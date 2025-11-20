@@ -15,7 +15,7 @@
 
 ## 세팅 가이드
 ### 1. Clone & Move
-git clone https: //
+git clone https://github.com/KDT-Final-4/Final-AI.git
 cd ai-platform
 
 ### 2. Create Virtual Environment
@@ -27,7 +27,7 @@ source .venv/bin/activate
 ### 4. Install Packages
 pip install -r requirements.txt
 
-### 5. Install Playwright browers
+### 5. Install Playwright browsers
 playwright install chromium
 
 ### 6. Start API
