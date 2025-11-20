@@ -16,7 +16,7 @@
 ## 세팅 가이드
 ### 1. Clone & Move
 git clone https://github.com/KDT-Final-4/Final-AI.git
-cd ai-platform
+cd Final-AI
 
 ### 2. Create Virtual Environment
 python3.11 -m venv .venv
