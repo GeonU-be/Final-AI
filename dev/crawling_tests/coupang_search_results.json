@@ -4,60 +4,65 @@
   "total_products": 5,
   "products": [
     {
-      "title": "벨느 물집 방지 양말 절대 안벗겨지는 논슬립 축구 풋살 양말, 블랙, 2개",
-      "original_price": "17,810원",
-      "displayed_price": "12,510원",
-      "product_link": "https://www.coupang.com/vp/products/8431308917?itemId=24388132287&vendorItemId=91258046958&sourceType=srp_product_ads&clickEventId=10c9b870-c9be-11f0-846a-9a14661de311&korePlacement=15&koreSubPlacement=1&clickEventId=10c9b870-c9be-11f0-846a-9a14661de311&korePlacement=15&koreSubPlacement=1",
-      "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/ab84/9ea81ce50ddd984516edf1eef5034446312e040f52965e77ff53aca6dd31.png",
+      "title": "장난감 테이블 게임 축구 보드 사커 게임기 보드게임 2인경기 완구 가족모임 미니 월드컵 스포츠 어린이 크리스마스 선물 생일 선물, 테이블 축구 게임기, 혼합색상, 1개",
+      "original_price": "51,800원",
+      "displayed_price": "25,900원",
+      "product_link": "https://www.coupang.com/vp/products/7400976126?itemId=19155934727&vendorItemId=90979891590&sourceType=srp_product_ads&clickEventId=bac949e0-c9db-11f0-90aa-d431b3ce0a52&korePlacement=15&koreSubPlacement=1&clickEventId=bac949e0-c9db-11f0-90aa-d431b3ce0a52&korePlacement=15&koreSubPlacement=1",
+      "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/de51/b7d3666648c45cb2838707aeab7a9c7f5bda83c13da1327d52205470475d.jpg",
       "detail_images": [
-        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/5c10/c828e948136f3b38d6c6fff7a36a9388a3ab854da5375e525f42c7f25b2f.png",
-        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/38e7/811408af2519262ca7af0ac24ce8974f9e56f400c82049f0585a91acb692.png",
-        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/2a07/8c9426f6b043caab6150a30bcacef8c8dda7ca82deae01d315e870540202.png",
-        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/247f/086733474b36892be8593e12fee3a5bdf7eb258c14cdc045bfa238d03998.png"
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/6480/0883bf6144f6fb1896e2885d6c87a0d00e77739080bdac9fb2d27a9a6a77.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/712d/4a55e8c544fb6bfea44bc138558b6409c32da03c7d4f52e84b5ce261d53d.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/e30b/3c070fa8f6a5985cc7d41aa68a3eb55532b1e3da538801346e7b5fa10e9b.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/7056/42ed4d5e4cd00c7f388a5109198f99b9cf14a25ffa2c3e8ebc8cd14da69a.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/d4e6/eedddc82fe5bc7cc894c5de0644fdb0e16bad845869b30436a48452c75b9.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/5b90/30dacc6f85abb6e9e4b4765fb4e71f3f595a56f2e9685c728c711994253f.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/c143/dbff389c69d4a68e6424594c3bfca470fc03964b88102658ec1e94793f6f.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/88ad/321350639fd072817252c41925e84f4b83d80d417c630f37b7eab3a949e9.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/925b/90615a1f593369fdb25fcf43f78b477a2ecd2d957c1c7909ed59910204d8.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/12c4/45525ed35bd426b2dde13538905555d8e71dfe650da539d3684d188b76bf.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/9eab/34d74ba140402ee36669a796ef1baecae5ad33f50967ceec3de4d9d602a0.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/810e/803c2f1417e0f95946a53b29d5f24adc89eb7825a94c155870c44a29a8bc.jpg"
       ],
       "extracted_info": {
-        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+        "product_name": "인터랙티브 축구 게임기",
+        "colors": null,
+        "sizes": null,
+        "size_guide": null,
+        "material": null,
+        "manufacturer": null,
+        "specifications": {
+          "type": "일반 게임기",
+          "players": "2명",
+          "play_area": "테이블 위"
+        },
+        "features": [
+          "가족과 함께 즐길 수 있는 놀이",
+          "아이들의 손놀림과 집중력 향상",
+          "소리와 움직임으로 몰입도 증가"
+        ],
+        "care_instructions": null,
+        "certifications": null,
+        "other_info": "선물용으로 적합하며, 다양한 연령대에서 즐길 수 있습니다."
       }
     },
     {
       "title": "BEST AWARDS",
       "original_price": "16,400원",
       "displayed_price": "9,800원",
-      "product_link": "https://www.coupang.com/vp/products/7014369123?itemId=17250350040&vendorItemId=84421770583&pickType=COU_PICK&q=%EC%B6%95%EA%B5%AC&searchId=08569b744336983&sourceType=search&itemsCount=36&searchRank=1&rank=1",
+      "product_link": "https://www.coupang.com/vp/products/7014369123?itemId=17250350040&vendorItemId=84421770583&pickType=COU_PICK&q=%EC%B6%95%EA%B5%AC&searchId=f4992d9a498006&sourceType=search&itemsCount=36&searchRank=1&rank=1",
       "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/2624/1a3044276dfc18e209691254d6d08e4ba6e1aa057a62b0b4436e764ff246.jpg",
       "detail_images": [
         "https://img2a.coupangcdn.com/image/retail/images/309428833961234-db4c97ad-a7ad-474c-87cb-0247e7f9e999.jpg",
         "https://img2a.coupangcdn.com/image/retail/images/12608613170729-8f885ec1-f448-4915-a814-1ce0cd7ad625.jpg",
         "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/2022/12/22/10/4/b5a301f1-9324-40ef-a47d-9e667c2434e4.jpg"
       ],
-      "extracted_info": {
-        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
-      }
-    },
-    {
-      "title": "리츠제이 스포츠 런닝 긴팔 트레이닝복 세트 사계절 경량 셋업",
-      "original_price": "30,000원",
-      "displayed_price": "23,700원",
-      "product_link": "https://www.coupang.com/vp/products/8806403339?itemId=25648854807&vendorItemId=92652675936&q=%EC%B6%95%EA%B5%AC&searchId=08569b744336983&sourceType=search&itemsCount=36&searchRank=2&rank=2",
-      "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/59b0/208db7cc04f7b94bac5ad6bcb93e06119238b6bd8d96b042b3891816abc1.jpg",
-      "detail_images": [
-        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/6f1a/138abfd7065e0c1bf7186b8529221b9148b4ac2646e37f430beac25e231e.jpg",
-        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/568a/b3b842a7179e5002359d6a59acb941fc27e4cd4d5ed9e72c85bc4f1ca5c0.jpg",
-        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/c4b9/5c8590c4756d325c4230ee5540c0d367453c0a6cdb45b008b0cb7718ce81.jpg",
-        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/fb1e/92d2826aef73f7a2563d1288f2a22012e19502aa67d94d7a9f9337883ddf.jpg",
-        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/18ee/247fe595df4f638913aaa3aba1aaa82ba7d8065da19aea472e5359217eb9.jpg",
-        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/fb85/7ade2bc8426d53ae9eec3f6be12c23cb40c2119eadf38bac1cb017b3181c.jpg",
-        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/2d74/81e377f23cf8132b0f67dce5d448f1a385676233ca0094a8d11d84ca3f32.jpg"
-      ],
-      "extracted_info": {
-        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
-      }
+      "extracted_info": "아래는 제공된 정보에 기반하여 쿠팡 상품 상세 이미지에서 추출된 정보를 JSON 형식으로 정리한 것입니다. \n\n```json\n{\n  \"product_name\": null,\n  \"colors\": null,\n  \"sizes\": null,\n  \"size_guide\": null,\n  \"material\": null,\n  \"manufacturer\": null,\n  \"specifications\": null,\n  \"features\": null,\n  \"care_instructions\": null,\n  \"certifications\": null,\n  \"other_info\": null\n}\n```\n\n제공된 이미지에는 제품명이나 기타 세부 사항에 대한 정보가 포함되어 있지 않아, 모든 항목이 `null`로 표시되었습니다. 추가적인 상품 정보를 제공하시면 더 구체적인 JSON으로 형식을 조정할 수 있습니다."
     },
     {
       "title": "새로이 축구 넥워머 비니 장갑 세트 1+1+1 챔피언스리그 겨울 방한 풋살",
       "original_price": "53,780원",
       "displayed_price": "19,800원",
-      "product_link": "https://www.coupang.com/vp/products/7822521561?itemId=21250915457&vendorItemId=91379718277&q=%EC%B6%95%EA%B5%AC&searchId=08569b744336983&sourceType=search&itemsCount=36&searchRank=3&rank=3",
+      "product_link": "https://www.coupang.com/vp/products/7822521561?itemId=21250915457&vendorItemId=91379718277&q=%EC%B6%95%EA%B5%AC&searchId=f4992d9a498006&sourceType=search&itemsCount=36&searchRank=2&rank=2",
       "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/40ef/509df5a62121e743d32329697cc7ad0ad4d14b407dbca28780728cb4974d.jpg",
       "detail_images": [
         "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/1a58/159080c1fc0095bb0ed08a363d513dcf2a53b4d06ab34d7dfcbcc6db400e.jpg",
@@ -83,21 +88,49 @@
         "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/556c/26f1ddca61a06946b62b4964fa18b32c945716d9dc265e53ab9495d69f24.jpg"
       ],
       "extracted_info": {
-        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+        "product_name": "다기능 넥워머 비니 마스크 세트",
+        "colors": [
+          "검정"
+        ],
+        "sizes": null,
+        "size_guide": null,
+        "material": null,
+        "manufacturer": "champions league",
+        "specifications": null,
+        "features": [
+          "넥워머, 비니, 마스크로 다양한 용도로 사용 가능",
+          "한세트로 제공"
+        ],
+        "care_instructions": null,
+        "certifications": null,
+        "other_info": null
       }
+    },
+    {
+      "title": "리츠제이 스포츠 런닝 긴팔 트레이닝복 세트 사계절 경량 셋업",
+      "original_price": "30,000원",
+      "displayed_price": "23,700원",
+      "product_link": "https://www.coupang.com/vp/products/8806403339?itemId=25648854807&vendorItemId=92652675936&q=%EC%B6%95%EA%B5%AC&searchId=f4992d9a498006&sourceType=search&itemsCount=36&searchRank=3&rank=3",
+      "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/59b0/208db7cc04f7b94bac5ad6bcb93e06119238b6bd8d96b042b3891816abc1.jpg",
+      "detail_images": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/6f1a/138abfd7065e0c1bf7186b8529221b9148b4ac2646e37f430beac25e231e.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/568a/b3b842a7179e5002359d6a59acb941fc27e4cd4d5ed9e72c85bc4f1ca5c0.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/c4b9/5c8590c4756d325c4230ee5540c0d367453c0a6cdb45b008b0cb7718ce81.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/fb1e/92d2826aef73f7a2563d1288f2a22012e19502aa67d94d7a9f9337883ddf.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/18ee/247fe595df4f638913aaa3aba1aaa82ba7d8065da19aea472e5359217eb9.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/fb85/7ade2bc8426d53ae9eec3f6be12c23cb40c2119eadf38bac1cb017b3181c.jpg",
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/2d74/81e377f23cf8132b0f67dce5d448f1a385676233ca0094a8d11d84ca3f32.jpg"
+      ]
     },
     {
       "title": "나이키 페이서 라이너 러닝 축구 장갑 세트 양손착용 HM9024-042, 블랙, 1세트",
       "original_price": "22,900원",
       "displayed_price": "",
-      "product_link": "https://www.coupang.com/vp/products/8275254647?itemId=23853033305&vendorItemId=90876393138&q=%EC%B6%95%EA%B5%AC&searchId=08569b744336983&sourceType=search&itemsCount=36&searchRank=4&rank=4",
+      "product_link": "https://www.coupang.com/vp/products/8275254647?itemId=23853033305&vendorItemId=90876393138&q=%EC%B6%95%EA%B5%AC&searchId=f4992d9a498006&sourceType=search&itemsCount=36&searchRank=4&rank=4",
       "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/2024/08/07/15/9/2d1b07df-51ad-4211-b9f8-0d69e83a976a.jpg",
       "detail_images": [
         "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/2024/08/07/15/2/a4d7e1e6-d0e9-4350-9867-b2acc0913d9a.jpg"
-      ],
-      "extracted_info": {
-        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
-      }
+      ]
     }
   ]
 }
