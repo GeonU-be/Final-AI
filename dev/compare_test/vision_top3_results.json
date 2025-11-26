@@ -1,0 +1,113 @@
+{
+  "generated_at": "2025-11-26 18:02:32",
+  "model": "gpt-4o-mini",
+  "detail": "low",
+  "top_k": 3,
+  "results": [
+    {
+      "coupang_product": {
+        "title": "포유컴퓨터 조립 PC 게이밍 컴퓨터 풀세트 데스크탑 모니터 사무용 게임용 본체, PC02",
+        "price": "798,000원",
+        "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/5949/1547b6b03dcc68b622a5c4cb8c11449edc691345d3edfddac809c3b9d480.jpg",
+        "product_link": "https://www.coupang.com/vp/products/8298648790?itemId=23937893519&vendorItemId=90959800115&sourceType=srp_product_ads&clickEventId=3c883b90-ca9e-11f0-a9ad-caeb3853dac3&korePlacement=15&koreSubPlacement=5&clickEventId=3c883b90-ca9e-11f0-a9ad-caeb3853dac3&korePlacement=15&koreSubPlacement=5"
+      },
+      "ssadagu_product": {
+        "title": "2025 코어 i7-13620H 독립 그래픽 카드 4G 컴퓨터 비즈니스 사무용 디자인 게임 16inch 게임 노트북",
+        "price": "768,380원",
+        "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01qxkXmy1EYImLzptFe_!!1677810363-0-cib.jpg",
+        "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=851090460021&ss_tx=컴퓨터"
+      },
+      "similarity": {
+        "combined_similarity": 0.5895897154390402,
+        "image_similarity": 0.65625,
+        "price_similarity": 0.9628822055137845,
+        "title_similarity": 0.336283185840708
+      },
+      "vision_result": {
+        "isSameProduct": "n",
+        "confidence": 75,
+        "keySimilarities": [
+          "고성능 하드웨어",
+          "게이밍 용도"
+        ],
+        "keyDifferences": [
+          "PC와 노트북의 차이",
+          "구성품의 차이 (모니터 포함 여부)",
+          "가격대 차이"
+        ],
+        "verdict": "제품 카테고리가 다르며, 하나는 조립형 PC이고 다른 하나는 노트북입니다."
+      }
+    },
+    {
+      "coupang_product": {
+        "title": "윈도우11 설치 한컴오피스 정품 증정 사무용 가정용 컴퓨터 본체 데스크탑 PC",
+        "price": "249,000원",
+        "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/a39d/d02b42828255570e02908b69ce0ff96f273c0361c6aadbfdc666cf26e6ff.jpg",
+        "product_link": "https://www.coupang.com/vp/products/9169986440?itemId=27023803859&vendorItemId=93992398691&q=%EC%BB%B4%ED%93%A8%ED%84%B0&searchId=2c912be0302401&sourceType=search&itemsCount=36&searchRank=34&rank=34"
+      },
+      "ssadagu_product": {
+        "title": "T8PLUS 듀얼 기가비트 포트 3 HDMI2.0 N150 오피스 게임 4K 휴대용 소형 컴퓨터 VS N100",
+        "price": "245,520원",
+        "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN010IWQqw1ge4rfINAS3_!!3193624166-0-cib.jpg",
+        "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=690023206457&ss_tx=컴퓨터"
+      },
+      "similarity": {
+        "combined_similarity": 0.5452817423540315,
+        "image_similarity": 0.5625,
+        "price_similarity": 0.9860240963855421,
+        "title_similarity": 0.3076923076923077
+      },
+      "vision_result": {
+        "isSameProduct": "n",
+        "confidence": 70,
+        "keySimilarities": [
+          "컴퓨터",
+          "사무용",
+          "윈도우11"
+        ],
+        "keyDifferences": [
+          "제품 모델",
+          "가격",
+          "기능",
+          "디자인",
+          "사이즈"
+        ],
+        "verdict": "두 제품은 컴퓨터라는 점에서는 유사하지만 모델과 기능이 다른 점에서 동일하지 않음."
+      }
+    },
+    {
+      "coupang_product": {
+        "title": "삼성 컴퓨터 본체 데스크탑 윈도우11 가정 사무 포토샵 주식용 게임용, 6세대 G4400, WIN11 Pro, 240GB, 8GB, 블랙",
+        "price": "194,000원",
+        "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/03c1/51e99657efc0a679dcbcdbe337791bf5ad99760e73988b21dada6c5c31ce.jpg",
+        "product_link": "https://www.coupang.com/vp/products/8450039802?itemId=24446808289&vendorItemId=91460708213&q=%EC%BB%B4%ED%93%A8%ED%84%B0&searchId=2c912be0302401&sourceType=search&itemsCount=36&searchRank=12&rank=12"
+      },
+      "ssadagu_product": {
+        "title": "12G 독립 디스플레이 i3i5i7 인터넷 카페 e-스포츠 게임 데스크탑 컴퓨터 호스트 디자인 라이브 방송 조립 컴퓨터 전체 배치",
+        "price": "154,590원",
+        "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN015935M81nfdgxkkiaO_!!2630035117-0-cib.jpg",
+        "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=665757568213&ss_tx=컴퓨터"
+      },
+      "similarity": {
+        "combined_similarity": 0.5387630259125105,
+        "image_similarity": 0.71875,
+        "price_similarity": 0.7968556701030928,
+        "title_similarity": 0.22972972972972974
+      },
+      "vision_result": {
+        "isSameProduct": "n",
+        "confidence": 45,
+        "keySimilarities": [
+          "데스크탑 컴퓨터",
+          "게임용"
+        ],
+        "keyDifferences": [
+          "CPU 모델(6세대 G4400 vs. i3i5i7)",
+          "디자인(기본형 vs. RGB 조명 큐브형)",
+          "가격 차이"
+        ],
+        "verdict": "두 제품은 데스크탑 컴퓨터라는 점에서 유사하지만, CPU 성능과 디자인 등에서 차이가 큽니다."
+      }
+    }
+  ]
+}
