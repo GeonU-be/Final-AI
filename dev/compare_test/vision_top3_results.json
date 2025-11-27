@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-27 17:38:31",
+  "generated_at": "2025-11-27 18:45:28",
   "model": "gpt-4o-mini",
   "detail": "low",
   "top_k": 3,
@@ -9,7 +9,7 @@
         "title": "삼성 컴퓨터 본체 데스크탑 윈도우11 가정 사무 포토샵 주식용 게임용, 6세대 G4400, WIN11 Pro, 240GB, 8GB, 블랙",
         "price": "194,000원",
         "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/03c1/51e99657efc0a679dcbcdbe337791bf5ad99760e73988b21dada6c5c31ce.jpg",
-        "product_link": "https://www.coupang.com/vp/products/8450039802?itemId=24446808289&vendorItemId=91460708213&q=%EC%BB%B4%ED%93%A8%ED%84%B0&searchId=c992cc3a626753&sourceType=search&itemsCount=36&searchRank=2&rank=2"
+        "product_link": "https://www.coupang.com/vp/products/8450039802?itemId=24446808289&vendorItemId=91460708213&q=%EC%BB%B4%ED%93%A8%ED%84%B0&searchId=785d413a413002&sourceType=search&itemsCount=36&searchRank=2&rank=2"
       },
       "ssadagu_product": {
         "title": "12G 독립 디스플레이 i3i5i7 인터넷 카페 e-스포츠 게임 데스크탑 컴퓨터 호스트 디자인 라이브 방송 조립 컴퓨터 전체 배치",
@@ -25,83 +25,86 @@
       },
       "vision_result": {
         "isSameProduct": "n",
-        "confidence": 75,
+        "confidence": 70,
         "keySimilarities": [
           "데스크탑 컴퓨터",
-          "가격대"
+          "게임용",
+          "사무용"
         ],
         "keyDifferences": [
-          "CPU 세대 (6세대 G4400 vs 12세대 i3/i5/i7)",
-          "디자인 (블랙 vs RGB 조명 케이스)",
-          "목적 (주식, 게임용 vs e-스포츠)"
+          "CPU 모델 (G4400 vs i3/i5/i7)",
+          "디자인 (기본형 vs 게이밍 디자인)",
+          "가격 차이"
         ],
-        "verdict": "두 제품은 모두 데스크탑이지만, 사양과 디자인이 다르므로 동일 제품이 아님.",
+        "verdict": "두 제품은 데스크탑 컴퓨터로 유사하지만, CPU 성능과 디자인에서 차이가 있어 동일 제품이 아니다.",
         "status": "ok"
       }
     },
     {
       "coupang_product": {
-        "title": "삼성 컴퓨터 본체 사무용 HDMI지원 원도우11, 1, i5-3470/8G/SSD240/GT710, 윈도우 11 프로, 240GB, 8GB, 블랙",
-        "price": "189,000원",
-        "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/cc51/923a2051acafe4c56a5a230cec052ec99a232ca4d1eaf668d256817b6e44.jpg",
-        "product_link": "https://www.coupang.com/vp/products/8894297234?itemId=25967581871&vendorItemId=94086615435&q=%EC%BB%B4%ED%93%A8%ED%84%B0&searchId=c992cc3a626753&sourceType=search&itemsCount=36&searchRank=12&rank=12"
+        "title": "발로란트 롤컴퓨터 조립pc 컴퓨터본체 사무용 업무용 주식용 로블록스 던파 캐드 포토삽, 케이스 변경 Q1번 LED고급 (단품 마우스)",
+        "price": "37,000원",
+        "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/9773/8c0f4ad6f31bbcf42ce2bdf3fc5e46372b2ed9197c839762c6c9201e45ef.jpg",
+        "product_link": "https://www.coupang.com/vp/products/7594565156?itemId=20076118302&vendorItemId=90431757705&q=%EC%BB%B4%ED%93%A8%ED%84%B0&searchId=aef2f36d135279&sourceType=search&itemsCount=36&searchRank=39&rank=39"
       },
       "ssadagu_product": {
-        "title": "15.6inch 노트북 i7 쿼드 코어 독립 그래픽 게임 사무실 비즈니스 학습 온라인 수업 라이브 방송 i5 초박형 휴대용",
-        "price": "191,950원",
-        "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01A4lQkx2NXgmdHWMct_!!1911179973-0-cib.jpg",
-        "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=530803621189&ss_tx=컴퓨터"
+        "title": "16G 512G 태블릿 PC 패드 프로 Netcom 5G 안드로이드 오피스 엔터테인먼트 게임 학습 기계 2 in 1",
+        "price": "38,390원",
+        "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01SfSTgZ1pd0aT95eEO_!!2218003985382-0-cib.jpg",
+        "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=802774376104&ss_tx=컴퓨터"
       },
       "similarity": {
-        "combined_similarity": 0.5167249406042891,
-        "image_similarity": 0.625,
-        "price_similarity": 0.9846314144308413,
-        "title_similarity": 0.174496644295302
+        "combined_similarity": 0.53460635695437,
+        "image_similarity": 0.59375,
+        "price_similarity": 0.963792654337067,
+        "title_similarity": 0.2608695652173913
       },
       "vision_result": {
         "isSameProduct": "n",
-        "confidence": 80,
-        "keySimilarities": [
-          "모두 컴퓨터 제품",
-          "윈도우 11 운영체제 지원"
-        ],
-        "keyDifferences": [
-          "Coupang 제품은 컴퓨터 본체, Ssadagu 제품은 노트북",
-          "CPU: Coupang i5-3470, Ssadagu i7 쿼드 코어",
-          "가격 차이: Coupang 189,000원, Ssadagu 191,950원"
-        ],
-        "verdict": "제품 유형과 사양이 다르므로 동일한 제품이 아님.",
-        "status": "ok"
-      }
-    },
-    {
-      "coupang_product": {
-        "title": "DARAMU 게이밍 컴퓨터 책상 K자형 프레임 인체공학 멀티 데스크 테이블 1인용 사무용 책상, 프리미엄 블랙 업그레이드형",
-        "price": "48,800원",
-        "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/e783/0c7b83018c4241b4d7feb006f3b8f0ca9359ef723eb3eef48a1f716f8e53.png",
-        "product_link": "https://www.coupang.com/vp/products/9156162490?itemId=26965677673&vendorItemId=93981662297&q=%EC%BB%B4%ED%93%A8%ED%84%B0&searchId=c992cc3a626753&sourceType=search&itemsCount=36&searchRank=17&rank=17"
-      },
-      "ssadagu_product": {
-        "title": "크로스보더 Pad6SPro 태블릿 컴퓨터 10.1인치 3G 통화 2+32 안드로이드 시스템 10",
-        "price": "52,560원",
-        "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN0177IY6g25mCT4GjeDR_!!2219502187568-0-cib.jpg",
-        "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=899956063218&ss_tx=컴퓨터"
-      },
-      "similarity": {
-        "combined_similarity": 0.5164776658238676,
-        "image_similarity": 0.5625,
-        "price_similarity": 0.9284627092846272,
-        "title_similarity": 0.2644628099173554
-      },
-      "vision_result": {
-        "isSameProduct": "n",
-        "confidence": 0,
+        "confidence": 10,
         "keySimilarities": [],
         "keyDifferences": [
-          "Coupang 제품은 게이밍 컴퓨터 책상이며, Ssadagu 제품은 태블릿 컴퓨터이다.",
-          "Coupang의 가격은 48,800원이지만 Ssadagu의 가격은 52,560원이다."
+          "첫 번째는 조립PC, 두 번째는 태블릿 PC",
+          "가격대가 서로 다름",
+          "용도와 기능이 상이함"
         ],
-        "verdict": "두 제품은 서로 다른 카테고리에 속하므로 동일한 제품이 아니다.",
+        "verdict": "두 제품은 서로 다른 유형으로, 하나는 컴퓨터 본체이고 다른 하나는 태블릿이다.",
+        "status": "ok"
+      }
+    },
+    {
+      "coupang_product": {
+        "title": "삼성 컴퓨터 사무용 가정용 학원 등 i3-2120 4G ssd120G, 슬림형",
+        "price": "84,300원",
+        "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/image_audit/prod/9fa7973b-b7b7-48c3-a293-7db0bd768add_fixing_v2.png",
+        "product_link": "https://www.coupang.com/vp/products/7595777101?itemId=20081538812&vendorItemId=87238836589&q=%EC%BB%B4%ED%93%A8%ED%84%B0&searchId=aef2f36d135279&sourceType=search&itemsCount=36&searchRank=41&rank=41"
+      },
+      "ssadagu_product": {
+        "title": "데스크탑 컴퓨터 i5i7 게이밍 독립 그래픽 카드 풀세트 가정용 사무용 디자인 13세대 14세대 데스크탑 컴퓨터",
+        "price": "90,950원",
+        "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01knLW8w1eVGB1r9Kne_!!1941143876-0-cib.jpg",
+        "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=673687408100&ss_tx=컴퓨터"
+      },
+      "similarity": {
+        "combined_similarity": 0.5197813424435196,
+        "image_similarity": 0.53125,
+        "price_similarity": 0.9268829026937878,
+        "title_similarity": 0.3047619047619048
+      },
+      "vision_result": {
+        "isSameProduct": "n",
+        "confidence": 75,
+        "keySimilarities": [
+          "가정용",
+          "사무용"
+        ],
+        "keyDifferences": [
+          "CPU 사양 (i3-2120 vs i5/i7)",
+          "가격 차이",
+          "디자인 및 구성 (슬림형 vs 풀세트)",
+          "그래픽 카드 유무"
+        ],
+        "verdict": "제품의 종류와 사양이 다르므로 동일 제품이 아니다.",
         "status": "ok"
       }
     }
