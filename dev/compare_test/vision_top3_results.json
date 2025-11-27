@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-27 10:54:03",
+  "generated_at": "2025-11-27 11:15:16",
   "model": "gpt-4o-mini",
   "detail": "low",
   "top_k": 3,
@@ -25,14 +25,16 @@
       },
       "vision_result": {
         "isSameProduct": "n",
-        "confidence": 80,
-        "keySimilarities": [],
-        "keyDifferences": [
-          "Coupang은 데스크탑 컴퓨터 풀세트, Ssadagu는 노트북",
-          "Coupang은 가격이 798,000원, Ssadagu는 768,380원",
-          "Coupang은 조립 PC, Ssadagu는 게이밍 노트북"
+        "confidence": 70,
+        "keySimilarities": [
+          "모든 제품은 게임용",
+          "가격대가 비슷함"
         ],
-        "verdict": "제품 유형과 가격 차이가 커서 동일 제품이 아님.",
+        "keyDifferences": [
+          "Coupang은 조립 PC, Ssadagu는 노트북",
+          "Coupang은 데스크탑 모니터 포함, Ssadagu는 16inch 노트북"
+        ],
+        "verdict": "제품의 형태가 다르기 때문에 동일 제품이 아님.",
         "status": "ok"
       }
     },
@@ -57,18 +59,17 @@
       },
       "vision_result": {
         "isSameProduct": "n",
-        "confidence": 70,
+        "confidence": 75,
         "keySimilarities": [
           "컴퓨터",
           "사무용"
         ],
         "keyDifferences": [
-          "제품 모델",
+          "제품 모델명",
           "사양",
-          "가격",
-          "디자인"
+          "가격"
         ],
-        "verdict": "두 제품은 모두 컴퓨터지만, 모델과 사양이 다르기 때문에 동일한 제품이 아닙니다.",
+        "verdict": "두 제품은 모두 컴퓨터지만, 모델명과 사양이 다릅니다.",
         "status": "ok"
       }
     },
@@ -93,16 +94,18 @@
       },
       "vision_result": {
         "isSameProduct": "n",
-        "confidence": 60,
+        "confidence": 70,
         "keySimilarities": [
-          "데스크탑 컴퓨터"
+          "데스크탑 컴퓨터",
+          "주요 사용 용도"
         ],
         "keyDifferences": [
-          "구성 요소 및 사양이 다름",
+          "브랜드 차이 (삼성 vs. 다른 브랜드)",
+          "제조세대 (6세대 vs. 12세대)",
           "가격 차이",
-          "디자인 및 외관 차이"
+          "디자인 및 외관 (블랙 본체 vs. RGB 조명 포함 디자인)"
         ],
-        "verdict": "두 제품은 데스크탑 컴퓨터지만, 사양과 디자인이 다르므로 동일 제품이 아닙니다.",
+        "verdict": "브랜드와 세대, 디자인이 달라 동일한 제품이 아님.",
         "status": "ok"
       }
     }
