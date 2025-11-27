@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-26 18:02:32",
+  "generated_at": "2025-11-27 10:54:03",
   "model": "gpt-4o-mini",
   "detail": "low",
   "top_k": 3,
@@ -25,17 +25,15 @@
       },
       "vision_result": {
         "isSameProduct": "n",
-        "confidence": 75,
-        "keySimilarities": [
-          "고성능 하드웨어",
-          "게이밍 용도"
-        ],
+        "confidence": 80,
+        "keySimilarities": [],
         "keyDifferences": [
-          "PC와 노트북의 차이",
-          "구성품의 차이 (모니터 포함 여부)",
-          "가격대 차이"
+          "Coupang은 데스크탑 컴퓨터 풀세트, Ssadagu는 노트북",
+          "Coupang은 가격이 798,000원, Ssadagu는 768,380원",
+          "Coupang은 조립 PC, Ssadagu는 게이밍 노트북"
         ],
-        "verdict": "제품 카테고리가 다르며, 하나는 조립형 PC이고 다른 하나는 노트북입니다."
+        "verdict": "제품 유형과 가격 차이가 커서 동일 제품이 아님.",
+        "status": "ok"
       }
     },
     {
@@ -62,17 +60,16 @@
         "confidence": 70,
         "keySimilarities": [
           "컴퓨터",
-          "사무용",
-          "윈도우11"
+          "사무용"
         ],
         "keyDifferences": [
           "제품 모델",
+          "사양",
           "가격",
-          "기능",
-          "디자인",
-          "사이즈"
+          "디자인"
         ],
-        "verdict": "두 제품은 컴퓨터라는 점에서는 유사하지만 모델과 기능이 다른 점에서 동일하지 않음."
+        "verdict": "두 제품은 모두 컴퓨터지만, 모델과 사양이 다르기 때문에 동일한 제품이 아닙니다.",
+        "status": "ok"
       }
     },
     {
@@ -96,17 +93,17 @@
       },
       "vision_result": {
         "isSameProduct": "n",
-        "confidence": 45,
+        "confidence": 60,
         "keySimilarities": [
-          "데스크탑 컴퓨터",
-          "게임용"
+          "데스크탑 컴퓨터"
         ],
         "keyDifferences": [
-          "CPU 모델(6세대 G4400 vs. i3i5i7)",
-          "디자인(기본형 vs. RGB 조명 큐브형)",
-          "가격 차이"
+          "구성 요소 및 사양이 다름",
+          "가격 차이",
+          "디자인 및 외관 차이"
         ],
-        "verdict": "두 제품은 데스크탑 컴퓨터라는 점에서 유사하지만, CPU 성능과 디자인 등에서 차이가 큽니다."
+        "verdict": "두 제품은 데스크탑 컴퓨터지만, 사양과 디자인이 다르므로 동일 제품이 아닙니다.",
+        "status": "ok"
       }
     }
   ]
