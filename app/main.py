@@ -2,6 +2,8 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.classes.requests import WritePostRequest, UploadPostRequest
+
 
 def create_app() -> FastAPI:
     app = FastAPI(title="AURA Python Server")
@@ -20,7 +22,7 @@ def create_app() -> FastAPI:
     )
 
     @app.post("/api/write")
-    async def write_posts():
+    async def write_posts(request: WritePostRequest):
         # 로직 돌리기, 대신 await 하지 않음
         # => 로직은 돌아가는데 응답이 먼저 들어감
         return
@@ -32,7 +34,7 @@ def create_app() -> FastAPI:
         return
 
     @app.post("/api/upload")
-    async def upload_post():
+    async def upload_post(request: UploadPostRequest):
         # 로직 돌리기, 대신 await 하지 않음
         # => 로직은 돌아가는데 응답이 먼저 들어감
         return
