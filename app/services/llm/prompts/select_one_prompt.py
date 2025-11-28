@@ -18,5 +18,4 @@ markdown 문법을 사용하지 마십시오. 출력은 순수한 JSON으로 이
 
 
 def se_input_prompt(arrs: list[str]) -> str:
-    result = arrs.append(item + "\n" for item in arrs)
-    return result
+    return "".join(item + "\n" for item in arrs)

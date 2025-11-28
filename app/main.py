@@ -10,7 +10,7 @@ def create_app() -> FastAPI:
     app = FastAPI(title="AURA Python Server")
 
     origin_env = os.getenv("FASTAPI_ALLOWED_ORIGINS", "")
-    allowed_origins = allowed_origins = [
+    allowed_origins = [
         origin.strip() for origin in origin_env.split(",") if origin.strip()
     ]
 

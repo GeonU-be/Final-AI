@@ -17,7 +17,6 @@ class PostData:
     content: str
 
 
-@dataclass
 class GraphState(TypedDict, total=False):
     keyword: str
     need_keyword: bool

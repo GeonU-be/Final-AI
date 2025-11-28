@@ -4,7 +4,7 @@ from langchain.schema import SystemMessage, HumanMessage
 
 def get_llm(api_key: str):
     return ChatUpstage(
-        model="gpt-4o",
+        model="solar-pro",
         api_key=api_key,
         # reasoning_effort="low",
         # verbosity="low"
