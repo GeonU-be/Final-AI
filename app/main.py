@@ -1,4 +1,5 @@
 import os
+from dataclasses import asdict
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -25,16 +26,21 @@ def create_app() -> FastAPI:
     async def write_posts(request: WritePostRequest):
         # asyncio.create_task로 로직 돌리기
         # => 로직은 돌아가는데 응답이 먼저 들어감
+        print("글 작성 로직 실행")
+        print("입력: \n", asdict(request))
         return
 
     @app.get("/api/crawler")
     async def get_keywords():
         # asyncio.create_task로 로직 돌리기
         # => 로직은 돌아가는데 응답을 먼저 제공함
+        print("키워드 호출 로직 실행")
         return
 
     @app.post("/api/upload")
     async def upload_post(request: UploadPostRequest):
         # asyncio.create_task로 로직 돌리기
         # => 로직은 돌아가는데 응답을 먼저 제공함
+        print("글 업로드 로직 실행")
+        print("입력: \n", asdict(request))
         return
