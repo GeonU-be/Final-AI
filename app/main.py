@@ -23,18 +23,18 @@ def create_app() -> FastAPI:
 
     @app.post("/api/write")
     async def write_posts(request: WritePostRequest):
-        # 로직 돌리기, 대신 await 하지 않음
+        # asyncio.create_task로 로직 돌리기
         # => 로직은 돌아가는데 응답이 먼저 들어감
         return
 
     @app.get("/api/crawler")
     async def get_keywords():
-        # 로직 돌리기, asyncio.
-        # => 로직은 돌아가는데 응답이 먼저 들어감
+        # asyncio.create_task로 로직 돌리기
+        # => 로직은 돌아가는데 응답을 먼저 제공함
         return
 
     @app.post("/api/upload")
     async def upload_post(request: UploadPostRequest):
-        # 로직 돌리기, 대신 await 하지 않음
-        # => 로직은 돌아가는데 응답이 먼저 들어감
+        # asyncio.create_task로 로직 돌리기
+        # => 로직은 돌아가는데 응답을 먼저 제공함
         return
