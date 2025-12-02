@@ -75,7 +75,7 @@ def send_log(
         )
         response.raise_for_status()
     except requests.RequestException as exc:
-        logger.error("원격 로그 전송 실패: %s", exc)
+        logger.exception("원격 로그 전송 실패: %s", exc)
         raise
     finally:
         if session is None:
