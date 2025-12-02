@@ -1,18 +1,18 @@
-import os
 from dataclasses import asdict
+import asyncio
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.services.llm.graph import Graph
+from app.classes.models import GraphState
 
 from app.classes.requests import WritePostRequest, UploadPostRequest
+from app.config import FASTAPI_ALLOWED_ORIGINS
 
 
 def create_app() -> FastAPI:
     app = FastAPI(title="AURA Python Server")
 
-    origin_env = os.getenv("FASTAPI_ALLOWED_ORIGINS", "")
-    allowed_origins = [
-        origin.strip() for origin in origin_env.split(",") if origin.strip()
-    ]
+    allowed_origins = FASTAPI_ALLOWED_ORIGINS
 
     app.add_middleware(
         CORSMiddleware,
@@ -28,6 +28,14 @@ def create_app() -> FastAPI:
         # => 로직은 돌아가는데 응답이 먼저 들어감
         print("글 작성 로직 실행")
         print("입력: \n", asdict(request))
+        # 그래프 굴리는 그 로직
+
+        input = GraphState(
+            keywords=request.keywords,
+            settings=request.llmSettings,
+        )
+
+        asyncio.create_task(Graph.ainvoke(input))
         return
 
     @app.get("/api/crawler")
@@ -35,6 +43,8 @@ def create_app() -> FastAPI:
         # asyncio.create_task로 로직 돌리기
         # => 로직은 돌아가는데 응답을 먼저 제공함
         print("키워드 호출 로직 실행")
+        # 크롤링 해서
+
         return
 
     @app.post("/api/upload")
@@ -43,4 +53,6 @@ def create_app() -> FastAPI:
         # => 로직은 돌아가는데 응답을 먼저 제공함
         print("글 업로드 로직 실행")
         print("입력: \n", asdict(request))
+        #
+
         return

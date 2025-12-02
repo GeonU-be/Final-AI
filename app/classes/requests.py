@@ -1,16 +1,15 @@
-from dataclasses import dataclass
+from pydantic import BaseModel
+
 from app.classes.models import LlmSettings, PostData
 
 
-@dataclass
-class WritePostRequest:
+class WritePostRequest(BaseModel):
     userId: int
     llmSettings: LlmSettings
     keywords: list[str]
     jobId: str
 
 
-@dataclass
-class UploadPostRequest:
+class UploadPostRequest(BaseModel):
     userId: int
     post: PostData

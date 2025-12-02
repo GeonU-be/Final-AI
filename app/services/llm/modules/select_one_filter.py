@@ -13,3 +13,6 @@ async def select_one(arrs: list[str], llm_settings: LlmSettings):
         system_prompt=system_prompt,
         input_prompt=input_prompt,
     )
+
+
+print("define select_one_filter")

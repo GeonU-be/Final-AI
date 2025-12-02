@@ -14,3 +14,6 @@ async def filter_wrong(keyword: str, product: dict, llm_settings: LlmSettings):
         system_prompt=system_prompt,
         input_prompt=input_prompt,
     )
+
+
+print("define filter_wrong_products")

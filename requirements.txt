@@ -3,11 +3,12 @@ uvicorn==0.30.0
 
 # LLM
 openai==1.45.0
-upstage==0.9.5
+upstage
 langchain==0.2.12
 langchain-core==0.2.35
 langchain-community==0.2.10
 langchain-openai==0.1.8
+langsmith
 pydantic==2.7.1
 
 # Crawling
@@ -15,7 +16,6 @@ playwright==1.46.0
 beautifulsoup4==4.12.3
 pytrends==4.9.2
 # selenium==4.15.2
-playwright
 undetected-chromedriver==3.5.4
 pandas==2.2.0
 
