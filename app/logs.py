@@ -1,13 +1,13 @@
 from __future__ import annotations
 
 import logging
-import os
 from dataclasses import asdict
 from typing import Any, Dict, Optional
 
 import requests
 
 from app.classes.models import LogPayload, LogType
+from app.config import JAVA_SERVER_ADDRESS, LOG_HTTP_TIMEOUT, LOG_LEVEL, LOG_USER_ID
 
 logger = logging.getLogger("app.logs")
 if not logger.handlers:
@@ -18,22 +18,14 @@ if not logger.handlers:
     )
     logger.addHandler(handler)
 
-logger.setLevel(os.getenv("LOG_LEVEL", "INFO").upper())
-
-_JAVA_SERVER_ADDRESS = os.getenv("JAVA_SERVER_ADDRESS")
-try:
-    _DEFAULT_USER_ID = int(os.getenv("LOG_USER_ID", "1"))
-except ValueError as exc:
-    raise ValueError("LOG_USER_ID 환경 변수는 정수여야 합니다.") from exc
-
-_REQUEST_TIMEOUT = float(os.getenv("LOG_HTTP_TIMEOUT", "5"))
+logger.setLevel(LOG_LEVEL)
 
 
 def _build_endpoint() -> str:
     """환경변수에서 엔드포인트를 만든다. 미설정 시 즉시 예외 발생."""
-    if not _JAVA_SERVER_ADDRESS:
+    if not JAVA_SERVER_ADDRESS:
         raise RuntimeError("JAVA_SERVER_ADDRESS env 값이 설정되지 않았습니다.")
-    return f"{_JAVA_SERVER_ADDRESS.rstrip('/')}/api/log"
+    return f"{JAVA_SERVER_ADDRESS.rstrip('/')}/api/log"
 
 
 def send_log(
@@ -58,7 +50,7 @@ def send_log(
         session: requests.Session 재사용 시 지정.
     """
 
-    user = user_id or _DEFAULT_USER_ID
+    user = user_id or LOG_USER_ID
     if not user:
         raise ValueError("user_id 또는 LOG_USER_ID 환경 변수가 필요합니다.")
 
@@ -79,7 +71,7 @@ def send_log(
         response = client.post(
             _build_endpoint(),
             json=body,
-            timeout=_REQUEST_TIMEOUT,
+            timeout=LOG_HTTP_TIMEOUT,
         )
         response.raise_for_status()
     except requests.RequestException as exc:
