@@ -63,3 +63,6 @@ workflow.set_finish_point("generate_ads")
 workflow.set_finish_point("job_failed")
 
 app = workflow.compile()
+
+print("build graph")
+print("=== LangGraph Ready ===")

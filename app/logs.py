@@ -105,3 +105,6 @@ def log_warn(message: str, **kwargs: Any) -> requests.Response:
 def log_error(message: str, **kwargs: Any) -> requests.Response:
     """ERROR 로그 전송. kwargs는 send_log 인자로 위임된다."""
     return send_log(message=message, log_type=LogType.ERROR, **kwargs)
+
+
+print("load logger")

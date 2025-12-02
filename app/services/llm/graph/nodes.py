@@ -182,3 +182,6 @@ async def generate_ads(state: GraphState) -> GraphState:
     #   }
     # }
     return
+
+
+print("define nodes")

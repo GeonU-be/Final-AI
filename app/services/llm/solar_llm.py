@@ -21,3 +21,6 @@ async def call_llm(api_key, system_prompt, input_prompt):
 
     # 결과값의 .content: 출력물
     return result.content.strip()
+
+
+print("load upstage llm")
