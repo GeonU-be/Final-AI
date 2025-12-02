@@ -1,8 +1,9 @@
-from pydantic import BaseModel
 from datetime import datetime, timezone
 from enum import Enum
 from typing import TypedDict, Annotated, Optional
 import operator
+
+from pydantic import BaseModel
 
 
 class LlmSettings(BaseModel):
@@ -68,11 +69,15 @@ class LogPayload(BaseModel):
         job_id: Optional[str] = None,
         logged_date: Optional[datetime] = None,
     ) -> "LogPayload":
-        logged_dt = logged_date or datetime.now()
-        # 자바 LocalDateTime은 타임존 정보를 허용하지 않으므로 UTC로 맞춘 뒤 tz 제거
-        if logged_dt.tzinfo:
+        logged_dt = logged_date or datetime.now(timezone.utc)
+        # 자바 LocalDateTime은 타임존 정보를 허용하지 않으므로 UTC로 통일
+        if logged_dt.tzinfo is None:
+            # naive datetime은 UTC로 간주 (권장하지 않음)
+            iso_logged_date = logged_dt.isoformat()
+        else:
+            # timezone-aware datetime은 UTC로 변환 후 tzinfo 제거
             logged_dt = logged_dt.astimezone(timezone.utc).replace(tzinfo=None)
-        iso_logged_date = logged_dt.isoformat()
+            iso_logged_date = logged_dt.isoformat()
 
         return cls(
             userId=user_id,
