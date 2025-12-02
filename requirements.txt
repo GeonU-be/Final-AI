@@ -8,6 +8,7 @@ langchain==0.2.12
 langchain-core==0.2.35
 langchain-community==0.2.10
 langchain-openai==0.1.8
+langsmith
 pydantic==2.7.1
 
 # Crawling

@@ -1,7 +1,9 @@
 from app.classes.models import GraphState
+from langsmith import traceable
 
 
 # 시작 노드
+@traceable
 async def entry_node(state: GraphState) -> GraphState:
     # 입력 키워드를 정제하고 없으면 다음 단계에 키워드를 요청한다.
     keyword = (state.get("keyword") or "").strip()
@@ -11,6 +13,7 @@ async def entry_node(state: GraphState) -> GraphState:
 
 
 # 키워드 없어서 가져오는 노드
+@traceable
 async def crawling_keywords_node(state: GraphState) -> GraphState:
     # state.get("target_channel", "")에
     # x가 포함되어있다면 x에서 키워드 가져오기
@@ -23,6 +26,7 @@ async def crawling_keywords_node(state: GraphState) -> GraphState:
     return
 
 
+@traceable
 async def make_keyword_node(state: GraphState) -> GraphState:
     # 배열을 주고, 해당 배열 중 하나를 선택하고, 출력물로 하나의 품목을 검색하기 위한 키워드를 뱉음
     # LLM이 키워드를 정할 예정
@@ -30,6 +34,7 @@ async def make_keyword_node(state: GraphState) -> GraphState:
     return {"keyword": keyword}
 
 
+@traceable
 async def get_keyword_node(state: GraphState) -> GraphState:
     # keywords = state.get("keywords") or [""]
 
@@ -39,6 +44,7 @@ async def get_keyword_node(state: GraphState) -> GraphState:
     return
 
 
+@traceable
 async def crawling_items_ssadagu_node(state: GraphState) -> GraphState:
     # 싸다구 몰에서 아이템 크롤링
     # TODO: 예시 결과입니다. 실제 로직으로 수정 필요
@@ -55,6 +61,7 @@ async def crawling_items_ssadagu_node(state: GraphState) -> GraphState:
     return
 
 
+@traceable
 async def crawling_items_coupang_node(state: GraphState) -> GraphState:
     # 쿠팡에서 크롤링
     # TODO: 예시 결과입니다. 실제 로직으로 수정 필요
@@ -72,6 +79,7 @@ async def crawling_items_coupang_node(state: GraphState) -> GraphState:
     return
 
 
+@traceable
 async def filter_strange_node(state: GraphState) -> GraphState:
     # products = state.get("products") or {}
     # # products가 비어있다면?
@@ -135,6 +143,7 @@ async def filter_strange_node(state: GraphState) -> GraphState:
     return
 
 
+@traceable
 async def product_check(state: GraphState) -> GraphState:
     # malls = state.get("filtered_products", [])
 
@@ -152,10 +161,12 @@ async def product_check(state: GraphState) -> GraphState:
     return
 
 
+@traceable
 async def job_failed(state: GraphState) -> GraphState:
     return {"failed": True}
 
 
+@traceable
 async def generate_ads(state: GraphState) -> GraphState:
     # # TODO: 설정 갖고 각 플랫폼의 성격에 맞게 LLM이 글 쓰기
     # # 이건 그냥 if 문으로 순회해도 될 듯? 어짜피 값을 요구하는게 아니라 로직 돌고 있다고 나중에 통보만 할거라
