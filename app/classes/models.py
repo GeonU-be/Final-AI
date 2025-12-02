@@ -1,12 +1,11 @@
-from dataclasses import dataclass
+from pydantic import BaseModel
 from datetime import datetime, timezone
 from enum import Enum
 from typing import TypedDict, Annotated, Optional
 import operator
 
 
-@dataclass
-class LlmSettings:
+class LlmSettings(BaseModel):
     """LLM 세팅들"""
 
     apiKey: str
@@ -15,8 +14,7 @@ class LlmSettings:
     targetLength: int
 
 
-@dataclass
-class PostData:
+class PostData(BaseModel):
     """게시글의 작성"""
 
     title: str
@@ -47,8 +45,7 @@ class LogType(str, Enum):
     DEBUG = "DEBUG"
 
 
-@dataclass
-class LogPayload:
+class LogPayload(BaseModel):
     """자바 서버가 기대하는 필드 구조."""
 
     userId: int
