@@ -26,6 +26,7 @@ class GraphState(TypedDict, total=False):
     """그래프에 저장되는 상태, 병렬 처리를 위해 TypeDict로 작성함"""
 
     keyword: str
+    jobId: str
     need_keyword: bool
     keywords: list[str]
     settings: LlmSettings

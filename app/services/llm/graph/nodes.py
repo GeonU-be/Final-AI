@@ -1,13 +1,22 @@
-from app.classes.models import GraphState
+import random
+import asyncio
+
 from langsmith import traceable
+
+from app.classes.models import GraphState
+from app.logs import log_info
+
+from app.services.crawler.keywords.google_trend import get_trend_keywords
 
 
 # 시작 노드
 @traceable
 async def entry_node(state: GraphState) -> GraphState:
     # 입력 키워드를 정제하고 없으면 다음 단계에 키워드를 요청한다.
+    log_info("프로세스 시작 ", job_id=state["jobId"])
     keyword = (state.get("keyword") or "").strip()
     if not keyword:
+        log_info("키워드 없음. 랜덤 키워드 추출 시도")
         return {"need_keyword": True}
     return {"keyword": keyword, "keywords": [keyword], "need_keyword": False}
 
@@ -15,33 +24,34 @@ async def entry_node(state: GraphState) -> GraphState:
 # 키워드 없어서 가져오는 노드
 @traceable
 async def crawling_keywords_node(state: GraphState) -> GraphState:
-    # state.get("target_channel", "")에
-    # x가 포함되어있다면 x에서 키워드 가져오기
-    # i가 포함되어있다면 instagram에서 해시태그 가져오기
-    # g가 포함되어있다면 google trend에서 크롤링
+    log_info("키워드 ", job_id=state["jobId"])
 
     # TODO: 예시 결과입니다. 실제 로직으로 수정 필요
     # keywords = ["평택대", "bangladesh vs ireland", "나경원", "중앙대학교", "강백호", "메이플", "조달청", "국립중앙박물관", "마이애미 대 골든 스테이트", "한국장학재단"]
     # return {"keywords": keywords}
-    return
+    result = []
+    result += get_trend_keywords()
+    return {"keywords": result}
 
 
 @traceable
 async def make_keyword_node(state: GraphState) -> GraphState:
     # 배열을 주고, 해당 배열 중 하나를 선택하고, 출력물로 하나의 품목을 검색하기 위한 키워드를 뱉음
     # LLM이 키워드를 정할 예정
-    keyword = "캐릭터 볼펜"
+    log_info("키워드 선택", job_id=state["jobId"])
+
+    keyword = ""
     return {"keyword": keyword}
 
 
 @traceable
-async def get_keyword_node(state: GraphState) -> GraphState:
-    # keywords = state.get("keywords") or [""]
+async def keyword_join_node(state: GraphState) -> GraphState:
+    # 그냥 모이는 노드
+    keywords = state.get("keywords") or [""]
+    if state.get("keyword", None) is None:
+        return {"keyword": keywords[random.randrange(0, len(keywords))]}
 
-    # # TODO: 랜덤으로 하나 뽑기. 나중에 수정하고싶으면 상의하세요
-    # keyword = keywords[random.randrange(0, len(keywords))]
-    # return {"keyword": keyword}
-    return
+    return {}
 
 
 @traceable
@@ -81,7 +91,7 @@ async def crawling_items_coupang_node(state: GraphState) -> GraphState:
 
 @traceable
 async def filter_strange_node(state: GraphState) -> GraphState:
-    # products = state.get("products") or {}
+    products = state.get("products") or {}
     # # products가 비어있다면?
     # # 이거 무슨 동작이지..?
     # if not products:
@@ -94,11 +104,11 @@ async def filter_strange_node(state: GraphState) -> GraphState:
     #     and "title" in value[0]
     #   }
 
-    # keyword = state.get("keyword")
-    # if not products:
-    #   return {"products": {}, "filtered_products": [], "need_more_products": True}
+    keyword = state.get("keyword")
+    if not products:
+        return {"products": {}, "filtered_products": [], "need_more_products": True}
 
-    # semaphore = asyncio.Semaphore(queue_size)
+    semaphore = asyncio.Semaphore(queue_size)
 
     # async def filter_strange(product, keyword) -> dict:
     #   async with semaphore:
