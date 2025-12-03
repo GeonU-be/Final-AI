@@ -218,7 +218,11 @@ def crawl_google_trends(
                 if not _valid_text(first_line, excluded) or first_line in found:
                     continue
                 link_elem = elem.query_selector("a")
-                link_url = _normalize_link(link_elem.get_attribute("href")) if link_elem else ""
+                link_url = (
+                    _normalize_link(link_elem.get_attribute("href"))
+                    if link_elem
+                    else ""
+                )
                 found.add(first_line)
                 trends.append({"keyword": first_line, "link": link_url})
                 if len(trends) >= max_trends:
@@ -229,9 +233,6 @@ def crawl_google_trends(
     trends = trends[:max_trends]
     logger.info("Google Trends 수집 완료: %s개", len(trends))
     return {"total_trends": len(trends), "trends": trends}
-
-
-__all__ = ["crawl_google_trends", "TREND_URL", "EXCLUDED_TEXTS"]
 
 
 def get_trend_keywords(
@@ -251,3 +252,6 @@ def get_trend_keywords(
         page_timeout_ms=page_timeout_ms,
     )
     return [item["keyword"] for item in result.get("trends", []) if "keyword" in item]
+
+
+__all__ = ["crawl_google_trends", "TREND_URL", "EXCLUDED_TEXTS", "get_trend_keywords"]
