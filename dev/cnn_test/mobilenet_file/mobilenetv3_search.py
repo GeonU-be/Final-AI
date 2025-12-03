@@ -111,7 +111,7 @@ def get_embedding(url):
 
 # 3) 사전 파일 로드
 
-BASE = "/Users/a/IdeaProjects/Final-AI/dev/cnn_test/mobilenet_file"
+BASE = os.path.dirname(os.path.abspath(__file__))
 
 id_map_path = os.path.join(BASE, "id_map_mobilenet.json")
 emb_matrix_path = os.path.join(BASE, "emb_matrix_mobilenet.npy")
