@@ -51,7 +51,7 @@ def create_app() -> FastAPI:
         # asyncio.create_task로 로직 돌리기
         # => 로직은 돌아가는데 응답을 먼저 제공함
         print("글 업로드 로직 실행")
-        print("입력: \n", asdict(request))
+        print("입력: \n", request.json())
         # 글 내용 받아서 업로드 해주는 코드
 
         return

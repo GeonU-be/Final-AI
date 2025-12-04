@@ -48,7 +48,7 @@ async def make_keyword_node(state: GraphState) -> GraphState:
     # LLM이 키워드를 정할 예정
     log_info("키워드 선택", job_id=state["jobId"])
 
-    result = json.loads(select_one(state.get("keywords", []), state["settings"]))
+    result = json.loads(await select_one(state.get("keywords", []), state["settings"]))
     keyword = result["real_keyword"]
 
     log_info(
