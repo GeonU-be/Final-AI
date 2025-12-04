@@ -1,12 +1,12 @@
 from langgraph.graph import StateGraph, END
 from langgraph.graph.graph import CompiledGraph
-from typing import TypedDict
+from typing import TypedDict, NotRequired
 
 from app.services.llm.workflows.naver_workflow import build_naver_graph
 from app.services.llm.workflows.twitter_workflow import build_twitter_graph
 
 
-class RouterState(TypedDict, total=False):
+class RouterState(TypedDict):
     # 사용자 입력
     product_name: str
     keyword: str
@@ -14,9 +14,9 @@ class RouterState(TypedDict, total=False):
     platform: str   # "naver" 또는 "twitter"
 
     # 내부 Workflow 에서 생성될 값
-    prompt: str
-    generated_content: str
-    final_content: str
+    prompt: NotRequired[str]
+    generated_content: NotRequired[str]
+    final_content: NotRequired[str]
 
 
 def router_decision(state: RouterState) -> str:

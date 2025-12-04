@@ -4,6 +4,8 @@ import os
 import requests
 
 API_KEY = os.getenv("UPSTAGE_API_KEY")
+if not API_KEY:
+    raise ValueError("환경 변수 UPSTAGE_API_KEY가 설정되지 않았습니다.")
 
 def call_llm(state: dict) -> dict[str, str]:
     """
@@ -41,7 +43,7 @@ def call_llm(state: dict) -> dict[str, str]:
     result = res.json()
 
     try:
-        text = result["choice"][0]["message"]["content"]
+        text = result["choices"][0]["message"]["content"]
     except (KeyError, IndexError) as e:
         raise ValueError(f"예상치 못한 API 응답 형식: {result}") from e
 
