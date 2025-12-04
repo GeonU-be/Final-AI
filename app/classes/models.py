@@ -36,6 +36,7 @@ class GraphState(TypedDict, total=False):
     need_retry: bool
     try_count: int
     failed: bool
+    result: dict
 
 
 class LogType(str, Enum):

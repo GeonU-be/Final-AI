@@ -27,12 +27,11 @@ def create_app() -> FastAPI:
         # asyncio.create_task로 로직 돌리기
         # => 로직은 돌아가는데 응답이 먼저 들어감
         print("글 작성 로직 실행")
-        print("입력: \n", asdict(request))
+        print("입력: \n", request.json())
         # 그래프 굴리는 그 로직
 
         input = GraphState(
-            keywords=request.keywords,
-            settings=request.llmSettings,
+            keyword=request.keyword, settings=request.llmSettings, jobId=request.jobId
         )
 
         asyncio.create_task(Graph.ainvoke(input))
@@ -43,7 +42,7 @@ def create_app() -> FastAPI:
         # asyncio.create_task로 로직 돌리기
         # => 로직은 돌아가는데 응답을 먼저 제공함
         print("키워드 호출 로직 실행")
-        # 크롤링 해서
+        # 크롤링 해서 키워드 리스트 갖다 주는 코드
 
         return
 
@@ -53,6 +52,16 @@ def create_app() -> FastAPI:
         # => 로직은 돌아가는데 응답을 먼저 제공함
         print("글 업로드 로직 실행")
         print("입력: \n", asdict(request))
-        #
+        # 글 내용 받아서 업로드 해주는 코드
 
         return
+
+    return app
+
+
+app = create_app()
+
+print("*" * 52)
+print("FastAPI is running on http://localhost:8000")
+print("Checkout Swagger page on http://localhost:8000/docs")
+print("*" * 52)

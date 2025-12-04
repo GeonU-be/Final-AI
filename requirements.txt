@@ -2,12 +2,13 @@ fastapi==0.115.0
 uvicorn==0.30.0
 
 # LLM
-openai==1.45.0
+openai
 upstage
 langchain==0.2.12
 langchain-core==0.2.35
 langchain-community==0.2.10
-langchain-openai==0.1.8
+langchain-openai
+langgraph
 langsmith
 pydantic==2.7.1
 
