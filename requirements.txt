@@ -2,18 +2,23 @@ fastapi==0.115.0
 uvicorn==0.30.0
 
 # LLM
-openai==1.45.0
-upstage==0.9.5
+openai
+upstage
 langchain==0.2.12
 langchain-core==0.2.35
 langchain-community==0.2.10
-langchain-openai==0.1.8
+langchain-openai
+langgraph
+langsmith
 pydantic==2.7.1
 
 # Crawling
 playwright==1.46.0
 beautifulsoup4==4.12.3
 pytrends==4.9.2
+# selenium==4.15.2
+undetected-chromedriver==3.5.4
+pandas==2.2.0
 
 # SNS Upload
 tweepy==4.14.0
@@ -25,3 +30,4 @@ google-auth==2.29.0
 requests==2.32.3
 python-multipart==0.0.9
 python-dotenv==1.0.1
+
