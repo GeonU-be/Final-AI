@@ -36,8 +36,8 @@ def post_tweet(access_token: str, text: str) -> dict:
     try:
         response = requests.post(url, headers=headers, json=data, timeout=30)
 
-        # HTTP 상태 코드 검증
-        if response.status_code != 200:
+        # HTTP 상태 코드 검증 : 2xx 범위를 모두 성공으로 허용
+        if not 200 <= response.status_code < 200:
             error_detail = response.json() if response.text else {}
             return {
                 "success": False,
