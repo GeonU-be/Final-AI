@@ -7,6 +7,9 @@ _model = None
 _preprocess = None
 _EMB_SIZE = 960
 
+# 외부 모듈에서 사용할 임베딩 차원 상수
+EMB_SIZE = _EMB_SIZE
+
 
 def load_model():
     """

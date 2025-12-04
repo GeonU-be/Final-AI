@@ -95,7 +95,7 @@ def search_similar_node(state: RecommenderState) -> RecommenderState:
 # -----------------------------
 # 5) Node: 결과 반환
 # -----------------------------
-def return_result_node(state: RecommenderState):
+def return_result_node(state: RecommenderState) -> RecommenderState:
     """
     기능:
     - 최종 결과를 그대로 반환하여 FastAPI Router에서 사용할 수 있게 함.
