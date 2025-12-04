@@ -2,6 +2,8 @@ import asyncio
 import os
 import uuid
 
+from app.logs import logger
+
 from app.services.uploader.twitter.oauth_service import (
     generate_code_verifier,
     generate_code_challenge,
@@ -100,7 +102,7 @@ def workflow_wait_for_callback(port=8080, timeout=60):
 
 def workflow_exchange_token(
         client_id, client_secret, authorization_code, redirect_uri, code_verifier
-):
+) -> dict:
     """
     기능:
         - Authorization Code를 AccessToken + RefreshToken으로 교환
@@ -129,7 +131,7 @@ def workflow_exchange_token(
 # 4) 토큰 저장
 # ============================================================
 
-def workflow_save_token(token_info, code_verifier, client_id, user_id):
+def workflow_save_token(token_info, code_verifier, client_id, user_id) -> dict:
     """
     기능:
         - 사용자별 token.json 저장
@@ -149,7 +151,7 @@ def workflow_save_token(token_info, code_verifier, client_id, user_id):
 # 5) Tweet 업로드
 # ============================================================
 
-def workflow_post_tweet(access_token, tweet_text):
+def workflow_post_tweet(access_token, tweet_text) -> dict:
     """
     기능:
         - Twitter API로 트윗 업로드 수행
@@ -201,7 +203,7 @@ async def run_twitter_login_upload_workflow(
     auth_url = step1["auth_url"]
     code_verifier = step1["code_verifier"]
 
-    print(f"[OAuth] 다음 URL에서 로그인하세요:\n{auth_url}")
+    logger.info(f"[OAuth] 다음 URL에서 로그인하세요: {auth_url}")
 
     # 2. Authorization Code 수신
     step2 = workflow_wait_for_callback(port=port, timeout=timeout)
@@ -234,7 +236,10 @@ async def run_twitter_login_upload_workflow(
     access_token = token_info["access_token"]
 
     # 4. Token 저장
-    workflow_save_token(token_info, code_verifier, client_id, user_id)
+    save_result = workflow_save_token(token_info, code_verifier, client_id, user_id)
+    if not save_result["success"]:
+        logger.warning(f"토큰 저장 실패 (user_id={user_id}): {save_result['message']}")
+        # 저장 실패해도 트윗 업로드는 진행 ( access_token 은 메모리에 있음 )
 
     # 5. Tweet 업로드
     step5 = workflow_post_tweet(access_token, tweet_text)

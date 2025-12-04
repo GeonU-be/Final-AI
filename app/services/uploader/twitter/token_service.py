@@ -31,7 +31,7 @@ def get_token_file_path(user_id: str) -> str:
 # 2. 토큰 저장
 # ============================================================
 
-def save_token(token_info: dict, code_verifier: str, client_id: str, user_id: str):
+def save_token(token_info: dict, code_verifier: str, client_id: str, user_id: str) -> dict:
     """
     기능:
         - token_info + code_verifier + client_id를 하나의 JSON 파일로 저장한다.

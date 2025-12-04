@@ -83,7 +83,7 @@ async def perform_new_login(browser, login_id: str, login_pw: str, session_file:
     await page.click("button[type=submit]")
 
     # 로그인 완료되는 순간 URL이 로그인 페이지에서 벗어남
-    await page.wait_for_url(lambda url: "nidlogin.login" in url, timeout=10000)
+    await page.wait_for_url(lambda url: "nidlogin.login" not in url, timeout=10000)
 
     # 저장
     await context.storage_state(path=session_file)

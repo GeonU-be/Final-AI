@@ -5,7 +5,7 @@ import requests
 # 1. 트윗 업로드 함수
 # ============================================================
 
-def post_tweet(access_token: str, text: str):
+def post_tweet(access_token: str, text: str) -> dict:
     """
     기능:
         - Twitter API 를 이용해 트윗을 작성한다.
@@ -35,6 +35,17 @@ def post_tweet(access_token: str, text: str):
 
     try:
         response = requests.post(url, headers=headers, json=data, timeout=30)
+
+        # HTTP 상태 코드 검증
+        if response.status_code != 200:
+            error_detail = response.json() if response.text else {}
+            return {
+                "success": False,
+                "message": f"트위터 업로드 실패 (HTTP {response.status_code}): {error_detail}",
+                "tweet_id": None,
+                "raw_response": error_detail
+            }
+
         result = response.json()
 
         # 트위터 특성상 실패 시 'errors' 키 포함
