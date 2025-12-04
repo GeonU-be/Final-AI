@@ -15,7 +15,7 @@ class SNSRequest(BaseModel):
 
 
 @router.post("/llm/generate-sns")
-def generate_sns_content(body: SNSRequest):
+def generate_sns_content(body: SNSRequest) -> dict[str, str]:
 
     graph = build_router_graph()
 

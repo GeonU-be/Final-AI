@@ -1,4 +1,5 @@
 from langgraph.graph import StateGraph, END
+from langgraph.graph.graph import CompiledGraph
 from typing import TypedDict
 
 from app.services.llm.workflows.naver_workflow import build_naver_graph
@@ -18,7 +19,7 @@ class RouterState(TypedDict, total=False):
     final_content: str
 
 
-def router_decision(state: RouterState):
+def router_decision(state: RouterState) -> str:
     """
     platform 값에 따라 workflow 다음 경로를 결정하는 Router Node.
     """
@@ -32,24 +33,12 @@ def router_decision(state: RouterState):
         raise ValueError(f"지원하지 않는 플랫폼: {platform}")
 
 
-def build_router_graph():
+def build_router_graph() -> CompiledGraph:
     """
     네이버 + 트위터 통합 Router 그래프 생성
     """
     graph = StateGraph(RouterState)
 
-    # Router Node
-    graph.add_node("router", router_decision)
-
-    # 플랫폼별 Workflow를 서브그래프로 연결
-    graph.add_conditional_edges(
-        source="router",
-        condition=router_decision,
-        path_map={
-            "NAVER_FLOW": "naver_workflow",
-            "TWITTER_FLOW": "twitter_workflow"
-        }
-    )
 
     # 네이버 Workflow 추가
     naver = build_naver_graph()
@@ -59,10 +48,18 @@ def build_router_graph():
     twitter = build_twitter_graph()
     graph.add_node("twitter_workflow", twitter)
 
+    # 진입점에서 직접 조건부 라우팅
+    graph.add_conditional_edges(
+        source="__start__",
+        condition=router_decision,
+        path_map={
+            "NAVER_FLOW": "naver_workflow",
+            "TWITTER_FLOW": "twitter_workflow",
+        }
+    )
+
     # 종료
     graph.add_edge("naver_workflow", END)
     graph.add_edge("twitter_workflow", END)
-
-    graph.set_entry_point("router")
 
     return graph.compile()

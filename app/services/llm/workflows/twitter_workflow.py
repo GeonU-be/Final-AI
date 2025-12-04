@@ -1,6 +1,5 @@
-# app/services/llm/workflows/twitter_graph.py
-
 from langgraph.graph import StateGraph, END
+from langgraph.graph.state import CompiledStateGraph
 from typing import TypedDict
 
 from app.services.llm.prompt_builder import build_prompt
@@ -18,7 +17,7 @@ class TwitterState(TypedDict, total=False):
     final_content: str
 
 
-def build_twitter_graph():
+def build_twitter_graph() -> CompiledStateGraph:
     """
     트위터용 짧은 홍보글 생성 Workflow.
     플랫폼 값은 자동으로 'twitter' 로 지정된다.

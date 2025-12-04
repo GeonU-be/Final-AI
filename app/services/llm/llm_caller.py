@@ -5,7 +5,7 @@ import requests
 
 API_KEY = os.getenv("UPSTAGE_API_KEY")
 
-def call_llm(state):
+def call_llm(state: dict) -> dict[str, str]:
     """
     prompt_builder에서 생성한 prompt를 받아
     Upstage Solar-Pro API에 요청을 보내고
@@ -32,10 +32,17 @@ def call_llm(state):
 
     res = requests.post(
         "https://api.upstage.ai/v1/chat/completions",
-        headers=headers, json=data
+        headers=headers, json=data, timeout=60
     )
 
+    # HTTP 오류 시 예외 발생
+    res.raise_for_status()
+
     result = res.json()
-    text = result["choices"][0]["message"]["content"]
+
+    try:
+        text = result["choice"][0]["message"]["content"]
+    except (KeyError, IndexError) as e:
+        raise ValueError(f"예상치 못한 API 응답 형식: {result}") from e
 
     return {"generated_content": text}

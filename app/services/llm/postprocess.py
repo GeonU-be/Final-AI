@@ -1,5 +1,5 @@
 
-def postprocess(state):
+def postprocess(state: dict) -> dict[str, str]:
     """
     플랫폼별로 LLM의 결과물을 최종 업로드 가능한 형태로 정리.
 
