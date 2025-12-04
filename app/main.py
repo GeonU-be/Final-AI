@@ -1,4 +1,4 @@
-from dataclasses import asdict
+from typing import Coroutine
 import asyncio
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -6,7 +6,20 @@ from app.services.llm.graph import Graph
 from app.classes.models import GraphState
 
 from app.classes.requests import WritePostRequest, UploadPostRequest
+from app.logs import log_error
 from app.config import FASTAPI_ALLOWED_ORIGINS
+
+
+async def run(func: Coroutine, jobId: str):
+    """에러 발생 시 즉시 Java 서버로 에러를 보내줄 수 있도록"""
+    try:
+        await func
+    except Exception as e:
+        log_error(
+            message="에러 발생!",
+            logged_process=f"END | ERROR | {jobId}",
+            submessage=str(e),
+        )
 
 
 def create_app() -> FastAPI:
@@ -27,15 +40,14 @@ def create_app() -> FastAPI:
         # asyncio.create_task로 로직 돌리기
         # => 로직은 돌아가는데 응답이 먼저 들어감
         print("글 작성 로직 실행")
-        print("입력: \n", asdict(request))
+        print("입력: \n", request.json())
         # 그래프 굴리는 그 로직
 
         input = GraphState(
-            keywords=request.keywords,
-            settings=request.llmSettings,
+            keyword=request.keyword, settings=request.llmSettings, jobId=request.jobId
         )
 
-        asyncio.create_task(Graph.ainvoke(input))
+        asyncio.create_task(run(Graph.ainvoke(input), request.jobId))
         return
 
     @app.get("/api/crawler")
@@ -43,7 +55,7 @@ def create_app() -> FastAPI:
         # asyncio.create_task로 로직 돌리기
         # => 로직은 돌아가는데 응답을 먼저 제공함
         print("키워드 호출 로직 실행")
-        # 크롤링 해서
+        # 크롤링 해서 키워드 리스트 갖다 주는 코드
 
         return
 
@@ -52,7 +64,17 @@ def create_app() -> FastAPI:
         # asyncio.create_task로 로직 돌리기
         # => 로직은 돌아가는데 응답을 먼저 제공함
         print("글 업로드 로직 실행")
-        print("입력: \n", asdict(request))
-        #
+        print("입력: \n", request.json())
+        # 글 내용 받아서 업로드 해주는 코드
 
         return
+
+    return app
+
+
+app = create_app()
+
+print("*" * 52)
+print("FastAPI is running on http://localhost:8000")
+print("Checkout Swagger page on http://localhost:8000/docs")
+print("*" * 52)

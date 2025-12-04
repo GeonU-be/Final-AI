@@ -63,11 +63,12 @@ def send_log(
         job_id=job_id,
     )
 
-    body: Dict[str, Any] = asdict(payload)
+    body: Dict[str, Any] = payload.dict()
     client = session or requests.Session()
 
     try:
         # requests.post에 json=을 넘겨 Content-Type과 직렬화를 동시에 처리
+        print(body)
         response = client.post(
             _build_endpoint(),
             json=body,

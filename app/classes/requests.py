@@ -6,7 +6,7 @@ from app.classes.models import LlmSettings, PostData
 class WritePostRequest(BaseModel):
     userId: int
     llmSettings: LlmSettings
-    keywords: list[str]
+    keyword: str
     jobId: str
 
 

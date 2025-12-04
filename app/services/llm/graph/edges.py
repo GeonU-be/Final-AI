@@ -44,8 +44,12 @@ workflow.add_edge("crawling_items_ssadagu_node", "filter_strange_node")
 workflow.add_edge("crawling_items_coupang_node", "filter_strange_node")
 workflow.add_conditional_edges(
     "filter_strange_node",
-    lambda state: "wait" if state.get("need_more_products") else "ready",
-    {"wait": "keyword_join_node", "ready": "product_check"},
+    lambda state: (
+        "ready"
+        if not state.get("need_more_products")
+        else "wait" if not state.get("try_count", 0) > 5 else "stop"
+    ),
+    {"wait": "keyword_join_node", "ready": "product_check", "stop": "job_failed"},
 )
 
 workflow.add_conditional_edges(
