@@ -1,4 +1,4 @@
-from dataclasses import asdict
+from typing import Coroutine
 import asyncio
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -6,7 +6,20 @@ from app.services.llm.graph import Graph
 from app.classes.models import GraphState
 
 from app.classes.requests import WritePostRequest, UploadPostRequest
+from app.logs import log_error
 from app.config import FASTAPI_ALLOWED_ORIGINS
+
+
+async def run(func: Coroutine, jobId: str):
+    """에러 발생 시 즉시 Java 서버로 에러를 보내줄 수 있도록"""
+    try:
+        await func
+    except Exception as e:
+        log_error(
+            message="에러 발생!",
+            logged_process=f"END | ERROR | {jobId}",
+            submessage=str(e),
+        )
 
 
 def create_app() -> FastAPI:
@@ -34,7 +47,7 @@ def create_app() -> FastAPI:
             keyword=request.keyword, settings=request.llmSettings, jobId=request.jobId
         )
 
-        asyncio.create_task(Graph.ainvoke(input))
+        asyncio.create_task(run(Graph.ainvoke(input), request.jobId))
         return
 
     @app.get("/api/crawler")
