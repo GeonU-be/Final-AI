@@ -6,11 +6,11 @@ Playwright를 사용해 한국(KR) 실시간 트렌드 페이지에서 키워드
 
 from __future__ import annotations
 
+import asyncio
 import logging
-import time
 from typing import Dict, List, Optional, Set
 
-from playwright.sync_api import sync_playwright
+from playwright.async_api import async_playwright
 
 logger = logging.getLogger(__name__)
 
@@ -74,7 +74,7 @@ def _normalize_link(href: Optional[str]) -> str:
     return f"https://trends.google.co.kr/{href}"
 
 
-def crawl_google_trends(
+async def crawl_google_trends(
     *,
     headless: bool = True,
     max_trends: int = 80,
@@ -91,56 +91,57 @@ def crawl_google_trends(
     trends: List[Dict[str, str]] = []
     found: Set[str] = set()
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=headless)
-        page = browser.new_page()
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=headless)
+        page = await browser.new_page()
         logger.info("Google Trends 접속: %s", TREND_URL)
 
         try:
-            page.goto(TREND_URL, wait_until="networkidle", timeout=page_timeout_ms)
+            await page.goto(TREND_URL, wait_until="networkidle", timeout=page_timeout_ms)
         except Exception:
             logger.warning("초기 접속 실패, load 이벤트까지 대기 재시도")
-            page.goto(TREND_URL, wait_until="load", timeout=page_timeout_ms)
+            await page.goto(TREND_URL, wait_until="load", timeout=page_timeout_ms)
 
         # 동적 로딩 대기
-        page.wait_for_timeout(8_000)
+        await page.wait_for_timeout(8_000)
 
         # 트렌드 섹션 렌더링 대기
         try:
-            page.wait_for_selector("c-wiz, [jsname], [jscontroller]", timeout=20_000)
+            await page.wait_for_selector("c-wiz, [jsname], [jscontroller]", timeout=20_000)
         except Exception:
             logger.debug("트렌드 섹션 selector 대기 타임아웃")
-        page.wait_for_timeout(5_000)
+        await page.wait_for_timeout(5_000)
 
         # 추가 로드를 위해 스크롤
         for idx in range(20):
-            page.evaluate("window.scrollBy(0, window.innerHeight)")
-            page.wait_for_timeout(2_000)
+            await page.evaluate("window.scrollBy(0, window.innerHeight)")
+            await page.wait_for_timeout(2_000)
             if idx % 5 == 0:
-                page.wait_for_timeout(3_000)
-        page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-        page.wait_for_timeout(3_000)
+                await page.wait_for_timeout(3_000)
+        await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+        await page.wait_for_timeout(3_000)
 
         # 방법 0: 테이블 기반 페이지 네비게이션
-        page.wait_for_timeout(1_000)
+        await page.wait_for_timeout(1_000)
         paged_round = 0
         while len(trends) < max_trends:
             paged_round += 1
             if paged_round > 20:
                 break
-            rows = page.query_selector_all("tbody tr")
+            rows = await page.query_selector_all("tbody tr")
             new_items = 0
             for row in rows:
-                keyword_elem = row.query_selector(".mZ3RIc")
+                keyword_elem = await row.query_selector(".mZ3RIc")
                 if not keyword_elem:
                     continue
-                text = (keyword_elem.inner_text() or "").strip()
+                text = (await keyword_elem.inner_text() or "").strip()
                 if not _valid_text(text, excluded) or text in found:
                     continue
                 link_url = ""
-                link_elem = row.query_selector("a")
+                link_elem = await row.query_selector("a")
                 if link_elem:
-                    link_url = _normalize_link(link_elem.get_attribute("href"))
+                    href = await link_elem.get_attribute("href")
+                    link_url = _normalize_link(href)
                 found.add(text)
                 trends.append({"keyword": text, "link": link_url})
                 new_items += 1
@@ -156,7 +157,7 @@ def crawl_google_trends(
                 "[aria-label*='Next']",
             ):
                 try:
-                    next_btn = page.query_selector(selector)
+                    next_btn = await page.query_selector(selector)
                 except Exception:
                     next_btn = None
                 if next_btn:
@@ -164,25 +165,27 @@ def crawl_google_trends(
             if not next_btn:
                 break
             try:
-                next_btn.click()
-                page.wait_for_timeout(2_000)
+                await next_btn.click()
+                await page.wait_for_timeout(2_000)
             except Exception:
                 break
 
         # 방법 1: 주요 클래스 기반 추출
         if len(trends) < max_trends:
-            for elem in page.query_selector_all(".mZ3RIc"):
+            elems = await page.query_selector_all(".mZ3RIc")
+            for elem in elems:
                 try:
-                    text = (elem.inner_text() or "").strip()
+                    text = (await elem.inner_text() or "").strip()
                 except Exception:
                     continue
                 if not _valid_text(text, excluded) or text in found:
                     continue
                 link_url = ""
                 try:
-                    parent = elem.evaluate_handle("el => el.closest('a')")
+                    parent = await elem.evaluate_handle("el => el.closest('a')")
                     if parent:
-                        link_url = _normalize_link(parent.get_attribute("href"))
+                        href = await parent.get_attribute("href")
+                        link_url = _normalize_link(href)
                 except Exception:
                     pass
                 found.add(text)
@@ -192,10 +195,11 @@ def crawl_google_trends(
 
         # 방법 2: 모든 링크에서 추출
         if len(trends) < max_trends:
-            for link in page.query_selector_all("a"):
+            links = await page.query_selector_all("a")
+            for link in links:
                 try:
-                    href = link.get_attribute("href") or ""
-                    text = (link.inner_text() or "").strip()
+                    href = await link.get_attribute("href") or ""
+                    text = (await link.inner_text() or "").strip()
                 except Exception:
                     continue
                 if not _valid_text(text, excluded) or text in found:
@@ -207,9 +211,10 @@ def crawl_google_trends(
 
         # 방법 3: 모든 텍스트 요소에서 추출
         if len(trends) < max_trends:
-            for elem in page.query_selector_all("div, span, p, h1, h2, h3, h4, h5, h6"):
+            elems = await page.query_selector_all("div, span, p, h1, h2, h3, h4, h5, h6")
+            for elem in elems:
                 try:
-                    raw = (elem.inner_text() or "").strip()
+                    raw = (await elem.inner_text() or "").strip()
                 except Exception:
                     continue
                 if not raw:
@@ -217,25 +222,24 @@ def crawl_google_trends(
                 first_line = raw.split("\n")[0].strip()
                 if not _valid_text(first_line, excluded) or first_line in found:
                     continue
-                link_elem = elem.query_selector("a")
-                link_url = (
-                    _normalize_link(link_elem.get_attribute("href"))
-                    if link_elem
-                    else ""
-                )
+                link_elem = await elem.query_selector("a")
+                link_url = ""
+                if link_elem:
+                    href = await link_elem.get_attribute("href")
+                    link_url = _normalize_link(href)
                 found.add(first_line)
                 trends.append({"keyword": first_line, "link": link_url})
                 if len(trends) >= max_trends:
                     break
 
-        browser.close()
+        await browser.close()
 
     trends = trends[:max_trends]
     logger.info("Google Trends 수집 완료: %s개", len(trends))
     return {"total_trends": len(trends), "trends": trends}
 
 
-def get_trend_keywords(
+async def get_trend_keywords(
     *,
     headless: bool = True,
     max_trends: int = 80,
@@ -245,7 +249,7 @@ def get_trend_keywords(
     """
     Google Trends에서 키워드 텍스트만 리스트로 반환한다.
     """
-    result = crawl_google_trends(
+    result = await crawl_google_trends(
         headless=headless,
         max_trends=max_trends,
         excluded_texts=excluded_texts,
