@@ -1,5 +1,3 @@
-# app/services/llm/prompt_templates.py
-
 # 네이버 블로그용 템플릿
 NAVER_TEMPLATE = """
 당신은 네이버 블로그 홍보글 전문 카피라이터입니다.
