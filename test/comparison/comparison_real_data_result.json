@@ -1,0 +1,964 @@
+{
+  "timestamp": "2025-12-07T14:28:12.749336",
+  "test_settings": {
+    "threshold": 0.4,
+    "data_source": "real_crawled_data",
+    "coupang_file": "C:\\projects\\Final-AI-Fork\\test\\crawler\\products\\coupang_test_result.json",
+    "ssadagu_file": "C:\\projects\\Final-AI-Fork\\test\\crawler\\products\\ssadagu_test_result.json",
+    "coupang_products_count": 5,
+    "ssadagu_products_count": 5
+  },
+  "graphstate": {
+    "products": {
+      "coupang": [
+        {
+          "title": "베이직스 베이직북 16 N-series N95, White, 256GB, 8GB, WIN11 Pro, BB1624FW",
+          "original_price": "",
+          "displayed_price": "548,000원",
+          "product_link": "https://www.coupang.com/vp/products/8416720242?itemId=24340453561&vendorItemId=91355958960&sourceType=srp_product_ads&clickEventId=75fcf820-d32c-11f0-aeaf-21834840c42b&korePlacement=15&koreSubPlacement=1&clickEventId=75fcf820-d32c-11f0-aeaf-21834840c42b&korePlacement=15&koreSubPlacement=1",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/48920532071374-bb3e9663-ab79-4360-bcab-7674fef43853.jpg",
+          "detail_images": [
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111577663619762-2267fedb-faed-43c8-9387-3793d1f2a65c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111581960566564-f244d455-62a3-4081-a55a-ce698a3aca5c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/11527080302421-5b89e944-800a-4b78-94ab-77637b5b580c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111582229338995-4933008d-e269-4d1b-a82f-64e64cd5527f.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/11526420438268-68f7cc00-52cb-4971-ab5b-621e7012e9e7.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111582415248296-544339c6-4d09-4849-8dce-6ec53042323c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111556435381979-7b7b4064-8f3b-450d-9525-f8c37672f25d.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111554979901562-0549b40e-012d-4efd-b8d4-4b6b177f9a11.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/11526427679045-613473e8-d15b-463b-942e-6822ef3d8f4b.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/11527128945142-e6c6cb32-8187-4bdc-b548-c5459872a287.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/138185895228500-49af95ca-0c3b-4fb6-a862-87a5fbb80a24.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/69733892535277-54a29a46-65e9-4764-abcd-e2630279cb3d.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/69737697799747-3f44a613-8ce6-408b-bd5b-3c7d7cf5ae8f.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/11524368617661-66afa534-6a1b-4f1d-b1ab-aa8d97dab7ce.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111556072823976-b59c4524-d07d-497f-afdc-a3ec98da5ae2.jpg"
+          ],
+          "ocr_text": "구매시 참고하세요! ·동일 모델인 경우에도 제품의 제조일자에 따라 라벨에 표기되는 소비효율 또는 소비효율등급의 정보가 달라질 수 있습니다. 제조업체 사정에 따라 최초 신고된 측정결과보다 낮은 소비효율 또는 소비효율등급이 제품에표기될 수 있습니다. coupang | 베이직스는 기본을 지향해요. Windows 11 베이직북만의 심플하고 깔끔한 디자인은 유지하면서 균일한 마감으로 균형감을 갖췄습니다.포트 단자가 있는 측면부는 더욱 매끈해지면서 그립감도 향상되었습니다.기본에 충실한 디자인 덕분에 베이직북16은 어디에나 잘 어울리죠. 글로벌 기업과 영 마이크로소프트, ,인텔 등 세계적인 회사와 함께 만들고 있습니다. M 이 연다 베이직북을 만들어오고 있습니다. 기업과 베이직스의 파트너쉽은 기술의 첨단과 합리적인 가격을 유지할 수 있는 핵심 동력입니다. | 요즘 가전 권음 이유에요. 가격보다 성능에 집중해요. 1920×1200 WUXGA IPS 디J스플레이| 2MP전면카메라,마이크,스피커까지완벽내장되어있어 Microsoft 윈도우 탑재는 기본이죠. 있어요 A/S가 믿음직스러워요 베이직복 16은 기본 1년 서비스를 제공하는 것은 물론 제품 전문가와 다양한 상담을 받을 수 있습니다. 자주묻는질문 Q.MS오피스가 설치되어 되나요? MS오피스는 별도로 제공되지 않습니다. Q.제품 구성품을 알려주세요 해당제의구성품은[노트책본품+전용 충전기+키보드스린] 으로 구성되어 있습니다. Q.듀얼 모니터 연결이 가능한가요? ㄴHOM/C타업포트로듀열모니터 사용가능합니다. Q. C타입 충전이 가능한가요? ㄴ네가능합니다.다만,일반한드폰 충전기로는 전력 부족으로 충전불가하여,명기된이조건 12V 표기,45W 이상출력되는 충전기일 경우 충진이 가능합니다 Q. 접수는 어떻게 진행해야 하나요? ㄴ상당 원활화를 위하여 채널목을동한 상담만 진행하고 있습니다. 카카오플러스친구 베이직스]를 검색하신 뒤 상담원 연결이 가능합니다 [ ]→[정보업력→[입력완료]버튼 클릭후채당 연결해주시면 됩니다 접수는 베이직스채널독을 동해접수해주시면CJ대한동은 액배를 수거하여 본사에서 직접 수리 진행하고 있습니다. 제품 정보. 제명 베이직백16 규격 34.4cm × 24.8cm X2.2cm 디스플레이크기 40.89cm (16.1항5) 디스플레이해상도 1920×1200 WUXGA IPS 무게 1666g CPU Intele Processor N-series N95 GPU Intele UHD Graphics RAM 808 SSD 25608 SSD규격 M.2 2280 os Windows 11 Pro Wifi 24GHz/5GHz 지원 Bluetooth Bluetooth 5.0 전입/소비전력 12V/2.5A 30W 색상 White 배터리용량 7.6V/5000mAh 스피커 80/TW × 2개 USB USB 3.0 × 2개, U58 2.0 × 1개8 HDMI Mini HOM x 178 TYPE-C Type-C (충전가능) 헤드E/DC책 f 3.5mm standard headphone jack 기보드 지원 전면가에라 화소 UsB, BT Expandabie Weed / Wreless 지원 2MP 마우스 민매원 베이직스 주식회사 원신지 중국 ①인증사항 R-R-s2m-BB1624FW xU103391-24003 YU10674-22001",
+          "ocr_text_raw": "구매시 참고하세요! ·동일 모델인 경우에도 제품의 제조일자에 따라 라벨에 표기되는 소비효율 또는 소비효율등급의 정보가 달라질 수 있습니다. 제조업체 사정에 따라 최초 신고된 측정결과보다 낮은 소비효율 또는 소비효율등급이 제품에표기될 수 있습니다. coupang | 베이직스는 기본을 지향해요. Windows 11 베이직북만의 심플하고 깔끔한 디자인은 유지하면서 균일한 마감으로 균형감을 갖췄습니다.포트 단자가 있는 측면부는 더욱 매끈해지면서 그립감도 향상되었습니다.기본에 충실한 디자인 덕분에 베이직북16은 어디에나 잘 어울리죠. 글로벌 기업과 영 마이크로소프트, ,인텔 등 세계적인 회사와 함께 만들고 있습니다. M  이 연다 베이직북을 만들어오고 있습니다. 기업과 베이직스의 파트너쉽은 기술의 첨단과 합리적인 가격을 유지할 수 있는 핵심 동력입니다. | 요즘 가전 권음 이유에요. 가격보다 성능에 집중해요. 1920×1200 WUXGA IPS 디J스플레이| 2MP전면카메라,마이크,스피커까지완벽내장되어있어 Microsoft 윈도우 탑재는 기본이죠. 있어요 A/S가 믿음직스러워요 베이직복 16은 기본 1년보증서비스를 제공하는 것은 물론 제품 전문가와 다양한 상담을 받을 수 있습니다. 자주묻는질문 Q.MS오피스가 설치되어 배송되나요? MS오피스는 별도로 제공되지 않습니다. Q.제품 구성품을 알려주세요 해당제의구성품은[노트책본품+전용 충전기+키보드스린] 으로 구성되어 있습니다. Q.듀얼 모니터 연결이 가능한가요? ㄴHOM/C타업포트로듀열모니터 사용가능합니다. Q. C타입 충전이 가능한가요? ㄴ네가능합니다.다만,일반한드폰 충전기로는 전력 부족으로 충전불가하여,명기된이조건 12V 표기,45W 이상출력되는 충전기일 경우 충진이 가능합니다 Q. AS 접수는 어떻게 진행해야 하나요? ㄴ상당 원활화를 위하여 채널목을동한 상담만 진행하고 있습니다. 카카오플러스친구 베이직스]를 검색하신 뒤 상담원 연결이 가능합니다 [AS문의]→[정보업력→[입력완료]버튼 클릭후채당 연결해주시면 됩니다 AS접수는 베이직스채널독을 동해접수해주시면CJ대한동은 액배를 수거하여 본사에서 직접 수리 진행하고 있습니다. 제품 정보. 제명 베이직백16 규격 34.4cm × 24.8cm X2.2cm 디스플레이크기 40.89cm (16.1항5) 디스플레이해상도 1920×1200 WUXGA IPS 무게 1666g CPU Intele Processor N-series N95 GPU Intele UHD Graphics RAM 808 SSD 25608 SSD규격 M.2 2280 os Windows 11 Pro Wifi 24GHz/5GHz 지원 Bluetooth Bluetooth 5.0 전입/소비전력 12V/2.5A 30W 색상 White 배터리용량 7.6V/5000mAh 스피커 80/TW × 2개 USB USB 3.0 × 2개, U58 2.0 × 1개8 HDMI Mini HOM x 178 TYPE-C Type-C (충전가능) 헤드E/DC책 f 3.5mm standard headphone jack 기보드 지원 전면가에라 화소 UsB, BT Expandabie Weed / Wreless 지원 2MP 마우스 민매원 베이직스 주식회사 원신지 중국 ①인증사항 R-R-s2m-BB1624FW xU103391-24003 YU10674-22001"
+        },
+        {
+          "title": "베이직스 2024 베이직북 14 N-시리즈, BasicWhite, 256GB, 8GB, WIN11 Home, BB1422SS-N",
+          "original_price": "398,000원",
+          "displayed_price": "393,000원",
+          "product_link": "https://www.coupang.com/vp/products/9128826497?itemId=26858848404&vendorItemId=92984476751&pickType=COU_PICK&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=1&rank=1",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/439182976936851-1d1ede57-5c28-4674-8955-62e9d52e6af2.jpg",
+          "detail_images": [
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/8141548359718-5c836386-8b85-4488-9abb-2b23ad2059a0.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/8449539977961-b8b0000a-6c37-4981-98e4-4ab8c6b659b6.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/193164922589265-895936f0-70c0-41e5-8aca-e06c135de45c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/8586950670781-7509e708-d1ba-446b-97cc-c3401cedf766.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/335814861081380-aa6747cb-0231-4abb-9706-f4edc1b7907c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/149445195557987-63f7d0df-e692-45d5-8fa7-82cacbeba0d2.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/307768323390942-b8cb24ad-7a61-42e6-a391-1aafaf65c9ed.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/307768420786165-fdb56585-07b2-4204-a256-ec508cd377c2.png"
+          ],
+          "ocr_text": "기분 좋은 성능 14인치 노트북. 베이직북14. WindowgIt 가장균형잡한노트북베이직북14는 마이크로소프트와인델,그리고베이직스가함께 만든 14.1형 작업을스마트하게지원해줍니다.워드파일을집중해서만들어야 하는 날에도,가법게넷플릭스를즐기고싶은휴식시간에도 노트북이필요할때언제든합리적인가격을 갖춘베이직북14를 만나보세요 intel. 더빨라진 속도 베이직북14. 가격은 그대로 베이직북14는 2023년 출시된 Inte의 N시리즈가 탑재S여 성능이더 강력하게 업그레이드 되었습니다 최대 3.4GH2의 주파수를 가진 CPU로 4코어 4스레드를 가지고 있으며,10mm 공정기술에따라 제조되었죠일상적인 업무와 학습 영상 감상 할수 있고 Adobe Photoshopol나 League of Legend 같은 게임도 무리없이 가능합니다. 업무용노트북이 필요하다면 부족함을 느끼지 못할거에요 한층향상된 성능 먹분에 3~5개의 프로그램을 동시에 실행해도 위{ 가단한 디자인 작업도 중분해요,바쁜 업무 속에서도 베이직불14 | 기이적국4에 더자세히 설명해드릴게요 Point 01. 가볍고 얇으니까. 1.4kg. 무계와 두께는 물론,베젤까지 최소화한 설계로 어떤 곳이라도 당신과 함께 움직일 준비가 되었어요. Point 02. 이어폰 포트 USB-A 3.0 USB-A2.0 SD card 전원포트 i US8-C HDM USB-A 3.0 JSB 3.02개,HDM 등 다양한 포트를 지원합니다. 특히 USB-C type 포트는 보조배터리 충전도 가능합니다. 등전기능을 위해 45W 혹은 6SW의Po기능지원보조행더리필요 point 03. C타입으로 간편하게 충전. 가장 병용적으로 활용되는 국제 표준 규격 | 'bloll 요즘 가전 이유에요. 가격보다 성능에 집중해요. 1920×1200 FHD IPS 디J스플레이| 0.3mp전면 카에라,마이크,스피커까지 완벽 내장되어 있어 부족함 없는 노트북 생활을 약속합니다. Microsoft 윈도우 탑재는 기본이죠. 베이직복14는 Windows11 Home을 탑재하고 있어 평생 사용할 수 있어요. 자주묻는 질문. Q.MS오피스가 설치되어 되나요? -MS오피스는 별도로 제공되지 않습니다. Q.제품 구성품을알려주세요 ㄴ해당제품의 구성품은[노트적본품+전용 중전기+키보드스킨] 으로 구성되어 있습니다 Q. 한컴오피스는 안 주나요? -[한럽 실속대키지]또는 [한럽 가득태키지로 구매한 경우에만 한법오피스영구이용권을드립니다. Q.듀얼 모니터 연결이 가능한가요? ㄴHDM/C타입 포트로듀얼모니터 사용가능합니다. Q. C타입 충전이 가능한가요? ㄴ네가능합니다.다안,일반 했드폰 중진기로는 전력 부족으로 충전불가하여,명기된이조건 12V표기,45W 이상출력되는 중전기일 경우 중전이 가능합니다. Q. 접수는 어떻게 진행해야 하나요? 상담 원할하를 위하여 재널독을 동한 상당안진행하고 있습니다. 카카오플러스 친구 [베이직스]를 검색하신 뒤상딩원 연결이 가능합니다. [ ]→[정보입력]→[입력완료]버튼 클릭 후채딩 접수는 베이직스 채널독을 동해 접수해주시면 CJ대한동운 연결해주시면 됩니다. 먹배를 수거하여 본사에서 직접 수리 진행하고 있습니다. 제품 정보. 제품명 베이직책14 운영제제 Windows 11 Home 프로세서 Intele Processor (NA리[즈) 4 Core/4 Thread,기쁜 170OHz/ CM N스 3.40GHT, 4MB L3 Cache 본제용의 주수는사용환경및 전력관리상태에따라 가반적으로 동적합니다 Lthography: 1onm (Trer 그개학 Intel8 UHD Graphics 16 Execution unts up to 75o MHz 디스플레이 35.8cm (14.19) Anti-glare IPS 광시o각 재널 FHD (1920 × 1080) 케오리 4/8/ 160B (00R4 2666 MT/s) 저장장치 128 / 256 / 512GB SSD (M.2 2280) 얼디미디어 Stereo speaker (w × 20a @80) Front camera (0.3MP) 내장아이크 /0 USB-A 3.0 × 20a, USB-A 2.0 × 1ea USB-C 3.2 × 1oa (Gen 1, PD층전 및 영상출력 지원) HDMI (Ful-sized) × 1ea 3.5mm Standard headphone jack 3.5mm DC-in jack Micro SD (TF card) slot ↓트워트 W-Fi 5, 802.11ac (2.4 /5.0GHz) Buetooth 4.2 업력장치 내장된 키보드 및 터치재드 RF/BT expandabie 우선 아우스 및 기보드 지원 표준 US8 규격에 없는 유선장치 지원 반원 및 배터리 12V DC @ 3A (36W) 백상 B ic White 제조사 Shenzhen NST industry And Trade Co,Ltd 개발 및 판매 베이직스 주식회사 방신지 중국 인중사항 R-R-s2m-B81422SS-N XU103391-25007 YU10674-22001",
+          "ocr_text_raw": "기분 좋은 성능 14인치 노트북. 베이직북14. WindowgIt 가장균형잡한노트북베이직북14는 마이크로소프트와인델,그리고베이직스가함께 만든 14.1형 작업을스마트하게지원해줍니다.워드파일을집중해서만들어야 하는 날에도,가법게넷플릭스를즐기고싶은휴식시간에도 노트북이필요할때언제든합리적인가격을 갖춘베이직북14를 만나보세요 intel. 더빨라진 속도 베이직북14. 가격은 그대로 베이직북14는 2023년 출시된 Inte의 N시리즈가 탑재S여 성능이더 강력하게 업그레이드 되었습니다 최대 3.4GH2의 주파수를 가진 CPU로 4코어 4스레드를 가지고 있으며,10mm 공정기술에따라 제조되었죠일상적인 업무와 학습 영상 감상 할수 있고 Adobe Photoshopol나 League of Legend 같은 게임도 무리없이 가능합니다. 업무용노트북이 필요하다면 부족함을 느끼지 못할거에요 한층향상된 성능 먹분에 3~5개의 프로그램을 동시에 실행해도 위{ 가단한 디자인 작업도 중분해요,바쁜 업무 속에서도 베이직불14 | 기이적국4에 더자세히 설명해드릴게요 Point 01. 가볍고 얇으니까. 1.4kg. 무계와 두께는 물론,베젤까지 최소화한 설계로 어떤 곳이라도 당신과 함께 움직일 준비가 되었어요. Point 02. 이어폰 포트 USB-A 3.0 USB-A2.0 SD card 전원포트 i US8-C HDM USB-A 3.0 JSB 3.02개,HDM 등 다양한 포트를 지원합니다. 특히 USB-C type 포트는 보조배터리 충전도 가능합니다. 등전기능을 위해 45W 혹은 6SW의Po기능지원보조행더리필요 point 03. C타입으로 간편하게 충전. 가장 병용적으로 활용되는 국제 표준 규격 | 'bloll 요즘 가전 이유에요. 가격보다 성능에 집중해요. 1920×1200 FHD IPS 디J스플레이| 0.3mp전면 카에라,마이크,스피커까지 완벽 내장되어 있어 부족함 없는 노트북 생활을 약속합니다. Microsoft 윈도우 탑재는 기본이죠. 베이직복14는 Windows11 Home을 탑재하고 있어 평생 사용할 수 있어요. 자주묻는 질문. Q.MS오피스가 설치되어 배송되나요? -MS오피스는 별도로 제공되지 않습니다. Q.제품 구성품을알려주세요 ㄴ해당제품의 구성품은[노트적본품+전용 중전기+키보드스킨] 으로 구성되어 있습니다 Q. 한컴오피스는 안 주나요? -[한럽 실속대키지]또는 [한럽 가득태키지로 구매한 경우에만 한법오피스영구이용권을드립니다. Q.듀얼 모니터 연결이 가능한가요? ㄴHDM/C타입 포트로듀얼모니터 사용가능합니다. Q. C타입 충전이 가능한가요? ㄴ네가능합니다.다안,일반 했드폰 중진기로는 전력 부족으로 충전불가하여,명기된이조건 12V표기,45W 이상출력되는 중전기일 경우 중전이 가능합니다. Q.AS 접수는 어떻게 진행해야 하나요? 상담 원할하를 위하여 재널독을 동한 상당안진행하고 있습니다. 카카오플러스 친구 [베이직스]를 검색하신 뒤상딩원 연결이 가능합니다. [AS문의]→[정보입력]→[입력완료]버튼 클릭 후채딩 AS접수는 베이직스 채널독을 동해 접수해주시면 CJ대한동운 연결해주시면 됩니다. 먹배를 수거하여 본사에서 직접 수리 진행하고 있습니다. 제품 정보. 제품명 베이직책14 운영제제 Windows 11 Home 프로세서 Intele Processor (NA리[즈) 4 Core/4 Thread,기쁜  170OHz/ CM N스 3.40GHT, 4MB L3 Cache 본제용의 주수는사용환경및 전력관리상태에따라 가반적으로 동적합니다 Lthography: 1onm (Trer 그개학 Intel8 UHD Graphics 16 Execution unts up to 75o MHz 디스플레이 35.8cm (14.19) Anti-glare IPS 광시o각 재널 FHD (1920 × 1080) 케오리 4/8/ 160B (00R4 2666 MT/s) 저장장치 128 / 256 / 512GB SSD (M.2 2280) 얼디미디어 Stereo speaker (w × 20a @80) Front camera (0.3MP) 내장아이크 /0 USB-A 3.0 × 20a, USB-A 2.0 × 1ea USB-C 3.2 × 1oa (Gen 1, PD층전 및 영상출력 지원) HDMI (Ful-sized) × 1ea 3.5mm Standard headphone jack 3.5mm DC-in jack Micro SD (TF card) slot ↓트워트 W-Fi 5, 802.11ac (2.4 /5.0GHz) Buetooth 4.2 업력장치 내장된 키보드 및 터치재드 RF/BT expandabie 우선 아우스 및 기보드 지원 표준 US8 규격에 없는 유선장치 지원 반원 및 배터리 12V DC @ 3A (36W) 백상 Basic White 제조사 Shenzhen NST industry And Trade Co,Ltd 개발 및 판매 베이직스 주식회사 방신지 중국 인중사항 R-R-s2m-B81422SS-N XU103391-25007 YU10674-22001"
+        },
+        {
+          "title": "빅트랙 2024 브이북 14 셀러론 인텔 11세대, 화이트, 256GB, 8GB, WIN11 Home, VIC-LPTP02",
+          "original_price": "219,990원",
+          "displayed_price": "211,190원",
+          "product_link": "https://www.coupang.com/vp/products/8074991230?itemId=22745090662&vendorItemId=89780320659&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=2&rank=2",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/d1dc/cd566d4f3607c75e2ece4172f020886258b822b16e5e66380d38f988181d.jpg",
+          "detail_images": [
+            "https://image11.coupangcdn.com/image/retail/images/3024802402332011-62841791-c665-4362-b954-79ea40a6be17.jpg",
+            "https://image11.coupangcdn.com/image/retail/images/3024802505909908-94be2ee1-6f72-4416-aa49-e1853077447f.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/193297701807268-963c8d85-26a1-4ca3-808e-749370dcb73d.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/407310793979133-348966b9-d605-4a19-9c05-21223d5850b6.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/5959804611750-0b5b9ff5-3cf0-4d74-9e0c-f04ba85b4162.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/407310926797090-bb952895-137e-47e6-9634-95903366d260.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/407310931604071-ac42ae36-36ad-4389-9d26-5b89b7a606b9.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/1009696311535923-f14c67c2-6525-4558-83d0-4cf36d9d5bbf.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/1009696440455161-0843695f-fcd7-4046-b38c-b5ff006f01be.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/1113821452629379-2d422e30-d2ee-420b-b2ee-880945334331.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/407310940158930-7914fde3-0902-4593-8794-5d6eef41035d.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/1009696361859703-ef04716c-1949-4bb6-a926-24bd836fcbea.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/1113821431753975-6670933a-4494-4f89-ba35-743b876fb8a9.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/3008220513976608-f9259e54-13ca-4abf-8e1d-87156d0a0d17.jpg"
+          ],
+          "ocr_text": "|YoA 메이이미교 머코이 | 이 Bureau Verit 에서6차검사 5차전수검사 글로벌 유수 검수기관 빅트랙 QC엔지니어 HRIIRIS AENBNI 양산품 샘플링 검사 양산품 샘플링 검사 제조사3차 빅트랙 4차 2차 부품 검수 부품검수 제조사1차 6단계양산 품질 관리 양산&사후품질관리 | 해외 수입상품도 로켓 래 쿠팡 수입상품 주문 로켓 해외 수입상품도 로켓 으로 오늘 주문하면 내일 해요(※일부 상품 제외) 쿠팡이 직접수입합니다 국내 안전성 기준과 검사 기준을 지켜 믿을 수 있어요 가격DOWN 유통 단계를 줄여 거품 없는 합리적인 가격 쿠팡이 직접써보고 선택 식품,뷰티,가전 등 다양한 카테고리 셀렉션 대형가전 로켓설치 로켓설치혜택은물론,국내A/S및사후관리를받을수 있어요",
+          "ocr_text_raw": "|YoA 메이이미교 머코이 | 이 Bureau Veritas에서6차검사 5차전수검사 글로벌 유수 검수기관 빅트랙 QC엔지니어 HRIIRIS AENBNI 양산품 샘플링 검사 양산품 샘플링 검사 제조사3차 빅트랙 4차 2차 부품 검수 부품검수 제조사1차 6단계양산 품질 관리 양산&사후품질관리 | 해외 수입상품도 로켓배송 래 쿠팡 수입상품 주문 로켓배송 도착 해외 수입상품도 로켓배송으로 오늘 주문하면 내일 도착해요(※일부 상품 제외) 쿠팡이 직접수입합니다 국내 안전성 기준과 검사 기준을 지켜 믿을 수 있어요 가격DOWN 유통 단계를 줄여 거품 없는 합리적인 가격 쿠팡이 직접써보고 선택 식품,뷰티,가전 등 다양한 카테고리 셀렉션 대형가전 로켓설치 로켓설치혜택은물론,국내A/S및사후관리를받을수 있어요"
+        },
+        {
+          "title": "LG전자 2024 울트라 PC 15 코어i3 인텔 13세대, 타이탄실버, 256GB, 8GB, WIN11 Home, 15U50T-GR3CK",
+          "original_price": "909,000원",
+          "displayed_price": "759,000원",
+          "product_link": "https://www.coupang.com/vp/products/8429938998?itemId=24385368371&vendorItemId=91400419547&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=3&rank=3",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/554811170277220-2ad27899-6102-4c4c-b1bc-9343321c5757.jpg",
+          "detail_images": [
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/rs_quotation_api/pm6fykqb/ff59e4c2bfcd4aefbdff29986960babe.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/303862711739717-4124bb22-c40c-47c3-a49f-f7de116e7c3d.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/449827417235145-4a72559f-1c56-4fd7-aaa5-13f18775e50d.JPG",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/449827585665898-17c439fa-da0e-403e-a6b4-866484de1547.JPG",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/462453266898586-30969d48-b312-4503-bc65-51d1e791bf9a.jpg"
+          ],
+          "ocr_text": "LG전자 인증 정품 ·LG전자와 직접 거래를통해 판매됩니다. LG전자 서비스 센터를통해A/S를이용할 수있습니다. Tel.1544-7777 coupang ‘ LG | 2U Y C sts3/K 국k 이 xx공 VEC V VocA | a5 운영체제 Wndows 11 Home (64 =) 디스플레이 화연크기(cm) 39.6 해상도 FHO (1920 × 1080) 제널영대 PS LCD 디스플어I (Arti gare) 프로세서 CPU Intel8 13세대 3-1315U 로세서 CUB (GaHe) 1.2 2 보 (GHc) 4.5 L3개시예오리 (M8) 10 해인어요적 어요릭 용장 (GB) 8 메모리종류 DOR4 3200MHz 1(SO-DMM) 얼티미디어 그래적 인털8 UHO Graphies 그래육어요리 내장형 Doby Aemos 오디오사운드 Stereo speakers (1.5 W × 2) 영정 H0범경 저장장치 ssp +1(PCle 4.0x4) 256 G8 (M2, NVMe*) 입력장치 키보드 기보드사이즈 97가 (3자 전용 ) 터지페드 터치패드 파월 AC(W) 65 배터4(We) 51 (4를 이은 배터리) 크기/무게 크기 (WH_mm) 360 × 238 (mm) 18.9 - 19.4 무계(g) 억1,700 네트워크 무선원 (W-Fi 6, 2x2, BT Combo) Intel Wreless-AX203 블루스 O(5.2) 유선원 Gigabit (했어 별) 기다 HOM, USB Tyoe-A (USB 3.2 Gen 1x1) USB Type-A(US8 2.0) Port USBType-Cx2 (USB 3.2 Gen 2x1, USB P0 Support). Hp-Out (4Pole Headset US type) PC X LG Smart sistant LG UpdateSRecovery LG PC Manuals LG Securty Guard LG Quick Gude LG On Screen Display 3 제공SW LG gram Lnk Google Quick Share Doloy Atmes Mcrosoft 365 (30 Days Tral) McAfee Uve Sate (30 Days Tral) LG PC Care 공공W-F 색상 다이한 실어 보안시스템 X 액세서리 X 노트북 (우처) X ·제품사생은 성능 생상을 위해사전여고 비고 없이 변경될수 있습니다 무거는 저용구성및제조여건에 따락 달락수있습니다 기본정보 용명및 모델명 노(1SU5OT) KC인증필유무 204 청격전압 100-240 V, 50/60 He 동일오델의 출시년일 2024년 10월 제조자 LG전(주) 제조국 중국 결음하자 등어 따른 소비자력하어 대해서는 용들 기준 소비지생해경기준(소비자기본법제16조) 에따락모상 가능 책자와 전화번호 LG스센/ 1544-7777",
+          "ocr_text_raw": "LG전자 인증 정품 ·LG전자와 직접 거래를통해 판매됩니다. LG전자 서비스 센터를통해A/S를이용할 수있습니다. Tel.1544-7777 coupang ‘ LG | 2U Y C sts3/K 국k 이 xx공 VEC V VocAAs | a5 운영체제 Wndows 11 Home (64 =) 디스플레이 화연크기(cm) 39.6 해상도 FHO (1920 × 1080) 제널영대 PS LCD 디스플어I (Arti gare) 프로세서 CPU Intel8 13세대 3-1315U 로세서 CUB (GaHe) 1.2 2 보 (GHc) 4.5 L3개시예오리 (M8) 10 해인어요적 어요릭 용장 (GB) 8 메모리종류 DOR4 3200MHz 1(SO-DMM) 얼티미디어 그래적 인털8 UHO Graphies 그래육어요리 내장형 Doby Aemos 오디오사운드 Stereo speakers (1.5 W × 2) 영정 H0범경 저장장치 ssp +1(PCle 4.0x4) 256 G8 (M2, NVMe*) 입력장치 키보드 기보드사이즈 97가 (3자 전용 ) 터지페드 터치패드 파월 AC(W) 65 배터4(We) 51 (4를 이은 배터리) 크기/무게 크기 (WH_mm) 360 × 238 (mm) 18.9 - 19.4 무계(g) 억1,700 네트워크 무선원 (W-Fi 6, 2x2, BT Combo) Intel Wreless-AX203 블루스 O(5.2) 유선원 Gigabit (했어 별) 기다 HOM, USB Tyoe-A (USB 3.2 Gen 1x1) USB Type-A(US8 2.0) Port USBType-Cx2 (USB 3.2 Gen 2x1, USB P0 Support). Hp-Out (4Pole Headset US type) PC X LG Smart Assistant LG UpdateSRecovery LG PC Manuals LG Securty Guard LG Quick Gude LG On Screen Display 3 제공SW LG gram Lnk Google Quick Share Doloy Atmes Mcrosoft 365 (30 Days Tral) McAfee Uve Sate (30 Days Tral) LG PC Care 공공W-F 색상 다이한 실어 보안시스템 X 액세서리 X 노트북 (우처) X ·제품사생은 성능 생상을 위해사전여고 비고 없이 변경될수 있습니다 무거는 저용구성및제조여건에 따락 달락수있습니다 기본정보 용명및 모델명 노(1SU5OT) KC인증필유무 204 청격전압 100-240 V, 50/60 He 동일오델의 출시년일 2024년 10월 제조자 LG전(주) 제조국 중국 결음하자 등어 따른 소비자력하어 대해서는 용들보증기준 소비지생해경기준(소비자기본법제16조) 에따락모상 가능 AS 책자와 전화번호 LG스센/ 1544-7777"
+        },
+        {
+          "title": "JUMPER 2025 노트북 16인치 화면대형 256GB SSD+128GB eMMc 12GB RAM office 365 셀러론5305U 사무용 WIN11 home 파랑, S7max 5305U, 384GB",
+          "original_price": "1,540,000원",
+          "displayed_price": "391,020원",
+          "product_link": "https://www.coupang.com/vp/products/8758594149?itemId=26948231325&vendorItemId=93917328628&sourceType=srp_product_ads&clickEventId=75fd1f30-d32c-11f0-a04c-1ef2f55f91fc&korePlacement=15&koreSubPlacement=5&clickEventId=75fd1f30-d32c-11f0-a04c-1ef2f55f91fc&korePlacement=15&koreSubPlacement=5",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/149d/d7b17af7b44d63fa1e4f8c6e19ef945da958f32c25088c5eb7710d26f807.jpg",
+          "detail_images": [
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/fbd2/d3c35703da1f9d6b7e8fbcf1ba5454bafff676f9062226d0a5e75b439f06.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/69ac/bd4f09908478ee0057535c1b16193d7410eca7ecd8b2ea34e312a9059fad.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/a333/b8a10b4383214294b233030beb69fb165c129cfbea466446269cda93a048.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/f758/5040139777faf82014080fea0619fc64abe7524bed65614bf087286b619b.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/b5a7/e1909f27cad6601541f86edf69e78ab9c7b53a2bcbcab3b3bbe8280d87c0.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/07b5/5ecd1598fc2acf679ca6da961c4cef9006b3e4724c1b0f9e7c2a4a2863bb.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/35ba/69cd6bf5d136f386237d9a698b672e2b93ad1c80ad461de3a0fa368ff25c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/f490/0efcc1b465fd1ee19bc102e990dc3739ae0df92034a454f1e842d8b4c76c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/78cd/3308256294d8874bff64317e4122965c9056d891d0023f11a2e50c2f1f1d.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/1e88/2cab967c7a3e108accffe6c6b106b842bcb1453835eeb44c7a777e8c77af.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/b342/5ac38ff8aacd51dac7b38510223c23a07d217e18a3a76d83b03622ce1b0c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/b17d/a706d947875376f0915e89e53a2d340d283389072961f2f237a6d3fc639b.jpg"
+          ],
+          "ocr_text": "풀사이즈 키보드 대면적 터치패드, 풀 레인지 누름, 마우스 없이도 모든 것을 제어할 수 있습니다. 40% | 한국어 키보드 커버 포함 Es4 A K AY Delete Prtc Pauso noen 4 0lb 00 144 F/ 0 % & Backspace Num 2 3 5 6 7 8 E B W x E π R ㄲ T ㅆ L O ㅖ L 8 9 Tab ㅛ H W H x Wom4 PyUp A S D F G H K Enter 4 6 Caps lock O 2 ㅎ ㅔ t < > Z × C V B N M V > ? 2 3 Shife Ⅱ π ^ ^ E X T End Pg0n Entet Fn : 한 한자 L V > 0 AIt B Oel",
+          "ocr_text_raw": "풀사이즈 키보드 대면적 터치패드, 풀 레인지 누름, 마우스 없이도 모든 것을 제어할 수 있습니다. 40% | 한국어 키보드 커버 포함 Es4 A K AY Delete Prtc Pauso noen 4 0lb 00 144 F/ 0 % & Backspace Num 2 3 5 6 7 8 E B W x E π R ㄲ T ㅆ L O ㅖ L 8 9 Tab ㅛ H W H x Wom4 PyUp A S D F G H K Enter 4 6 Caps lock O 2 ㅎ ㅔ t < > Z × C V B N M V > ? 2 3 Shife Ⅱ π ^ ^ E X T End Pg0n Entet Fn : 한 한자 L V > 0 AIt B Oel"
+        }
+      ],
+      "ssadagu": [
+        {
+          "title": "N95 고급형 15.6inch 노트북 지문 인식 해제 크로스보더",
+          "price": "330,430원",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=894979810606&ss_tx=컴퓨터",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01vRzqYw1VP0HsuJ0IZ_!!2214200952644-0-cib.jpg",
+          "detail_specs": {
+            "상표": "아이오파/아이오파",
+            "모델": "AP156PC01",
+            "품목 번호": "AP156PC01",
+            "시장 출시 시간": "2023",
+            "공급 카테고리": "스팟상품",
+            "브랜드 지역": "국내",
+            "CPU 유형": "intel",
+            "CPU 주파수": "기계를 보세요",
+            "하드 드라이브 용량": "선택 사항",
+            "광학 플로피 드라이브 위치": "광학 드라이브 없음",
+            "화면 크기": "15.6inch",
+            "그래픽 카드": "통합 그래픽",
+            "무선 네트워크 카드": "무선 네트워크 카드가 있습니다",
+            "해결책": "풀 HD(1920x1080)",
+            "운영 체제": "win10/win11/Chrome OS",
+            "터치스크린 여부": "비터치",
+            "두께": "일반 두께(>25mm)",
+            "배터리 수명": "5~7시간",
+            "제품 크기": "15.6",
+            "무게": "1.5-2.0KG",
+            "OEM": "OEM 가능",
+            "가장 빠른 배송 시간": "8~15일",
+            "프록시 가입 지원 여부": "지원하다",
+            "판매 후 유형": "3개 보증 저장",
+            "보증": "1 년",
+            "송장": "송장 제공",
+            "포장 목록": "포장 참조",
+            "3C 인증서 번호": "2025200902000005",
+            "비디오 메모리 용량": "선택 사항",
+            "색상": "N95+32GB 실행+1TB 솔리드 스테이트",
+            "라이센스가 부여된 개인 상표가 있습니다.": "예",
+            "에너지 효율 수준": "레벨 1",
+            "에너지효율등록번호": "20250221-CEL0272016-419705",
+            "유형": "얇고 가벼운 휴대용 노트북"
+          }
+        },
+        {
+          "title": "16G 512G 태블릿 PC 패드 프로 Netcom 5G 안드로이드 오피스 엔터테인먼트 게임 학습 기계 2 in 1",
+          "price": "38,530원",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=802774376104&ss_tx=컴퓨터",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01SfSTgZ1pd0aT95eEO_!!2218003985382-0-cib.jpg",
+          "detail_specs": {
+            "모델": "T50-5G",
+            "항목 번호.": "T50-5G",
+            "시장에 시간": "2024",
+            "소스 카테고리": "재고",
+            "운영 체제": "기타 운영 체제",
+            "프로세서": "MTK",
+            "프로세서 주파수": "다른 주요 주파수",
+            "저장 유형": "다른 저장 유형",
+            "하드 디스크 용량": "500GB",
+            "화면 크기": "10.1 인치",
+            "카메라": "3 개의 전면 후면 카메라",
+            "블루투스": "지원",
+            "통신 기능": "지원 전화",
+            "네트워크 유형": "모든 Netcom 4G5G/WiFi",
+            "내장 유도": "지능형 중력 유도",
+            "프로세서 코어": "여덟 코어",
+            "지구력": "9 시간 이상",
+            "추가 기능": "기타",
+            "언어": "기타",
+            "재료/프로세스": "금속 유리",
+            "제품 크기": "243mm*162.4mm*7.9m",
+            "무게": "0.8k",
+            "처리 사용자 정의": "예",
+            "인쇄 된 로고": "예",
+            "에이전트에 가입 지원 여부": "지원",
+            "가장 빠른 배송 시간": "1-3 일",
+            "송장": "의사 소통 필요",
+            "판매 후 유형": "매장 보증",
+            "패킹 리스트": "전체 패키지",
+            "3C 인증서 번호": "2022010902489181",
+            "색상": "블랙 실버 [재생 속도 분할 화면 버전]]",
+            "메모리 용량": "16G 실행 1TB 메모리 [1024G 총] 강하게 추천 [패키지 4]",
+            "주요 하류 플랫폼": "기타",
+            "주요 판매 지역": "기타",
+            "라이센스 개인 상표": "예",
+            "국경 간 수출의 원천이 독점적인지 여부": "예",
+            "통신 유형": "플러그 가능 카드",
+            "통신 장비 액세스 라이센스 번호": "17-G990-223329",
+            "라디오 전송 장비 유형 승인 코드": "202215597",
+            "유형": "휴대 전화 태블릿"
+          }
+        },
+        {
+          "title": "4-in-1 터치스크린 노트북 14inch PC 태블릿 2-in-1 국경 간 비즈니스 오피스 얇고 가벼운 노트북",
+          "price": "470,070원",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=895796617378&ss_tx=컴퓨터",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01sW8iM51q7hCrxcEO8_!!2219369275449-0-cib.jpg",
+          "detail_specs": {
+            "모델": "LQ140S",
+            "품목 번호": "LQ140S",
+            "시장 출시 시간": "2023",
+            "공급 카테고리": "현물 상품",
+            "브랜드 지역": "국내 생산",
+            "CPU 유형": "셀러론/셀러론",
+            "CPU 주파수": "3.4",
+            "하드 드라이브 용량": "선택 사항",
+            "광학 플로피 드라이브 위치": "광학 드라이브 없음",
+            "화면 크기": "14inch",
+            "그래픽 카드": "통합 그래픽",
+            "무선 네트워크 카드": "무선 네트워크 카드가 있습니다",
+            "해결하다": "1920*1200",
+            "운영 체제": "WIN11",
+            "터치스크린인가요?": "PC 태블릿 2-in-1",
+            "두께": "휴대성이 좋고 얇음(17.5mm-21mm)",
+            "배터리 수명": "5~7시간",
+            "제품 크기": "14inch",
+            "무게": "1.5-2.0KG",
+            "OEM": "OEM 가능",
+            "가장 빠른 배송 시간": "1~3일",
+            "프록시 가입 지원 여부": "지원하다",
+            "애프터 서비스 유형": "매장 3개 보증",
+            "보증": "1 년",
+            "송장": "송장 제공 없음",
+            "포장 목록": "컴퓨터, 설명서, 충전기",
+            "색상": "은",
+            "메모리 용량": "16G+1TB SSD",
+            "주요 다운스트림 플랫폼": "다른",
+            "주요 판매지역": "다른",
+            "라이센스가 부여된 개인 상표가 있습니다.": "아니요",
+            "국경 간 수출을 위한 독점 공급원이 있습니까?": "예",
+            "에너지 효율 등급": "없음",
+            "특허받은 소스인가요?": "아니요",
+            "유형": "2 in 1 컴퓨터"
+          }
+        },
+        {
+          "title": "TK 폭발성 어린이 태블릿 IPS 화면 IWAWA 라이브 국경 전자 상거래 선물 어린이 태블릿 7 인치",
+          "price": "22,930원",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=859954903986&ss_tx=컴퓨터",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01WioJ3V1O1uvuafblp_!!938681646-0-cib.jpg",
+          "detail_specs": {
+            "브랜드": "중립",
+            "모델": "Q8",
+            "품목 번호": "YJ-Q8",
+            "시장 출시 시간": "2024",
+            "공급 카테고리": "스팟",
+            "운영 체제": "ANDROID",
+            "프로세서": "MTK",
+            "프로세서 주파수": "1.5GHz",
+            "저장 유형": "플래시 메모리",
+            "하드 드라이브 용량": "8GB",
+            "화면 크기": "7inch",
+            "카메라": "300k 픽셀",
+            "블루투스": "지원하다",
+            "통신 기능": "지원되지 않음",
+            "네트워크 유형": "WIFI",
+            "내장 유도": "지능형 중력 감지",
+            "프로세서 코어": "4개 코어",
+            "배터리 수명": "5시간 미만",
+            "추가 기능": "IPS 화면",
+            "언어": "중국어 간체",
+            "재료/공예": "플라스틱 껍질",
+            "제품 크기": "18CM*12CM*0.7cm",
+            "무게": "베어메탈 0.27",
+            "처리 및 맞춤화": "예",
+            "인쇄된 로고": "할 수 있다",
+            "에이전트 가입을 지원합니까?": "지원하다",
+            "가장 빠른 배송 시간": "1~3일",
+            "송장": "송장은 제공되지 않습니다",
+            "판매 후 유형": "전국 공동보증",
+            "포장 목록": "박스, 데이터케이블, 충전기, OTG케이블, 설명서",
+            "3C 인증서 번호": "2024011606610568",
+            "색깔": "검은색",
+            "메모리 용량": "MTK 6735 1/16G 7.0 시스템",
+            "주요 다운스트림 플랫폼": "LAZADA",
+            "주요 판매지역": "중동",
+            "라이센스가 있는 개인 브랜드가 있습니다.": "아니요",
+            "국경 간 수출 전용 공급 여부": "예",
+            "통신 유형": "카드를 삽입할 수 없습니다",
+            "특허 출처 여부": "아니요",
+            "무선 송신 장비 모델 승인 코드": "123",
+            "유형": "선물 태블릿"
+          }
+        },
+        {
+          "title": "Puia70 태블릿 울트라 HD 4K 눈 보호 전체 화면 5g 풀 넷콤 학생 사무실 게임 그리기 온라인 수업",
+          "price": "54,580원",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=851908583470&ss_tx=컴퓨터",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01LgDGjD1Wn6fRzcSjn_!!2215641912832-0-cib.jpg",
+          "detail_specs": {
+            "브랜드": "지메이파이",
+            "품목 번호": "Y3",
+            "시장 출시 시간": "2024년",
+            "공급 카테고리": "스팟",
+            "운영 체제": "ANDROID",
+            "프로세서": "기타 프로세서",
+            "프로세서 주파수": "기타 주요 주파수",
+            "저장 유형": "솔리드 스테이트 드라이브",
+            "하드 드라이브 용량": "500GB",
+            "화면 크기": "다른 크기",
+            "카메라": "듀얼 카메라",
+            "블루투스": "지원하다",
+            "통신 기능": "지원 전화",
+            "네트워크 유형": "전체 넷콤 5G+WiFi",
+            "내장 유도": "지능형 중력 감지",
+            "프로세서 코어": "8개 코어",
+            "배터리 수명": "9시간 이상",
+            "추가 기능": "망막 화면",
+            "언어": "중국어 번체",
+            "재료/공예": "고정밀 CNC",
+            "제품 크기": "12inch",
+            "무게": "1.25",
+            "처리 및 맞춤화": "예",
+            "인쇄된 로고": "할 수 있다",
+            "에이전트 가입을 지원합니까?": "지원하다",
+            "가장 빠른 배송 시간": "1~3일",
+            "송장": "송장 제공",
+            "판매 후 유형": "전국 공동보증",
+            "포장 목록": "호스트 + 액세서리 + 선물",
+            "3C 인증서 번호": "2022201606000228",
+            "색깔": "P34 로컬 골드",
+            "메모리 용량": "16G 실행 + 1024G 메모리/상위 버전에는 Bluetooth 마우스, 키보드, 가죽 케이스 스타일러스가 함께 제공됩니다.",
+            "라이센스가 있는 개인 브랜드가 있습니다.": "예",
+            "국경 간 수출 전용 공급 여부": "아니요",
+            "통신 유형": "삽입 가능한 카드",
+            "통신장비망 접속 허가번호": "17-G682-223168",
+            "특허 출처 여부": "아니요",
+            "무선 송신 장비 모델 승인 코드": "2024023",
+            "유형": "엔터테인먼트 태블릿"
+          }
+        }
+      ]
+    },
+    "filtered_products": [
+      {
+        "mall": "coupang",
+        "items": [
+          {
+            "title": "베이직스 베이직북 16 N-series N95, White, 256GB, 8GB, WIN11 Pro, BB1624FW",
+            "original_price": "",
+            "displayed_price": "548,000원",
+            "product_link": "https://www.coupang.com/vp/products/8416720242?itemId=24340453561&vendorItemId=91355958960&sourceType=srp_product_ads&clickEventId=75fcf820-d32c-11f0-aeaf-21834840c42b&korePlacement=15&koreSubPlacement=1&clickEventId=75fcf820-d32c-11f0-aeaf-21834840c42b&korePlacement=15&koreSubPlacement=1",
+            "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/48920532071374-bb3e9663-ab79-4360-bcab-7674fef43853.jpg",
+            "detail_images": [
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111577663619762-2267fedb-faed-43c8-9387-3793d1f2a65c.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111581960566564-f244d455-62a3-4081-a55a-ce698a3aca5c.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/11527080302421-5b89e944-800a-4b78-94ab-77637b5b580c.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111582229338995-4933008d-e269-4d1b-a82f-64e64cd5527f.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/11526420438268-68f7cc00-52cb-4971-ab5b-621e7012e9e7.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111582415248296-544339c6-4d09-4849-8dce-6ec53042323c.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111556435381979-7b7b4064-8f3b-450d-9525-f8c37672f25d.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111554979901562-0549b40e-012d-4efd-b8d4-4b6b177f9a11.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/11526427679045-613473e8-d15b-463b-942e-6822ef3d8f4b.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/11527128945142-e6c6cb32-8187-4bdc-b548-c5459872a287.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/138185895228500-49af95ca-0c3b-4fb6-a862-87a5fbb80a24.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/69733892535277-54a29a46-65e9-4764-abcd-e2630279cb3d.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/69737697799747-3f44a613-8ce6-408b-bd5b-3c7d7cf5ae8f.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/11524368617661-66afa534-6a1b-4f1d-b1ab-aa8d97dab7ce.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/111556072823976-b59c4524-d07d-497f-afdc-a3ec98da5ae2.jpg"
+            ],
+            "ocr_text": "구매시 참고하세요! ·동일 모델인 경우에도 제품의 제조일자에 따라 라벨에 표기되는 소비효율 또는 소비효율등급의 정보가 달라질 수 있습니다. 제조업체 사정에 따라 최초 신고된 측정결과보다 낮은 소비효율 또는 소비효율등급이 제품에표기될 수 있습니다. coupang | 베이직스는 기본을 지향해요. Windows 11 베이직북만의 심플하고 깔끔한 디자인은 유지하면서 균일한 마감으로 균형감을 갖췄습니다.포트 단자가 있는 측면부는 더욱 매끈해지면서 그립감도 향상되었습니다.기본에 충실한 디자인 덕분에 베이직북16은 어디에나 잘 어울리죠. 글로벌 기업과 영 마이크로소프트, ,인텔 등 세계적인 회사와 함께 만들고 있습니다. M 이 연다 베이직북을 만들어오고 있습니다. 기업과 베이직스의 파트너쉽은 기술의 첨단과 합리적인 가격을 유지할 수 있는 핵심 동력입니다. | 요즘 가전 권음 이유에요. 가격보다 성능에 집중해요. 1920×1200 WUXGA IPS 디J스플레이| 2MP전면카메라,마이크,스피커까지완벽내장되어있어 Microsoft 윈도우 탑재는 기본이죠. 있어요 A/S가 믿음직스러워요 베이직복 16은 기본 1년 서비스를 제공하는 것은 물론 제품 전문가와 다양한 상담을 받을 수 있습니다. 자주묻는질문 Q.MS오피스가 설치되어 되나요? MS오피스는 별도로 제공되지 않습니다. Q.제품 구성품을 알려주세요 해당제의구성품은[노트책본품+전용 충전기+키보드스린] 으로 구성되어 있습니다. Q.듀얼 모니터 연결이 가능한가요? ㄴHOM/C타업포트로듀열모니터 사용가능합니다. Q. C타입 충전이 가능한가요? ㄴ네가능합니다.다만,일반한드폰 충전기로는 전력 부족으로 충전불가하여,명기된이조건 12V 표기,45W 이상출력되는 충전기일 경우 충진이 가능합니다 Q. 접수는 어떻게 진행해야 하나요? ㄴ상당 원활화를 위하여 채널목을동한 상담만 진행하고 있습니다. 카카오플러스친구 베이직스]를 검색하신 뒤 상담원 연결이 가능합니다 [ ]→[정보업력→[입력완료]버튼 클릭후채당 연결해주시면 됩니다 접수는 베이직스채널독을 동해접수해주시면CJ대한동은 액배를 수거하여 본사에서 직접 수리 진행하고 있습니다. 제품 정보. 제명 베이직백16 규격 34.4cm × 24.8cm X2.2cm 디스플레이크기 40.89cm (16.1항5) 디스플레이해상도 1920×1200 WUXGA IPS 무게 1666g CPU Intele Processor N-series N95 GPU Intele UHD Graphics RAM 808 SSD 25608 SSD규격 M.2 2280 os Windows 11 Pro Wifi 24GHz/5GHz 지원 Bluetooth Bluetooth 5.0 전입/소비전력 12V/2.5A 30W 색상 White 배터리용량 7.6V/5000mAh 스피커 80/TW × 2개 USB USB 3.0 × 2개, U58 2.0 × 1개8 HDMI Mini HOM x 178 TYPE-C Type-C (충전가능) 헤드E/DC책 f 3.5mm standard headphone jack 기보드 지원 전면가에라 화소 UsB, BT Expandabie Weed / Wreless 지원 2MP 마우스 민매원 베이직스 주식회사 원신지 중국 ①인증사항 R-R-s2m-BB1624FW xU103391-24003 YU10674-22001",
+            "ocr_text_raw": "구매시 참고하세요! ·동일 모델인 경우에도 제품의 제조일자에 따라 라벨에 표기되는 소비효율 또는 소비효율등급의 정보가 달라질 수 있습니다. 제조업체 사정에 따라 최초 신고된 측정결과보다 낮은 소비효율 또는 소비효율등급이 제품에표기될 수 있습니다. coupang | 베이직스는 기본을 지향해요. Windows 11 베이직북만의 심플하고 깔끔한 디자인은 유지하면서 균일한 마감으로 균형감을 갖췄습니다.포트 단자가 있는 측면부는 더욱 매끈해지면서 그립감도 향상되었습니다.기본에 충실한 디자인 덕분에 베이직북16은 어디에나 잘 어울리죠. 글로벌 기업과 영 마이크로소프트, ,인텔 등 세계적인 회사와 함께 만들고 있습니다. M  이 연다 베이직북을 만들어오고 있습니다. 기업과 베이직스의 파트너쉽은 기술의 첨단과 합리적인 가격을 유지할 수 있는 핵심 동력입니다. | 요즘 가전 권음 이유에요. 가격보다 성능에 집중해요. 1920×1200 WUXGA IPS 디J스플레이| 2MP전면카메라,마이크,스피커까지완벽내장되어있어 Microsoft 윈도우 탑재는 기본이죠. 있어요 A/S가 믿음직스러워요 베이직복 16은 기본 1년보증서비스를 제공하는 것은 물론 제품 전문가와 다양한 상담을 받을 수 있습니다. 자주묻는질문 Q.MS오피스가 설치되어 배송되나요? MS오피스는 별도로 제공되지 않습니다. Q.제품 구성품을 알려주세요 해당제의구성품은[노트책본품+전용 충전기+키보드스린] 으로 구성되어 있습니다. Q.듀얼 모니터 연결이 가능한가요? ㄴHOM/C타업포트로듀열모니터 사용가능합니다. Q. C타입 충전이 가능한가요? ㄴ네가능합니다.다만,일반한드폰 충전기로는 전력 부족으로 충전불가하여,명기된이조건 12V 표기,45W 이상출력되는 충전기일 경우 충진이 가능합니다 Q. AS 접수는 어떻게 진행해야 하나요? ㄴ상당 원활화를 위하여 채널목을동한 상담만 진행하고 있습니다. 카카오플러스친구 베이직스]를 검색하신 뒤 상담원 연결이 가능합니다 [AS문의]→[정보업력→[입력완료]버튼 클릭후채당 연결해주시면 됩니다 AS접수는 베이직스채널독을 동해접수해주시면CJ대한동은 액배를 수거하여 본사에서 직접 수리 진행하고 있습니다. 제품 정보. 제명 베이직백16 규격 34.4cm × 24.8cm X2.2cm 디스플레이크기 40.89cm (16.1항5) 디스플레이해상도 1920×1200 WUXGA IPS 무게 1666g CPU Intele Processor N-series N95 GPU Intele UHD Graphics RAM 808 SSD 25608 SSD규격 M.2 2280 os Windows 11 Pro Wifi 24GHz/5GHz 지원 Bluetooth Bluetooth 5.0 전입/소비전력 12V/2.5A 30W 색상 White 배터리용량 7.6V/5000mAh 스피커 80/TW × 2개 USB USB 3.0 × 2개, U58 2.0 × 1개8 HDMI Mini HOM x 178 TYPE-C Type-C (충전가능) 헤드E/DC책 f 3.5mm standard headphone jack 기보드 지원 전면가에라 화소 UsB, BT Expandabie Weed / Wreless 지원 2MP 마우스 민매원 베이직스 주식회사 원신지 중국 ①인증사항 R-R-s2m-BB1624FW xU103391-24003 YU10674-22001"
+          },
+          {
+            "title": "베이직스 2024 베이직북 14 N-시리즈, BasicWhite, 256GB, 8GB, WIN11 Home, BB1422SS-N",
+            "original_price": "398,000원",
+            "displayed_price": "393,000원",
+            "product_link": "https://www.coupang.com/vp/products/9128826497?itemId=26858848404&vendorItemId=92984476751&pickType=COU_PICK&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=1&rank=1",
+            "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/439182976936851-1d1ede57-5c28-4674-8955-62e9d52e6af2.jpg",
+            "detail_images": [
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/8141548359718-5c836386-8b85-4488-9abb-2b23ad2059a0.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/8449539977961-b8b0000a-6c37-4981-98e4-4ab8c6b659b6.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/193164922589265-895936f0-70c0-41e5-8aca-e06c135de45c.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/8586950670781-7509e708-d1ba-446b-97cc-c3401cedf766.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/335814861081380-aa6747cb-0231-4abb-9706-f4edc1b7907c.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/149445195557987-63f7d0df-e692-45d5-8fa7-82cacbeba0d2.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/307768323390942-b8cb24ad-7a61-42e6-a391-1aafaf65c9ed.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/307768420786165-fdb56585-07b2-4204-a256-ec508cd377c2.png"
+            ],
+            "ocr_text": "기분 좋은 성능 14인치 노트북. 베이직북14. WindowgIt 가장균형잡한노트북베이직북14는 마이크로소프트와인델,그리고베이직스가함께 만든 14.1형 작업을스마트하게지원해줍니다.워드파일을집중해서만들어야 하는 날에도,가법게넷플릭스를즐기고싶은휴식시간에도 노트북이필요할때언제든합리적인가격을 갖춘베이직북14를 만나보세요 intel. 더빨라진 속도 베이직북14. 가격은 그대로 베이직북14는 2023년 출시된 Inte의 N시리즈가 탑재S여 성능이더 강력하게 업그레이드 되었습니다 최대 3.4GH2의 주파수를 가진 CPU로 4코어 4스레드를 가지고 있으며,10mm 공정기술에따라 제조되었죠일상적인 업무와 학습 영상 감상 할수 있고 Adobe Photoshopol나 League of Legend 같은 게임도 무리없이 가능합니다. 업무용노트북이 필요하다면 부족함을 느끼지 못할거에요 한층향상된 성능 먹분에 3~5개의 프로그램을 동시에 실행해도 위{ 가단한 디자인 작업도 중분해요,바쁜 업무 속에서도 베이직불14 | 기이적국4에 더자세히 설명해드릴게요 Point 01. 가볍고 얇으니까. 1.4kg. 무계와 두께는 물론,베젤까지 최소화한 설계로 어떤 곳이라도 당신과 함께 움직일 준비가 되었어요. Point 02. 이어폰 포트 USB-A 3.0 USB-A2.0 SD card 전원포트 i US8-C HDM USB-A 3.0 JSB 3.02개,HDM 등 다양한 포트를 지원합니다. 특히 USB-C type 포트는 보조배터리 충전도 가능합니다. 등전기능을 위해 45W 혹은 6SW의Po기능지원보조행더리필요 point 03. C타입으로 간편하게 충전. 가장 병용적으로 활용되는 국제 표준 규격 | 'bloll 요즘 가전 이유에요. 가격보다 성능에 집중해요. 1920×1200 FHD IPS 디J스플레이| 0.3mp전면 카에라,마이크,스피커까지 완벽 내장되어 있어 부족함 없는 노트북 생활을 약속합니다. Microsoft 윈도우 탑재는 기본이죠. 베이직복14는 Windows11 Home을 탑재하고 있어 평생 사용할 수 있어요. 자주묻는 질문. Q.MS오피스가 설치되어 되나요? -MS오피스는 별도로 제공되지 않습니다. Q.제품 구성품을알려주세요 ㄴ해당제품의 구성품은[노트적본품+전용 중전기+키보드스킨] 으로 구성되어 있습니다 Q. 한컴오피스는 안 주나요? -[한럽 실속대키지]또는 [한럽 가득태키지로 구매한 경우에만 한법오피스영구이용권을드립니다. Q.듀얼 모니터 연결이 가능한가요? ㄴHDM/C타입 포트로듀얼모니터 사용가능합니다. Q. C타입 충전이 가능한가요? ㄴ네가능합니다.다안,일반 했드폰 중진기로는 전력 부족으로 충전불가하여,명기된이조건 12V표기,45W 이상출력되는 중전기일 경우 중전이 가능합니다. Q. 접수는 어떻게 진행해야 하나요? 상담 원할하를 위하여 재널독을 동한 상당안진행하고 있습니다. 카카오플러스 친구 [베이직스]를 검색하신 뒤상딩원 연결이 가능합니다. [ ]→[정보입력]→[입력완료]버튼 클릭 후채딩 접수는 베이직스 채널독을 동해 접수해주시면 CJ대한동운 연결해주시면 됩니다. 먹배를 수거하여 본사에서 직접 수리 진행하고 있습니다. 제품 정보. 제품명 베이직책14 운영제제 Windows 11 Home 프로세서 Intele Processor (NA리[즈) 4 Core/4 Thread,기쁜 170OHz/ CM N스 3.40GHT, 4MB L3 Cache 본제용의 주수는사용환경및 전력관리상태에따라 가반적으로 동적합니다 Lthography: 1onm (Trer 그개학 Intel8 UHD Graphics 16 Execution unts up to 75o MHz 디스플레이 35.8cm (14.19) Anti-glare IPS 광시o각 재널 FHD (1920 × 1080) 케오리 4/8/ 160B (00R4 2666 MT/s) 저장장치 128 / 256 / 512GB SSD (M.2 2280) 얼디미디어 Stereo speaker (w × 20a @80) Front camera (0.3MP) 내장아이크 /0 USB-A 3.0 × 20a, USB-A 2.0 × 1ea USB-C 3.2 × 1oa (Gen 1, PD층전 및 영상출력 지원) HDMI (Ful-sized) × 1ea 3.5mm Standard headphone jack 3.5mm DC-in jack Micro SD (TF card) slot ↓트워트 W-Fi 5, 802.11ac (2.4 /5.0GHz) Buetooth 4.2 업력장치 내장된 키보드 및 터치재드 RF/BT expandabie 우선 아우스 및 기보드 지원 표준 US8 규격에 없는 유선장치 지원 반원 및 배터리 12V DC @ 3A (36W) 백상 B ic White 제조사 Shenzhen NST industry And Trade Co,Ltd 개발 및 판매 베이직스 주식회사 방신지 중국 인중사항 R-R-s2m-B81422SS-N XU103391-25007 YU10674-22001",
+            "ocr_text_raw": "기분 좋은 성능 14인치 노트북. 베이직북14. WindowgIt 가장균형잡한노트북베이직북14는 마이크로소프트와인델,그리고베이직스가함께 만든 14.1형 작업을스마트하게지원해줍니다.워드파일을집중해서만들어야 하는 날에도,가법게넷플릭스를즐기고싶은휴식시간에도 노트북이필요할때언제든합리적인가격을 갖춘베이직북14를 만나보세요 intel. 더빨라진 속도 베이직북14. 가격은 그대로 베이직북14는 2023년 출시된 Inte의 N시리즈가 탑재S여 성능이더 강력하게 업그레이드 되었습니다 최대 3.4GH2의 주파수를 가진 CPU로 4코어 4스레드를 가지고 있으며,10mm 공정기술에따라 제조되었죠일상적인 업무와 학습 영상 감상 할수 있고 Adobe Photoshopol나 League of Legend 같은 게임도 무리없이 가능합니다. 업무용노트북이 필요하다면 부족함을 느끼지 못할거에요 한층향상된 성능 먹분에 3~5개의 프로그램을 동시에 실행해도 위{ 가단한 디자인 작업도 중분해요,바쁜 업무 속에서도 베이직불14 | 기이적국4에 더자세히 설명해드릴게요 Point 01. 가볍고 얇으니까. 1.4kg. 무계와 두께는 물론,베젤까지 최소화한 설계로 어떤 곳이라도 당신과 함께 움직일 준비가 되었어요. Point 02. 이어폰 포트 USB-A 3.0 USB-A2.0 SD card 전원포트 i US8-C HDM USB-A 3.0 JSB 3.02개,HDM 등 다양한 포트를 지원합니다. 특히 USB-C type 포트는 보조배터리 충전도 가능합니다. 등전기능을 위해 45W 혹은 6SW의Po기능지원보조행더리필요 point 03. C타입으로 간편하게 충전. 가장 병용적으로 활용되는 국제 표준 규격 | 'bloll 요즘 가전 이유에요. 가격보다 성능에 집중해요. 1920×1200 FHD IPS 디J스플레이| 0.3mp전면 카에라,마이크,스피커까지 완벽 내장되어 있어 부족함 없는 노트북 생활을 약속합니다. Microsoft 윈도우 탑재는 기본이죠. 베이직복14는 Windows11 Home을 탑재하고 있어 평생 사용할 수 있어요. 자주묻는 질문. Q.MS오피스가 설치되어 배송되나요? -MS오피스는 별도로 제공되지 않습니다. Q.제품 구성품을알려주세요 ㄴ해당제품의 구성품은[노트적본품+전용 중전기+키보드스킨] 으로 구성되어 있습니다 Q. 한컴오피스는 안 주나요? -[한럽 실속대키지]또는 [한럽 가득태키지로 구매한 경우에만 한법오피스영구이용권을드립니다. Q.듀얼 모니터 연결이 가능한가요? ㄴHDM/C타입 포트로듀얼모니터 사용가능합니다. Q. C타입 충전이 가능한가요? ㄴ네가능합니다.다안,일반 했드폰 중진기로는 전력 부족으로 충전불가하여,명기된이조건 12V표기,45W 이상출력되는 중전기일 경우 중전이 가능합니다. Q.AS 접수는 어떻게 진행해야 하나요? 상담 원할하를 위하여 재널독을 동한 상당안진행하고 있습니다. 카카오플러스 친구 [베이직스]를 검색하신 뒤상딩원 연결이 가능합니다. [AS문의]→[정보입력]→[입력완료]버튼 클릭 후채딩 AS접수는 베이직스 채널독을 동해 접수해주시면 CJ대한동운 연결해주시면 됩니다. 먹배를 수거하여 본사에서 직접 수리 진행하고 있습니다. 제품 정보. 제품명 베이직책14 운영제제 Windows 11 Home 프로세서 Intele Processor (NA리[즈) 4 Core/4 Thread,기쁜  170OHz/ CM N스 3.40GHT, 4MB L3 Cache 본제용의 주수는사용환경및 전력관리상태에따라 가반적으로 동적합니다 Lthography: 1onm (Trer 그개학 Intel8 UHD Graphics 16 Execution unts up to 75o MHz 디스플레이 35.8cm (14.19) Anti-glare IPS 광시o각 재널 FHD (1920 × 1080) 케오리 4/8/ 160B (00R4 2666 MT/s) 저장장치 128 / 256 / 512GB SSD (M.2 2280) 얼디미디어 Stereo speaker (w × 20a @80) Front camera (0.3MP) 내장아이크 /0 USB-A 3.0 × 20a, USB-A 2.0 × 1ea USB-C 3.2 × 1oa (Gen 1, PD층전 및 영상출력 지원) HDMI (Ful-sized) × 1ea 3.5mm Standard headphone jack 3.5mm DC-in jack Micro SD (TF card) slot ↓트워트 W-Fi 5, 802.11ac (2.4 /5.0GHz) Buetooth 4.2 업력장치 내장된 키보드 및 터치재드 RF/BT expandabie 우선 아우스 및 기보드 지원 표준 US8 규격에 없는 유선장치 지원 반원 및 배터리 12V DC @ 3A (36W) 백상 Basic White 제조사 Shenzhen NST industry And Trade Co,Ltd 개발 및 판매 베이직스 주식회사 방신지 중국 인중사항 R-R-s2m-B81422SS-N XU103391-25007 YU10674-22001"
+          },
+          {
+            "title": "빅트랙 2024 브이북 14 셀러론 인텔 11세대, 화이트, 256GB, 8GB, WIN11 Home, VIC-LPTP02",
+            "original_price": "219,990원",
+            "displayed_price": "211,190원",
+            "product_link": "https://www.coupang.com/vp/products/8074991230?itemId=22745090662&vendorItemId=89780320659&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=2&rank=2",
+            "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/d1dc/cd566d4f3607c75e2ece4172f020886258b822b16e5e66380d38f988181d.jpg",
+            "detail_images": [
+              "https://image11.coupangcdn.com/image/retail/images/3024802402332011-62841791-c665-4362-b954-79ea40a6be17.jpg",
+              "https://image11.coupangcdn.com/image/retail/images/3024802505909908-94be2ee1-6f72-4416-aa49-e1853077447f.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/193297701807268-963c8d85-26a1-4ca3-808e-749370dcb73d.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/407310793979133-348966b9-d605-4a19-9c05-21223d5850b6.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/5959804611750-0b5b9ff5-3cf0-4d74-9e0c-f04ba85b4162.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/407310926797090-bb952895-137e-47e6-9634-95903366d260.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/407310931604071-ac42ae36-36ad-4389-9d26-5b89b7a606b9.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/1009696311535923-f14c67c2-6525-4558-83d0-4cf36d9d5bbf.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/1009696440455161-0843695f-fcd7-4046-b38c-b5ff006f01be.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/1113821452629379-2d422e30-d2ee-420b-b2ee-880945334331.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/407310940158930-7914fde3-0902-4593-8794-5d6eef41035d.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/1009696361859703-ef04716c-1949-4bb6-a926-24bd836fcbea.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/1113821431753975-6670933a-4494-4f89-ba35-743b876fb8a9.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/3008220513976608-f9259e54-13ca-4abf-8e1d-87156d0a0d17.jpg"
+            ],
+            "ocr_text": "|YoA 메이이미교 머코이 | 이 Bureau Verit 에서6차검사 5차전수검사 글로벌 유수 검수기관 빅트랙 QC엔지니어 HRIIRIS AENBNI 양산품 샘플링 검사 양산품 샘플링 검사 제조사3차 빅트랙 4차 2차 부품 검수 부품검수 제조사1차 6단계양산 품질 관리 양산&사후품질관리 | 해외 수입상품도 로켓 래 쿠팡 수입상품 주문 로켓 해외 수입상품도 로켓 으로 오늘 주문하면 내일 해요(※일부 상품 제외) 쿠팡이 직접수입합니다 국내 안전성 기준과 검사 기준을 지켜 믿을 수 있어요 가격DOWN 유통 단계를 줄여 거품 없는 합리적인 가격 쿠팡이 직접써보고 선택 식품,뷰티,가전 등 다양한 카테고리 셀렉션 대형가전 로켓설치 로켓설치혜택은물론,국내A/S및사후관리를받을수 있어요",
+            "ocr_text_raw": "|YoA 메이이미교 머코이 | 이 Bureau Veritas에서6차검사 5차전수검사 글로벌 유수 검수기관 빅트랙 QC엔지니어 HRIIRIS AENBNI 양산품 샘플링 검사 양산품 샘플링 검사 제조사3차 빅트랙 4차 2차 부품 검수 부품검수 제조사1차 6단계양산 품질 관리 양산&사후품질관리 | 해외 수입상품도 로켓배송 래 쿠팡 수입상품 주문 로켓배송 도착 해외 수입상품도 로켓배송으로 오늘 주문하면 내일 도착해요(※일부 상품 제외) 쿠팡이 직접수입합니다 국내 안전성 기준과 검사 기준을 지켜 믿을 수 있어요 가격DOWN 유통 단계를 줄여 거품 없는 합리적인 가격 쿠팡이 직접써보고 선택 식품,뷰티,가전 등 다양한 카테고리 셀렉션 대형가전 로켓설치 로켓설치혜택은물론,국내A/S및사후관리를받을수 있어요"
+          },
+          {
+            "title": "LG전자 2024 울트라 PC 15 코어i3 인텔 13세대, 타이탄실버, 256GB, 8GB, WIN11 Home, 15U50T-GR3CK",
+            "original_price": "909,000원",
+            "displayed_price": "759,000원",
+            "product_link": "https://www.coupang.com/vp/products/8429938998?itemId=24385368371&vendorItemId=91400419547&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=3&rank=3",
+            "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/554811170277220-2ad27899-6102-4c4c-b1bc-9343321c5757.jpg",
+            "detail_images": [
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/rs_quotation_api/pm6fykqb/ff59e4c2bfcd4aefbdff29986960babe.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/303862711739717-4124bb22-c40c-47c3-a49f-f7de116e7c3d.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/449827417235145-4a72559f-1c56-4fd7-aaa5-13f18775e50d.JPG",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/449827585665898-17c439fa-da0e-403e-a6b4-866484de1547.JPG",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/retail/images/462453266898586-30969d48-b312-4503-bc65-51d1e791bf9a.jpg"
+            ],
+            "ocr_text": "LG전자 인증 정품 ·LG전자와 직접 거래를통해 판매됩니다. LG전자 서비스 센터를통해A/S를이용할 수있습니다. Tel.1544-7777 coupang ‘ LG | 2U Y C sts3/K 국k 이 xx공 VEC V VocA | a5 운영체제 Wndows 11 Home (64 =) 디스플레이 화연크기(cm) 39.6 해상도 FHO (1920 × 1080) 제널영대 PS LCD 디스플어I (Arti gare) 프로세서 CPU Intel8 13세대 3-1315U 로세서 CUB (GaHe) 1.2 2 보 (GHc) 4.5 L3개시예오리 (M8) 10 해인어요적 어요릭 용장 (GB) 8 메모리종류 DOR4 3200MHz 1(SO-DMM) 얼티미디어 그래적 인털8 UHO Graphies 그래육어요리 내장형 Doby Aemos 오디오사운드 Stereo speakers (1.5 W × 2) 영정 H0범경 저장장치 ssp +1(PCle 4.0x4) 256 G8 (M2, NVMe*) 입력장치 키보드 기보드사이즈 97가 (3자 전용 ) 터지페드 터치패드 파월 AC(W) 65 배터4(We) 51 (4를 이은 배터리) 크기/무게 크기 (WH_mm) 360 × 238 (mm) 18.9 - 19.4 무계(g) 억1,700 네트워크 무선원 (W-Fi 6, 2x2, BT Combo) Intel Wreless-AX203 블루스 O(5.2) 유선원 Gigabit (했어 별) 기다 HOM, USB Tyoe-A (USB 3.2 Gen 1x1) USB Type-A(US8 2.0) Port USBType-Cx2 (USB 3.2 Gen 2x1, USB P0 Support). Hp-Out (4Pole Headset US type) PC X LG Smart sistant LG UpdateSRecovery LG PC Manuals LG Securty Guard LG Quick Gude LG On Screen Display 3 제공SW LG gram Lnk Google Quick Share Doloy Atmes Mcrosoft 365 (30 Days Tral) McAfee Uve Sate (30 Days Tral) LG PC Care 공공W-F 색상 다이한 실어 보안시스템 X 액세서리 X 노트북 (우처) X ·제품사생은 성능 생상을 위해사전여고 비고 없이 변경될수 있습니다 무거는 저용구성및제조여건에 따락 달락수있습니다 기본정보 용명및 모델명 노(1SU5OT) KC인증필유무 204 청격전압 100-240 V, 50/60 He 동일오델의 출시년일 2024년 10월 제조자 LG전(주) 제조국 중국 결음하자 등어 따른 소비자력하어 대해서는 용들 기준 소비지생해경기준(소비자기본법제16조) 에따락모상 가능 책자와 전화번호 LG스센/ 1544-7777",
+            "ocr_text_raw": "LG전자 인증 정품 ·LG전자와 직접 거래를통해 판매됩니다. LG전자 서비스 센터를통해A/S를이용할 수있습니다. Tel.1544-7777 coupang ‘ LG | 2U Y C sts3/K 국k 이 xx공 VEC V VocAAs | a5 운영체제 Wndows 11 Home (64 =) 디스플레이 화연크기(cm) 39.6 해상도 FHO (1920 × 1080) 제널영대 PS LCD 디스플어I (Arti gare) 프로세서 CPU Intel8 13세대 3-1315U 로세서 CUB (GaHe) 1.2 2 보 (GHc) 4.5 L3개시예오리 (M8) 10 해인어요적 어요릭 용장 (GB) 8 메모리종류 DOR4 3200MHz 1(SO-DMM) 얼티미디어 그래적 인털8 UHO Graphies 그래육어요리 내장형 Doby Aemos 오디오사운드 Stereo speakers (1.5 W × 2) 영정 H0범경 저장장치 ssp +1(PCle 4.0x4) 256 G8 (M2, NVMe*) 입력장치 키보드 기보드사이즈 97가 (3자 전용 ) 터지페드 터치패드 파월 AC(W) 65 배터4(We) 51 (4를 이은 배터리) 크기/무게 크기 (WH_mm) 360 × 238 (mm) 18.9 - 19.4 무계(g) 억1,700 네트워크 무선원 (W-Fi 6, 2x2, BT Combo) Intel Wreless-AX203 블루스 O(5.2) 유선원 Gigabit (했어 별) 기다 HOM, USB Tyoe-A (USB 3.2 Gen 1x1) USB Type-A(US8 2.0) Port USBType-Cx2 (USB 3.2 Gen 2x1, USB P0 Support). Hp-Out (4Pole Headset US type) PC X LG Smart Assistant LG UpdateSRecovery LG PC Manuals LG Securty Guard LG Quick Gude LG On Screen Display 3 제공SW LG gram Lnk Google Quick Share Doloy Atmes Mcrosoft 365 (30 Days Tral) McAfee Uve Sate (30 Days Tral) LG PC Care 공공W-F 색상 다이한 실어 보안시스템 X 액세서리 X 노트북 (우처) X ·제품사생은 성능 생상을 위해사전여고 비고 없이 변경될수 있습니다 무거는 저용구성및제조여건에 따락 달락수있습니다 기본정보 용명및 모델명 노(1SU5OT) KC인증필유무 204 청격전압 100-240 V, 50/60 He 동일오델의 출시년일 2024년 10월 제조자 LG전(주) 제조국 중국 결음하자 등어 따른 소비자력하어 대해서는 용들보증기준 소비지생해경기준(소비자기본법제16조) 에따락모상 가능 AS 책자와 전화번호 LG스센/ 1544-7777"
+          },
+          {
+            "title": "JUMPER 2025 노트북 16인치 화면대형 256GB SSD+128GB eMMc 12GB RAM office 365 셀러론5305U 사무용 WIN11 home 파랑, S7max 5305U, 384GB",
+            "original_price": "1,540,000원",
+            "displayed_price": "391,020원",
+            "product_link": "https://www.coupang.com/vp/products/8758594149?itemId=26948231325&vendorItemId=93917328628&sourceType=srp_product_ads&clickEventId=75fd1f30-d32c-11f0-a04c-1ef2f55f91fc&korePlacement=15&koreSubPlacement=5&clickEventId=75fd1f30-d32c-11f0-a04c-1ef2f55f91fc&korePlacement=15&koreSubPlacement=5",
+            "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/149d/d7b17af7b44d63fa1e4f8c6e19ef945da958f32c25088c5eb7710d26f807.jpg",
+            "detail_images": [
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/fbd2/d3c35703da1f9d6b7e8fbcf1ba5454bafff676f9062226d0a5e75b439f06.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/69ac/bd4f09908478ee0057535c1b16193d7410eca7ecd8b2ea34e312a9059fad.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/a333/b8a10b4383214294b233030beb69fb165c129cfbea466446269cda93a048.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/f758/5040139777faf82014080fea0619fc64abe7524bed65614bf087286b619b.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/b5a7/e1909f27cad6601541f86edf69e78ab9c7b53a2bcbcab3b3bbe8280d87c0.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/07b5/5ecd1598fc2acf679ca6da961c4cef9006b3e4724c1b0f9e7c2a4a2863bb.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/35ba/69cd6bf5d136f386237d9a698b672e2b93ad1c80ad461de3a0fa368ff25c.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/f490/0efcc1b465fd1ee19bc102e990dc3739ae0df92034a454f1e842d8b4c76c.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/78cd/3308256294d8874bff64317e4122965c9056d891d0023f11a2e50c2f1f1d.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/1e88/2cab967c7a3e108accffe6c6b106b842bcb1453835eeb44c7a777e8c77af.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/b342/5ac38ff8aacd51dac7b38510223c23a07d217e18a3a76d83b03622ce1b0c.jpg",
+              "https://thumbnail.coupangcdn.com/thumbnails/remote/q89/image/vendor_inventory/b17d/a706d947875376f0915e89e53a2d340d283389072961f2f237a6d3fc639b.jpg"
+            ],
+            "ocr_text": "풀사이즈 키보드 대면적 터치패드, 풀 레인지 누름, 마우스 없이도 모든 것을 제어할 수 있습니다. 40% | 한국어 키보드 커버 포함 Es4 A K AY Delete Prtc Pauso noen 4 0lb 00 144 F/ 0 % & Backspace Num 2 3 5 6 7 8 E B W x E π R ㄲ T ㅆ L O ㅖ L 8 9 Tab ㅛ H W H x Wom4 PyUp A S D F G H K Enter 4 6 Caps lock O 2 ㅎ ㅔ t < > Z × C V B N M V > ? 2 3 Shife Ⅱ π ^ ^ E X T End Pg0n Entet Fn : 한 한자 L V > 0 AIt B Oel",
+            "ocr_text_raw": "풀사이즈 키보드 대면적 터치패드, 풀 레인지 누름, 마우스 없이도 모든 것을 제어할 수 있습니다. 40% | 한국어 키보드 커버 포함 Es4 A K AY Delete Prtc Pauso noen 4 0lb 00 144 F/ 0 % & Backspace Num 2 3 5 6 7 8 E B W x E π R ㄲ T ㅆ L O ㅖ L 8 9 Tab ㅛ H W H x Wom4 PyUp A S D F G H K Enter 4 6 Caps lock O 2 ㅎ ㅔ t < > Z × C V B N M V > ? 2 3 Shife Ⅱ π ^ ^ E X T End Pg0n Entet Fn : 한 한자 L V > 0 AIt B Oel"
+          }
+        ]
+      },
+      {
+        "mall": "ssadagu",
+        "items": [
+          {
+            "title": "N95 고급형 15.6inch 노트북 지문 인식 해제 크로스보더",
+            "price": "330,430원",
+            "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=894979810606&ss_tx=컴퓨터",
+            "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01vRzqYw1VP0HsuJ0IZ_!!2214200952644-0-cib.jpg",
+            "detail_specs": {
+              "상표": "아이오파/아이오파",
+              "모델": "AP156PC01",
+              "품목 번호": "AP156PC01",
+              "시장 출시 시간": "2023",
+              "공급 카테고리": "스팟상품",
+              "브랜드 지역": "국내",
+              "CPU 유형": "intel",
+              "CPU 주파수": "기계를 보세요",
+              "하드 드라이브 용량": "선택 사항",
+              "광학 플로피 드라이브 위치": "광학 드라이브 없음",
+              "화면 크기": "15.6inch",
+              "그래픽 카드": "통합 그래픽",
+              "무선 네트워크 카드": "무선 네트워크 카드가 있습니다",
+              "해결책": "풀 HD(1920x1080)",
+              "운영 체제": "win10/win11/Chrome OS",
+              "터치스크린 여부": "비터치",
+              "두께": "일반 두께(>25mm)",
+              "배터리 수명": "5~7시간",
+              "제품 크기": "15.6",
+              "무게": "1.5-2.0KG",
+              "OEM": "OEM 가능",
+              "가장 빠른 배송 시간": "8~15일",
+              "프록시 가입 지원 여부": "지원하다",
+              "판매 후 유형": "3개 보증 저장",
+              "보증": "1 년",
+              "송장": "송장 제공",
+              "포장 목록": "포장 참조",
+              "3C 인증서 번호": "2025200902000005",
+              "비디오 메모리 용량": "선택 사항",
+              "색상": "N95+32GB 실행+1TB 솔리드 스테이트",
+              "라이센스가 부여된 개인 상표가 있습니다.": "예",
+              "에너지 효율 수준": "레벨 1",
+              "에너지효율등록번호": "20250221-CEL0272016-419705",
+              "유형": "얇고 가벼운 휴대용 노트북"
+            }
+          },
+          {
+            "title": "16G 512G 태블릿 PC 패드 프로 Netcom 5G 안드로이드 오피스 엔터테인먼트 게임 학습 기계 2 in 1",
+            "price": "38,530원",
+            "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=802774376104&ss_tx=컴퓨터",
+            "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01SfSTgZ1pd0aT95eEO_!!2218003985382-0-cib.jpg",
+            "detail_specs": {
+              "모델": "T50-5G",
+              "항목 번호.": "T50-5G",
+              "시장에 시간": "2024",
+              "소스 카테고리": "재고",
+              "운영 체제": "기타 운영 체제",
+              "프로세서": "MTK",
+              "프로세서 주파수": "다른 주요 주파수",
+              "저장 유형": "다른 저장 유형",
+              "하드 디스크 용량": "500GB",
+              "화면 크기": "10.1 인치",
+              "카메라": "3 개의 전면 후면 카메라",
+              "블루투스": "지원",
+              "통신 기능": "지원 전화",
+              "네트워크 유형": "모든 Netcom 4G5G/WiFi",
+              "내장 유도": "지능형 중력 유도",
+              "프로세서 코어": "여덟 코어",
+              "지구력": "9 시간 이상",
+              "추가 기능": "기타",
+              "언어": "기타",
+              "재료/프로세스": "금속 유리",
+              "제품 크기": "243mm*162.4mm*7.9m",
+              "무게": "0.8k",
+              "처리 사용자 정의": "예",
+              "인쇄 된 로고": "예",
+              "에이전트에 가입 지원 여부": "지원",
+              "가장 빠른 배송 시간": "1-3 일",
+              "송장": "의사 소통 필요",
+              "판매 후 유형": "매장 보증",
+              "패킹 리스트": "전체 패키지",
+              "3C 인증서 번호": "2022010902489181",
+              "색상": "블랙 실버 [재생 속도 분할 화면 버전]]",
+              "메모리 용량": "16G 실행 1TB 메모리 [1024G 총] 강하게 추천 [패키지 4]",
+              "주요 하류 플랫폼": "기타",
+              "주요 판매 지역": "기타",
+              "라이센스 개인 상표": "예",
+              "국경 간 수출의 원천이 독점적인지 여부": "예",
+              "통신 유형": "플러그 가능 카드",
+              "통신 장비 액세스 라이센스 번호": "17-G990-223329",
+              "라디오 전송 장비 유형 승인 코드": "202215597",
+              "유형": "휴대 전화 태블릿"
+            }
+          },
+          {
+            "title": "4-in-1 터치스크린 노트북 14inch PC 태블릿 2-in-1 국경 간 비즈니스 오피스 얇고 가벼운 노트북",
+            "price": "470,070원",
+            "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=895796617378&ss_tx=컴퓨터",
+            "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01sW8iM51q7hCrxcEO8_!!2219369275449-0-cib.jpg",
+            "detail_specs": {
+              "모델": "LQ140S",
+              "품목 번호": "LQ140S",
+              "시장 출시 시간": "2023",
+              "공급 카테고리": "현물 상품",
+              "브랜드 지역": "국내 생산",
+              "CPU 유형": "셀러론/셀러론",
+              "CPU 주파수": "3.4",
+              "하드 드라이브 용량": "선택 사항",
+              "광학 플로피 드라이브 위치": "광학 드라이브 없음",
+              "화면 크기": "14inch",
+              "그래픽 카드": "통합 그래픽",
+              "무선 네트워크 카드": "무선 네트워크 카드가 있습니다",
+              "해결하다": "1920*1200",
+              "운영 체제": "WIN11",
+              "터치스크린인가요?": "PC 태블릿 2-in-1",
+              "두께": "휴대성이 좋고 얇음(17.5mm-21mm)",
+              "배터리 수명": "5~7시간",
+              "제품 크기": "14inch",
+              "무게": "1.5-2.0KG",
+              "OEM": "OEM 가능",
+              "가장 빠른 배송 시간": "1~3일",
+              "프록시 가입 지원 여부": "지원하다",
+              "애프터 서비스 유형": "매장 3개 보증",
+              "보증": "1 년",
+              "송장": "송장 제공 없음",
+              "포장 목록": "컴퓨터, 설명서, 충전기",
+              "색상": "은",
+              "메모리 용량": "16G+1TB SSD",
+              "주요 다운스트림 플랫폼": "다른",
+              "주요 판매지역": "다른",
+              "라이센스가 부여된 개인 상표가 있습니다.": "아니요",
+              "국경 간 수출을 위한 독점 공급원이 있습니까?": "예",
+              "에너지 효율 등급": "없음",
+              "특허받은 소스인가요?": "아니요",
+              "유형": "2 in 1 컴퓨터"
+            }
+          },
+          {
+            "title": "TK 폭발성 어린이 태블릿 IPS 화면 IWAWA 라이브 국경 전자 상거래 선물 어린이 태블릿 7 인치",
+            "price": "22,930원",
+            "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=859954903986&ss_tx=컴퓨터",
+            "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01WioJ3V1O1uvuafblp_!!938681646-0-cib.jpg",
+            "detail_specs": {
+              "브랜드": "중립",
+              "모델": "Q8",
+              "품목 번호": "YJ-Q8",
+              "시장 출시 시간": "2024",
+              "공급 카테고리": "스팟",
+              "운영 체제": "ANDROID",
+              "프로세서": "MTK",
+              "프로세서 주파수": "1.5GHz",
+              "저장 유형": "플래시 메모리",
+              "하드 드라이브 용량": "8GB",
+              "화면 크기": "7inch",
+              "카메라": "300k 픽셀",
+              "블루투스": "지원하다",
+              "통신 기능": "지원되지 않음",
+              "네트워크 유형": "WIFI",
+              "내장 유도": "지능형 중력 감지",
+              "프로세서 코어": "4개 코어",
+              "배터리 수명": "5시간 미만",
+              "추가 기능": "IPS 화면",
+              "언어": "중국어 간체",
+              "재료/공예": "플라스틱 껍질",
+              "제품 크기": "18CM*12CM*0.7cm",
+              "무게": "베어메탈 0.27",
+              "처리 및 맞춤화": "예",
+              "인쇄된 로고": "할 수 있다",
+              "에이전트 가입을 지원합니까?": "지원하다",
+              "가장 빠른 배송 시간": "1~3일",
+              "송장": "송장은 제공되지 않습니다",
+              "판매 후 유형": "전국 공동보증",
+              "포장 목록": "박스, 데이터케이블, 충전기, OTG케이블, 설명서",
+              "3C 인증서 번호": "2024011606610568",
+              "색깔": "검은색",
+              "메모리 용량": "MTK 6735 1/16G 7.0 시스템",
+              "주요 다운스트림 플랫폼": "LAZADA",
+              "주요 판매지역": "중동",
+              "라이센스가 있는 개인 브랜드가 있습니다.": "아니요",
+              "국경 간 수출 전용 공급 여부": "예",
+              "통신 유형": "카드를 삽입할 수 없습니다",
+              "특허 출처 여부": "아니요",
+              "무선 송신 장비 모델 승인 코드": "123",
+              "유형": "선물 태블릿"
+            }
+          },
+          {
+            "title": "Puia70 태블릿 울트라 HD 4K 눈 보호 전체 화면 5g 풀 넷콤 학생 사무실 게임 그리기 온라인 수업",
+            "price": "54,580원",
+            "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=851908583470&ss_tx=컴퓨터",
+            "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01LgDGjD1Wn6fRzcSjn_!!2215641912832-0-cib.jpg",
+            "detail_specs": {
+              "브랜드": "지메이파이",
+              "품목 번호": "Y3",
+              "시장 출시 시간": "2024년",
+              "공급 카테고리": "스팟",
+              "운영 체제": "ANDROID",
+              "프로세서": "기타 프로세서",
+              "프로세서 주파수": "기타 주요 주파수",
+              "저장 유형": "솔리드 스테이트 드라이브",
+              "하드 드라이브 용량": "500GB",
+              "화면 크기": "다른 크기",
+              "카메라": "듀얼 카메라",
+              "블루투스": "지원하다",
+              "통신 기능": "지원 전화",
+              "네트워크 유형": "전체 넷콤 5G+WiFi",
+              "내장 유도": "지능형 중력 감지",
+              "프로세서 코어": "8개 코어",
+              "배터리 수명": "9시간 이상",
+              "추가 기능": "망막 화면",
+              "언어": "중국어 번체",
+              "재료/공예": "고정밀 CNC",
+              "제품 크기": "12inch",
+              "무게": "1.25",
+              "처리 및 맞춤화": "예",
+              "인쇄된 로고": "할 수 있다",
+              "에이전트 가입을 지원합니까?": "지원하다",
+              "가장 빠른 배송 시간": "1~3일",
+              "송장": "송장 제공",
+              "판매 후 유형": "전국 공동보증",
+              "포장 목록": "호스트 + 액세서리 + 선물",
+              "3C 인증서 번호": "2022201606000228",
+              "색깔": "P34 로컬 골드",
+              "메모리 용량": "16G 실행 + 1024G 메모리/상위 버전에는 Bluetooth 마우스, 키보드, 가죽 케이스 스타일러스가 함께 제공됩니다.",
+              "라이센스가 있는 개인 브랜드가 있습니다.": "예",
+              "국경 간 수출 전용 공급 여부": "아니요",
+              "통신 유형": "삽입 가능한 카드",
+              "통신장비망 접속 허가번호": "17-G682-223168",
+              "특허 출처 여부": "아니요",
+              "무선 송신 장비 모델 승인 코드": "2024023",
+              "유형": "엔터테인먼트 태블릿"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "result": {
+    "total_matches": 12,
+    "matches": [
+      {
+        "coupang_product": {
+          "title": "베이직스 베이직북 16 N-series N95, White, 256GB, 8GB, WIN11 Pro, BB1624FW",
+          "price": "548,000원",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/48920532071374-bb3e9663-ab79-4360-bcab-7674fef43853.jpg",
+          "product_link": "https://www.coupang.com/vp/products/8416720242?itemId=24340453561&vendorItemId=91355958960&sourceType=srp_product_ads&clickEventId=75fcf820-d32c-11f0-aeaf-21834840c42b&korePlacement=15&koreSubPlacement=1&clickEventId=75fcf820-d32c-11f0-aeaf-21834840c42b&korePlacement=15&koreSubPlacement=1"
+        },
+        "ssadagu_product": {
+          "title": "N95 고급형 15.6inch 노트북 지문 인식 해제 크로스보더",
+          "price": "330,430원",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01vRzqYw1VP0HsuJ0IZ_!!2214200952644-0-cib.jpg",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=894979810606&ss_tx=컴퓨터"
+        },
+        "similarity": {
+          "combined_similarity": 0.48691544531010034,
+          "image_similarity": 1.0,
+          "price_similarity": 0.6029744525547445,
+          "title_similarity": 0.10250000000000001,
+          "ocr_specs_similarity": 0.08337710970755469
+        }
+      },
+      {
+        "coupang_product": {
+          "title": "베이직스 베이직북 16 N-series N95, White, 256GB, 8GB, WIN11 Pro, BB1624FW",
+          "price": "548,000원",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/48920532071374-bb3e9663-ab79-4360-bcab-7674fef43853.jpg",
+          "product_link": "https://www.coupang.com/vp/products/8416720242?itemId=24340453561&vendorItemId=91355958960&sourceType=srp_product_ads&clickEventId=75fcf820-d32c-11f0-aeaf-21834840c42b&korePlacement=15&koreSubPlacement=1&clickEventId=75fcf820-d32c-11f0-aeaf-21834840c42b&korePlacement=15&koreSubPlacement=1"
+        },
+        "ssadagu_product": {
+          "title": "4-in-1 터치스크린 노트북 14inch PC 태블릿 2-in-1 국경 간 비즈니스 오피스 얇고 가벼운 노트북",
+          "price": "470,070원",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01sW8iM51q7hCrxcEO8_!!2219369275449-0-cib.jpg",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=895796617378&ss_tx=컴퓨터"
+        },
+        "similarity": {
+          "combined_similarity": 0.5114145635073767,
+          "image_similarity": 1.0,
+          "price_similarity": 0.8577919708029197,
+          "title_similarity": 0.06929133858267716,
+          "ocr_specs_similarity": 0.061691732965077614
+        }
+      },
+      {
+        "coupang_product": {
+          "title": "베이직스 2024 베이직북 14 N-시리즈, BasicWhite, 256GB, 8GB, WIN11 Home, BB1422SS-N",
+          "price": "393,000원",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/439182976936851-1d1ede57-5c28-4674-8955-62e9d52e6af2.jpg",
+          "product_link": "https://www.coupang.com/vp/products/9128826497?itemId=26858848404&vendorItemId=92984476751&pickType=COU_PICK&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=1&rank=1"
+        },
+        "ssadagu_product": {
+          "title": "N95 고급형 15.6inch 노트북 지문 인식 해제 크로스보더",
+          "price": "330,430원",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01vRzqYw1VP0HsuJ0IZ_!!2214200952644-0-cib.jpg",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=894979810606&ss_tx=컴퓨터"
+        },
+        "similarity": {
+          "combined_similarity": 0.5038990647281917,
+          "image_similarity": 1.0,
+          "price_similarity": 0.8407888040712468,
+          "title_similarity": 0.05490196078431373,
+          "ocr_specs_similarity": 0.05622101568570486
+        }
+      },
+      {
+        "coupang_product": {
+          "title": "베이직스 2024 베이직북 14 N-시리즈, BasicWhite, 256GB, 8GB, WIN11 Home, BB1422SS-N",
+          "price": "393,000원",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/439182976936851-1d1ede57-5c28-4674-8955-62e9d52e6af2.jpg",
+          "product_link": "https://www.coupang.com/vp/products/9128826497?itemId=26858848404&vendorItemId=92984476751&pickType=COU_PICK&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=1&rank=1"
+        },
+        "ssadagu_product": {
+          "title": "4-in-1 터치스크린 노트북 14inch PC 태블릿 2-in-1 국경 간 비즈니스 오피스 얇고 가벼운 노트북",
+          "price": "470,070원",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01sW8iM51q7hCrxcEO8_!!2219369275449-0-cib.jpg",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=895796617378&ss_tx=컴퓨터"
+        },
+        "similarity": {
+          "combined_similarity": 0.5059247159698914,
+          "image_similarity": 1.0,
+          "price_similarity": 0.8360456953219733,
+          "title_similarity": 0.07218045112781955,
+          "ocr_specs_similarity": 0.04989099555856221
+        }
+      },
+      {
+        "coupang_product": {
+          "title": "빅트랙 2024 브이북 14 셀러론 인텔 11세대, 화이트, 256GB, 8GB, WIN11 Home, VIC-LPTP02",
+          "price": "211,190원",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/d1dc/cd566d4f3607c75e2ece4172f020886258b822b16e5e66380d38f988181d.jpg",
+          "product_link": "https://www.coupang.com/vp/products/8074991230?itemId=22745090662&vendorItemId=89780320659&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=2&rank=2"
+        },
+        "ssadagu_product": {
+          "title": "N95 고급형 15.6inch 노트북 지문 인식 해제 크로스보더",
+          "price": "330,430원",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01vRzqYw1VP0HsuJ0IZ_!!2214200952644-0-cib.jpg",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=894979810606&ss_tx=컴퓨터"
+        },
+        "similarity": {
+          "combined_similarity": 0.47295840063920985,
+          "image_similarity": 1.0,
+          "price_similarity": 0.6391368822443483,
+          "title_similarity": 0.05656565656565657,
+          "ocr_specs_similarity": 0.05178581664457421
+        }
+      },
+      {
+        "coupang_product": {
+          "title": "빅트랙 2024 브이북 14 셀러론 인텔 11세대, 화이트, 256GB, 8GB, WIN11 Home, VIC-LPTP02",
+          "price": "211,190원",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/d1dc/cd566d4f3607c75e2ece4172f020886258b822b16e5e66380d38f988181d.jpg",
+          "product_link": "https://www.coupang.com/vp/products/8074991230?itemId=22745090662&vendorItemId=89780320659&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=2&rank=2"
+        },
+        "ssadagu_product": {
+          "title": "16G 512G 태블릿 PC 패드 프로 Netcom 5G 안드로이드 오피스 엔터테인먼트 게임 학습 기계 2 in 1",
+          "price": "38,530원",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01SfSTgZ1pd0aT95eEO_!!2218003985382-0-cib.jpg",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=802774376104&ss_tx=컴퓨터"
+        },
+        "similarity": {
+          "combined_similarity": 0.4035044168511422,
+          "image_similarity": 1.0,
+          "price_similarity": 0.18244235049008006,
+          "title_similarity": 0.03636363636363637,
+          "ocr_specs_similarity": 0.06818862074688456
+        }
+      },
+      {
+        "coupang_product": {
+          "title": "빅트랙 2024 브이북 14 셀러론 인텔 11세대, 화이트, 256GB, 8GB, WIN11 Home, VIC-LPTP02",
+          "price": "211,190원",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/d1dc/cd566d4f3607c75e2ece4172f020886258b822b16e5e66380d38f988181d.jpg",
+          "product_link": "https://www.coupang.com/vp/products/8074991230?itemId=22745090662&vendorItemId=89780320659&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=2&rank=2"
+        },
+        "ssadagu_product": {
+          "title": "4-in-1 터치스크린 노트북 14inch PC 태블릿 2-in-1 국경 간 비즈니스 오피스 얇고 가벼운 노트북",
+          "price": "470,070원",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01sW8iM51q7hCrxcEO8_!!2219369275449-0-cib.jpg",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=895796617378&ss_tx=컴퓨터"
+        },
+        "similarity": {
+          "combined_similarity": 0.456255363219779,
+          "image_similarity": 1.0,
+          "price_similarity": 0.4492735124555918,
+          "title_similarity": 0.08615384615384616,
+          "ocr_specs_similarity": 0.06930349925191487
+        }
+      },
+      {
+        "coupang_product": {
+          "title": "빅트랙 2024 브이북 14 셀러론 인텔 11세대, 화이트, 256GB, 8GB, WIN11 Home, VIC-LPTP02",
+          "price": "211,190원",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/d1dc/cd566d4f3607c75e2ece4172f020886258b822b16e5e66380d38f988181d.jpg",
+          "product_link": "https://www.coupang.com/vp/products/8074991230?itemId=22745090662&vendorItemId=89780320659&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=2&rank=2"
+        },
+        "ssadagu_product": {
+          "title": "Puia70 태블릿 울트라 HD 4K 눈 보호 전체 화면 5g 풀 넷콤 학생 사무실 게임 그리기 온라인 수업",
+          "price": "54,580원",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01LgDGjD1Wn6fRzcSjn_!!2215641912832-0-cib.jpg",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=851908583470&ss_tx=컴퓨터"
+        },
+        "similarity": {
+          "combined_similarity": 0.41738184247225,
+          "image_similarity": 1.0,
+          "price_similarity": 0.2584402670580993,
+          "title_similarity": 0.09375,
+          "ocr_specs_similarity": 0.020713209654140724
+        }
+      },
+      {
+        "coupang_product": {
+          "title": "LG전자 2024 울트라 PC 15 코어i3 인텔 13세대, 타이탄실버, 256GB, 8GB, WIN11 Home, 15U50T-GR3CK",
+          "price": "759,000원",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/554811170277220-2ad27899-6102-4c4c-b1bc-9343321c5757.jpg",
+          "product_link": "https://www.coupang.com/vp/products/8429938998?itemId=24385368371&vendorItemId=91400419547&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=3&rank=3"
+        },
+        "ssadagu_product": {
+          "title": "N95 고급형 15.6inch 노트북 지문 인식 해제 크로스보더",
+          "price": "330,430원",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01vRzqYw1VP0HsuJ0IZ_!!2214200952644-0-cib.jpg",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=894979810606&ss_tx=컴퓨터"
+        },
+        "similarity": {
+          "combined_similarity": 0.4378367378118456,
+          "image_similarity": 1.0,
+          "price_similarity": 0.4353491436100132,
+          "title_similarity": 0.05925925925925926,
+          "ocr_specs_similarity": 0.030878205822115392
+        }
+      },
+      {
+        "coupang_product": {
+          "title": "LG전자 2024 울트라 PC 15 코어i3 인텔 13세대, 타이탄실버, 256GB, 8GB, WIN11 Home, 15U50T-GR3CK",
+          "price": "759,000원",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/554811170277220-2ad27899-6102-4c4c-b1bc-9343321c5757.jpg",
+          "product_link": "https://www.coupang.com/vp/products/8429938998?itemId=24385368371&vendorItemId=91400419547&q=%EB%85%B8%ED%8A%B8%EB%B6%81&searchId=40b26aa35053935&sourceType=search&itemsCount=36&searchRank=3&rank=3"
+        },
+        "ssadagu_product": {
+          "title": "4-in-1 터치스크린 노트북 14inch PC 태블릿 2-in-1 국경 간 비즈니스 오피스 얇고 가벼운 노트북",
+          "price": "470,070원",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01sW8iM51q7hCrxcEO8_!!2219369275449-0-cib.jpg",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=895796617378&ss_tx=컴퓨터"
+        },
+        "similarity": {
+          "combined_similarity": 0.4737221653498287,
+          "image_similarity": 1.0,
+          "price_similarity": 0.6193280632411067,
+          "title_similarity": 0.0988201438848921,
+          "ocr_specs_similarity": 0.024471679569758903
+        }
+      },
+      {
+        "coupang_product": {
+          "title": "JUMPER 2025 노트북 16인치 화면대형 256GB SSD+128GB eMMc 12GB RAM office 365 셀러론5305U 사무용 WIN11 home 파랑, S7max 5305U, 384GB",
+          "price": "391,020원",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/149d/d7b17af7b44d63fa1e4f8c6e19ef945da958f32c25088c5eb7710d26f807.jpg",
+          "product_link": "https://www.coupang.com/vp/products/8758594149?itemId=26948231325&vendorItemId=93917328628&sourceType=srp_product_ads&clickEventId=75fd1f30-d32c-11f0-a04c-1ef2f55f91fc&korePlacement=15&koreSubPlacement=5&clickEventId=75fd1f30-d32c-11f0-a04c-1ef2f55f91fc&korePlacement=15&koreSubPlacement=5"
+        },
+        "ssadagu_product": {
+          "title": "N95 고급형 15.6inch 노트북 지문 인식 해제 크로스보더",
+          "price": "330,430원",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01vRzqYw1VP0HsuJ0IZ_!!2214200952644-0-cib.jpg",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=894979810606&ss_tx=컴퓨터"
+        },
+        "similarity": {
+          "combined_similarity": 0.5094077703164469,
+          "image_similarity": 1.0,
+          "price_similarity": 0.8450462891923687,
+          "title_similarity": 0.07863247863247863,
+          "ocr_specs_similarity": 0.05197082911788794
+        }
+      },
+      {
+        "coupang_product": {
+          "title": "JUMPER 2025 노트북 16인치 화면대형 256GB SSD+128GB eMMc 12GB RAM office 365 셀러론5305U 사무용 WIN11 home 파랑, S7max 5305U, 384GB",
+          "price": "391,020원",
+          "thumbnail_url": "https://thumbnail.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/149d/d7b17af7b44d63fa1e4f8c6e19ef945da958f32c25088c5eb7710d26f807.jpg",
+          "product_link": "https://www.coupang.com/vp/products/8758594149?itemId=26948231325&vendorItemId=93917328628&sourceType=srp_product_ads&clickEventId=75fd1f30-d32c-11f0-a04c-1ef2f55f91fc&korePlacement=15&koreSubPlacement=5&clickEventId=75fd1f30-d32c-11f0-a04c-1ef2f55f91fc&korePlacement=15&koreSubPlacement=5"
+        },
+        "ssadagu_product": {
+          "title": "4-in-1 터치스크린 노트북 14inch PC 태블릿 2-in-1 국경 간 비즈니스 오피스 얇고 가벼운 노트북",
+          "price": "470,070원",
+          "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01sW8iM51q7hCrxcEO8_!!2219369275449-0-cib.jpg",
+          "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=895796617378&ss_tx=컴퓨터"
+        },
+        "similarity": {
+          "combined_similarity": 0.5175202284816423,
+          "image_similarity": 1.0,
+          "price_similarity": 0.8318335567043207,
+          "title_similarity": 0.10164055299539171,
+          "ocr_specs_similarity": 0.06934022690858489
+        }
+      }
+    ]
+  }
+}

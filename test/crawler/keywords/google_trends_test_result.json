@@ -1,0 +1,114 @@
+{
+  "timestamp": "2025-12-05T11:12:39.043168",
+  "test_settings": {
+    "max_trends": 20,
+    "headless": true
+  },
+  "result": {
+    "total_trends": 20,
+    "trends": [
+      {
+        "keyword": "맨유 대 웨스트 햄",
+        "link": "https://trends.google.co.kr/trends/explore?q=%EB%A7%A8%EC%9C%A0&date=now%201-d&hl=ko"
+      },
+      {
+        "keyword": "윈터 정국",
+        "link": "https://trends.google.co.kr/trends/explore?q=%EC%A0%95%EA%B5%AD%20%EC%9C%88%ED%84%B0&date=now%201-d&hl=ko"
+      },
+      {
+        "keyword": "평가원",
+        "link": "https://trends.google.co.kr/trends/explore?q=%EC%88%98%EB%8A%A5%20%EB%93%B1%EA%B8%89%EC%BB%B7&date=now%201-d&hl=ko"
+      },
+      {
+        "keyword": "박나래",
+        "link": "https://trends.google.co.kr/trends/explore?q=%EB%B0%95%EB%82%98%EB%9E%98%20%EB%A7%A4%EB%8B%88%EC%A0%80&date=now%201-d&hl=ko"
+      },
+      {
+        "keyword": "조세호",
+        "link": "https://trends.google.co.kr/trends/explore?q=%EC%A1%B0%EC%84%B8%ED%98%B8%20%EC%A1%B0%ED%8F%AD&date=now%201-d&hl=ko"
+      },
+      {
+        "keyword": "이부진",
+        "link": "https://trends.google.co.kr/trends/explore?q=%EC%9D%B4%EB%B6%80%EC%A7%84%20%EC%95%84%EB%93%A4&date=now%201-d&hl=ko"
+      },
+      {
+        "keyword": "정국",
+        "link": ""
+      },
+      {
+        "keyword": "윈터",
+        "link": ""
+      },
+      {
+        "keyword": "agf",
+        "link": ""
+      },
+      {
+        "keyword": "youtube recap",
+        "link": "https://trends.google.co.kr/trends/explore?q=youtube.com%2Frecap&date=now%201-d&hl=ko"
+      },
+      {
+        "keyword": "알테오젠",
+        "link": "https://trends.google.co.kr/trends/explore?q=%EC%95%8C%ED%85%8C%EC%98%A4%EC%A0%A0%20%EC%A3%BC%EA%B0%80&date=now%201-d&hl=ko"
+      },
+      {
+        "keyword": "제설",
+        "link": "https://trends.google.co.kr/trends/explore?q=%ED%8F%AD%EC%84%A4&date=now%201-d&hl=ko"
+      },
+      {
+        "keyword": "수능",
+        "link": "https://trends.google.co.kr/trends/explore?q=%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5%EC%8B%9C%ED%97%98&date=now%201-d&hl=ko"
+      },
+      {
+        "keyword": "월드컵 조추첨",
+        "link": ""
+      },
+      {
+        "keyword": "이해인",
+        "link": ""
+      },
+      {
+        "keyword": "중앙대",
+        "link": "https://trends.google.co.kr/trends/explore?q=%EC%A4%91%EC%95%99%EB%8C%80%ED%95%99%EA%B5%90&date=now%201-d&hl=ko"
+      },
+      {
+        "keyword": "현대차",
+        "link": ""
+      },
+      {
+        "keyword": "kice",
+        "link": ""
+      },
+      {
+        "keyword": "현대차 주가",
+        "link": ""
+      },
+      {
+        "keyword": "미트윌란 대 노르셸란",
+        "link": ""
+      }
+    ]
+  },
+  "keywords_only": [
+    "맨유 대 웨스트 햄",
+    "윈터 정국",
+    "평가원",
+    "박나래",
+    "조세호",
+    "이부진",
+    "정국",
+    "윈터",
+    "agf",
+    "youtube recap",
+    "알테오젠",
+    "제설",
+    "수능",
+    "월드컵 조추첨",
+    "이해인",
+    "중앙대",
+    "현대차",
+    "kice",
+    "현대차 주가",
+    "미트윌란 대 노르셸란"
+  ]
+}
