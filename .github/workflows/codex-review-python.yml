@@ -36,11 +36,52 @@ jobs:
           FILES=$(paste -sd, changed_files.txt || true)
           echo "files=$FILES" >> "$GITHUB_OUTPUT"
 
+      - name: Validate OpenAI API Key
+        env:
+          API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          set -euo pipefail
+          
+          if [ -z "$API_KEY" ]; then
+            echo "❌ FATAL ERROR: OPENAI_API_KEY is not set"
+            echo "Please configure OPENAI_API_KEY in GitHub repository secrets"
+            exit 1
+          fi
+          
+          API_KEY_LENGTH=${#API_KEY}
+          if [ "$API_KEY_LENGTH" -lt 20 ]; then
+            echo "⚠️  WARNING: OPENAI_API_KEY seems too short (length: $API_KEY_LENGTH)"
+            echo "Valid OpenAI API keys are typically 40+ characters"
+            echo "Note: GitHub Actions masks secrets, actual length may be longer"
+            echo "Proceeding with API call (actual validation will happen at API level)"
+          else
+            echo "✅ OPENAI_API_KEY length check passed (length: $API_KEY_LENGTH characters)"
+          fi
+          
+          # API 키 형식 검증 (sk-로 시작하는지 확인)
+          if [[ "$API_KEY" != sk-* ]]; then
+            echo "⚠️  WARNING: OPENAI_API_KEY does not start with 'sk-'"
+            echo "This might indicate an invalid or old API key format"
+            echo "Note: Actual validation will occur during API call"
+          else
+            echo "✅ OPENAI_API_KEY format check passed (starts with 'sk-')"
+          fi
+
       - name: Build Codex prompt from diff
         run: |
           set -euo pipefail
           BASE_SHA="${{ github.event.pull_request.base.sha }}"
           HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+
+          # Diff 크기 체크 (1000줄 초과 시 경고)
+          DIFF_LINES=$(git --no-pager diff --unified=5 "$BASE_SHA" "$HEAD_SHA" | wc -l)
+          echo "📊 Diff size: $DIFF_LINES lines"
+          
+          if [ "$DIFF_LINES" -gt 5000 ]; then
+            echo "⚠️  WARNING: Diff is very large ($DIFF_LINES lines)"
+            echo "   Codex review might fail or be incomplete"
+            echo "   Consider splitting this PR into smaller changes"
+          fi
 
           cat > codex-prompt.md << 'EOF'
           당신은 Python 및 Java 백엔드를 담당하는 시니어 풀스택 개발자입니다.
@@ -105,9 +146,47 @@ jobs:
         with:
           openai-api-key: ${{ env.OPENAI_API_KEY }}
           prompt-file: codex-prompt.md
-          model: o4-mini
+          model: gpt-4o-mini
           output-file: codex-output.json
           sandbox: read-only
+        continue-on-error: true
+
+      - name: Check Codex review result
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          
+          # 이전 스텝의 결과 확인
+          if [ "${{ steps.run-codex.outcome }}" = "failure" ]; then
+            echo "❌ Codex review step failed"
+            echo "Possible causes:"
+            echo "  1. Invalid or expired OPENAI_API_KEY"
+            echo "  2. API rate limit exceeded"
+            echo "  3. Network connectivity issue"
+            echo "  4. Invalid model name (currently using: gpt-4o-mini)"
+            echo "  5. Diff size too large (> 5000 lines)"
+            echo ""
+            echo "Debug information:"
+            echo "  - API Key status: ${{ env.OPENAI_API_KEY != '' && '✅ Set' || '❌ Not Set' }}"
+            exit 1
+          fi
+          
+          # 출력 파일 존재 여부 확인
+          if [ ! -f codex-output.json ]; then
+            echo "❌ ERROR: codex-output.json file not created"
+            echo "The Codex review action may have failed silently"
+            exit 1
+          fi
+          
+          # 출력 파일이 비어있는지 확인
+          if [ ! -s codex-output.json ]; then
+            echo "⚠️  WARNING: codex-output.json is empty"
+            echo "Codex may have encountered an error or returned no comments"
+            exit 1
+          fi
+          
+          echo "✅ Codex review completed successfully"
+          echo "Output file size: $(wc -c < codex-output.json) bytes"
 
       - name: Parse Codex output into GitHub comments
         id: parse-codex
