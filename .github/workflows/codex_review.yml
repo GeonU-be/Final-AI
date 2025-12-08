@@ -1,0 +1,211 @@
+name: Codex Code Review
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+
+jobs:
+  codex-review:
+    runs-on: ubuntu-latest
+
+    # 이 Job이 PR에 코멘트를 달 수 있도록 권한 부여
+    permissions:
+      contents: read
+      pull-requests: write
+
+    env:
+      # OpenAI API 키 (리포지토리 시크릿에서 가져옴)
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      # GitHub API 호출용 토큰
+      GITHUB_TOKEN: ${{ github.token }}
+
+    steps:
+      # 1️⃣ PR의 머지 커밋 체크아웃
+      - name: Checkout pull request merge commit
+        uses: actions/checkout@v4
+        with:
+          # PR이 main에 머지됐다고 가정한 상태의 가상 merge commit을 체크아웃
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
+
+      # 2️⃣ 이번 PR에서 변경된 파일 목록 만들기
+      - name: Get list of changed files
+        id: changed-files
+        run: |
+          set -euo pipefail
+          # base SHA와 head SHA 가져오기
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          echo "Base: $BASE_SHA"
+          echo "Head: $HEAD_SHA"
+
+          # 변경된 파일 목록 추출
+          git diff --name-only "$BASE_SHA" "$HEAD_SHA" > changed_files.txt
+
+          echo "Changed files:"
+          cat changed_files.txt
+
+          # GitHub Actions output으로도 노출
+          FILES=$(paste -sd, changed_files.txt || true)
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+
+      # 3️⃣ Codex에 넘길 프롬프트(지시문 + diff) 만들기
+      - name: Build Codex prompt from diff
+        run: |
+          set -euo pipefail
+          BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+
+          # 리뷰 지시문 부분
+          cat > codex-prompt.md << 'EOF'
+          You are a senior software engineer doing a code review on a pull request.
+
+          - Focus on **correctness, security, performance, and maintainability**.
+          - Only comment on issues that are introduced or clearly visible in this diff.
+          - If everything looks good, respond with an empty list.
+
+          Return your answer as JSON in the following format:
+
+          [
+            {
+              "file": "relative/path/to/file.ext",
+              "line": 123,
+              "severity": "info | warning | error",
+              "title": "Short summary of the issue",
+              "body": "Multi-line explanation of the problem and suggestion"
+            }
+          ]
+          EOF
+
+          echo "" >> codex-prompt.md
+          echo "=== DIFF START ===" >> codex-prompt.md
+
+          # 실제 코드 diff 추가
+          git --no-pager diff --unified=5 "$BASE_SHA" "$HEAD_SHA" >> codex-prompt.md
+
+      # 4️⃣ Codex 실행 (openai/codex-action 사용)
+      - name: Run Codex review
+        id: run-codex
+        uses: openai/codex-action@main
+        with:
+          openai-api-key: ${{ env.OPENAI_API_KEY }}
+          # 위에서 만든 프롬프트 파일
+          prompt-file: codex-prompt.md
+          # 코드리뷰에 쓸 모델 (원하면 변수/입력으로 빼도 됨)
+          model: o4-mini
+          # Codex의 JSON 결과를 이 파일에 저장
+          output-file: codex-output.json
+          # 리포를 수정하지 않도록 read-only 모드
+          sandbox: read-only
+
+      # 5️⃣ Codex 결과(JSON)를 GitHub PR 코멘트 포맷으로 변환
+      - name: Parse Codex output into GitHub comments
+        id: parse-codex
+        run: |
+          set -euo pipefail
+
+          if [ ! -s codex-output.json ]; then
+            echo "Codex output is empty. Nothing to comment."
+            echo "has_comments=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "Codex raw output:"
+          cat codex-output.json
+          echo ""
+
+          # codex-output.json이 문자열일 수도 있으므로 jq로 한 번 감싸줌
+          # 예: "..." 형태면 안쪽 문자열을 JSON으로 파싱, 이미 배열이면 그대로 사용
+          NORMALIZED=$(cat codex-output.json | \
+            jq 'try (fromjson) catch .')
+
+          echo "$NORMALIZED" > codex-output.json
+
+          # 빈 배열이면 코멘트 없음
+          if [ "$(jq 'length' codex-output.json)" -eq 0 ]; then
+            echo "No review comments from Codex."
+            echo "has_comments=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "Parsed Codex comments:"
+          cat codex-output.json
+
+          echo "has_comments=true" >> "$GITHUB_OUTPUT"
+
+      # 6️⃣ Codex가 생성한 각 이슈를 PR에 inline 코멘트로 달기
+      - name: Post inline review comments to PR
+        if: steps.parse-codex.outputs.has_comments == 'true'
+        run: |
+          set -euo pipefail
+
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          REPO=${{ github.repository }}
+
+          # PR의 최신 커밋 SHA (리뷰 코멘트에 필요)
+          COMMIT_SHA=${{ github.event.pull_request.head.sha }}
+
+          # codex-output.json: [
+          #   { "file": "...", "line": 123, "severity": "...", "title": "...", "body": "..." }
+          # ]
+          length=$(jq 'length' codex-output.json)
+          echo "Posting $length review comments from Codex..."
+
+          for i in $(seq 0 $((length - 1))); do
+            file=$(jq -r ".[$i].file" codex-output.json)
+            line=$(jq -r ".[$i].line" codex-output.json)
+            severity=$(jq -r ".[$i].severity" codex-output.json)
+            title=$(jq -r ".[$i].title" codex-output.json)
+            body=$(jq -r ".[$i].body" codex-output.json)
+
+            # GitHub review body 구성
+            comment="[$severity] $title
+            
+            $body"
+
+            echo "Comment on $file:$line"
+            echo "$comment"
+            echo "----"
+
+            # GitHub API로 리뷰 코멘트 생성
+            jq -n \
+              --arg body "$comment" \
+              --arg path "$file" \
+              --argjson line "$line" \
+              --arg sha "$COMMIT_SHA" \
+              '{
+                body: $body,
+                path: $path,
+                line: $line,
+                side: "RIGHT",
+                commit_id: $sha
+              }' > comment.json
+
+            curl -sS \
+              -X POST \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer $GITHUB_TOKEN" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "https://api.github.com/repos/$REPO/pulls/$PR_NUMBER/comments" \
+              -d @comment.json
+          done
+
+      # 7️⃣ (옵션) Codex 요약을 PR에 일반 코멘트로 한 번 더 남기기
+      - name: Post summary comment
+        if: steps.parse-codex.outputs.has_comments == 'true'
+        run: |
+          set -euo pipefail
+
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          REPO=${{ github.repository }}
+
+          SUMMARY="**Codex automated review summary** See inline comments for details."
+
+          jq -n --arg body "$SUMMARY" '{ body: $body }' > summary.json
+
+          curl -sS \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/$REPO/issues/$PR_NUMBER/comments" \
+            -d @summary.json
