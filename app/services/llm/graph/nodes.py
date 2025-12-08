@@ -1,6 +1,7 @@
 import random
 import asyncio
 import json
+import os
 
 from langsmith import traceable
 
@@ -9,6 +10,14 @@ from app.logs import log_info, log_warn, log_error
 
 from app.services.llm.modules import filter_wrong, select_one
 from app.utils.text_cleaner import try_repair_json
+
+# 키워드 크롤러
+from app.services.crawler.keywords.google_trend import get_trend_keywords as get_google_trends
+from app.services.crawler.keywords.twitter_crawler import get_trend_keywords as get_twitter_trends
+
+# 상품 크롤러
+from app.services.crawler.products.ssadagu_crawler import crawl_ssadagu_products
+from app.services.crawler.products.coupang_crawler import crawl_coupang_products
 
 QUEUE_SIZE = 10
 
@@ -28,18 +37,64 @@ async def entry_node(state: GraphState) -> GraphState:
 # 키워드 없어서 가져오는 노드
 @traceable
 async def crawling_keywords_node(state: GraphState) -> GraphState:
-    log_info("키워드 ", job_id=state["jobId"])
+    log_info("트렌드 키워드 크롤링 시작", job_id=state["jobId"])
 
-    # TODO: 예시 결과입니다. 실제 로직으로 수정 필요
-    # keywords = ["평택대", "bangladesh vs ireland", "나경원", "중앙대학교", "강백호", "메이플", "조달청", "국립중앙박물관", "마이애미 대 골든 스테이트", "한국장학재단"]
-    # return {"keywords": keywords}
-    result = []
-    # result += get_trend_keywords()
-    result += [
-        "안드로이드",
-    ]
+    keywords: list[str] = []
 
-    return {"keywords": result}
+    # Google Trends에서 키워드 수집
+    try:
+        log_info("Google Trends 키워드 수집 중...", job_id=state["jobId"])
+        google_keywords = await get_google_trends(headless=True, max_trends=30)
+        keywords.extend(google_keywords)
+        log_info(f"Google Trends: {len(google_keywords)}개 키워드 수집", job_id=state["jobId"])
+    except Exception as e:
+        log_warn(
+            message="Google Trends 크롤링 실패",
+            job_id=state["jobId"],
+            submessage=str(e),
+            logged_process="crawling_keywords",
+        )
+
+    # Twitter(X.com)에서 키워드 수집 (쿠키 파일 필요)
+    twitter_cookie_file = "twitter_cookies.json"
+    if os.path.exists(twitter_cookie_file):
+        try:
+            log_info("Twitter 트렌드 키워드 수집 중...", job_id=state["jobId"])
+            twitter_keywords = await get_twitter_trends(
+                headless=True,
+                max_trends=20,
+                cookie_file=twitter_cookie_file,
+            )
+            keywords.extend(twitter_keywords)
+            log_info(f"Twitter: {len(twitter_keywords)}개 키워드 수집", job_id=state["jobId"])
+        except Exception as e:
+            log_warn(
+                message="Twitter 크롤링 실패",
+                job_id=state["jobId"],
+                submessage=str(e),
+                logged_process="crawling_keywords",
+            )
+    else:
+        log_warn(
+            message="Twitter 쿠키 파일 없음 - Twitter 트렌드 스킵",
+            job_id=state["jobId"],
+            submessage=f"쿠키 파일 경로: {twitter_cookie_file}",
+            logged_process="crawling_keywords",
+        )
+
+    # 중복 제거
+    keywords = list(dict.fromkeys(keywords))
+
+    if not keywords:
+        log_warn(
+            message="수집된 키워드가 없습니다. 기본 키워드 사용",
+            job_id=state["jobId"],
+            logged_process="crawling_keywords",
+        )
+        keywords = ["스마트폰", "노트북", "무선이어폰"]
+
+    log_info(f"총 {len(keywords)}개 키워드 수집 완료", job_id=state["jobId"])
+    return {"keywords": keywords}
 
 
 @traceable
@@ -73,35 +128,69 @@ async def keyword_join_node(state: GraphState) -> GraphState:
 @traceable
 async def crawling_items_ssadagu_node(state: GraphState) -> GraphState:
     log_info("상품 크롤링 중 - ssadagu.kr", job_id=state["jobId"])
-    # 싸다구 몰에서 아이템 크롤링
-    # TODO: 예시 결과입니다. 실제 로직으로 수정 필요
-    result = [
-        {
-            "title": "2025 새로운 국경 스마트 폰 I16PROMax 안드로이드 전화 AliExpress 핫 세일 새로운 공장 도매",
-            "price": "41800",
-            "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=901876889270&ss_tx=스마트폰",
-            "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01Kkep2t2MGSUYrhH3X_!!2217178229800-0-cib.jpg",
-            "sales_count": "0",
-        },
-    ]
+    
+    keyword = state.get("keyword", "")
+    if not keyword:
+        log_warn(
+            message="검색 키워드가 없습니다",
+            job_id=state["jobId"],
+            logged_process="crawling_ssadagu",
+        )
+        return {"products": {**state.get("products", {}), "ssadagu": []}}
+    
+    try:
+        log_info(f"싸다구 상품 검색: '{keyword}'", job_id=state["jobId"])
+        result = await crawl_ssadagu_products(
+            keyword=keyword,
+            max_products=30,
+            headless=True,
+        )
+        log_info(f"싸다구 크롤링 완료: {len(result)}개 상품", job_id=state["jobId"])
+    except Exception as e:
+        log_warn(
+            message="싸다구 크롤링 실패",
+            job_id=state["jobId"],
+            submessage=str(e),
+            logged_process="crawling_ssadagu",
+        )
+        result = []
+    
     return {"products": {**state.get("products", {}), "ssadagu": result}}
 
 
 @traceable
 async def crawling_items_coupang_node(state: GraphState) -> GraphState:
     log_info("상품 크롤링 중 - coupang.com", job_id=state["jobId"])
-    # 쿠팡에서 크롤링
-    # TODO: 예시 결과입니다. 실제 로직으로 수정 필요
-    # 크롤링 테스트가 나오면 예시도 수정이 필요합니다.
-    result = [
-        {
-            "title": "2025 새로운 국경 스마트 폰 I16PROMax 안드로이드 전화 AliExpress 핫 세일 새로운 공장 도매",
-            "price": "41800",
-            "product_link": "https://ssadagu.kr/shop/view.php?platform=1688&num_iid=901876889270&ss_tx=스마트폰",
-            "thumbnail_url": "https://cbu01.alicdn.com/img/ibank/O1CN01Kkep2t2MGSUYrhH3X_!!2217178229800-0-cib.jpg",
-            "sales_count": "0",
-        },
-    ]
+    
+    keyword = state.get("keyword", "")
+    if not keyword:
+        log_warn(
+            message="검색 키워드가 없습니다",
+            job_id=state["jobId"],
+            logged_process="crawling_coupang",
+        )
+        return {"products": {**state.get("products", {}), "coupang": []}}
+    
+    try:
+        log_info(f"쿠팡 상품 검색: '{keyword}'", job_id=state["jobId"])
+        result = await crawl_coupang_products(
+            keyword=keyword,
+            max_products=30,
+            headless=True,
+            fetch_detail_images=True,  # OCR을 위해 상세 이미지 수집
+            use_ocr=True,  # OCR 텍스트 추출
+            max_ocr_images=5,
+        )
+        log_info(f"쿠팡 크롤링 완료: {len(result)}개 상품", job_id=state["jobId"])
+    except Exception as e:
+        log_warn(
+            message="쿠팡 크롤링 실패",
+            job_id=state["jobId"],
+            submessage=str(e),
+            logged_process="crawling_coupang",
+        )
+        result = []
+    
     return {"products": {**state.get("products", {}), "coupang": result}}
 
 
