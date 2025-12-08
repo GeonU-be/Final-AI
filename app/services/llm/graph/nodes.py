@@ -13,7 +13,7 @@ from app.utils.text_cleaner import try_repair_json
 
 # 키워드 크롤러
 from app.services.crawler.keywords.google_trend import get_trend_keywords as get_google_trends
-from app.services.crawler.keywords.twitter_crawler import get_trend_keywords as get_twitter_trends
+# from app.services.crawler.keywords.twitter_crawler import get_trend_keywords as get_twitter_trends
 
 # 상품 크롤러
 from app.services.crawler.products.ssadagu_crawler import crawl_ssadagu_products
@@ -56,31 +56,32 @@ async def crawling_keywords_node(state: GraphState) -> GraphState:
         )
 
     # Twitter(X.com)에서 키워드 수집 (쿠키 파일 필요)
-    twitter_cookie_file = "twitter_cookies.json"
-    if os.path.exists(twitter_cookie_file):
-        try:
-            log_info("Twitter 트렌드 키워드 수집 중...", job_id=state["jobId"])
-            twitter_keywords = await get_twitter_trends(
-                headless=True,
-                max_trends=20,
-                cookie_file=twitter_cookie_file,
-            )
-            keywords.extend(twitter_keywords)
-            log_info(f"Twitter: {len(twitter_keywords)}개 키워드 수집", job_id=state["jobId"])
-        except Exception as e:
-            log_warn(
-                message="Twitter 크롤링 실패",
-                job_id=state["jobId"],
-                submessage=str(e),
-                logged_process="crawling_keywords",
-            )
-    else:
-        log_warn(
-            message="Twitter 쿠키 파일 없음 - Twitter 트렌드 스킵",
-            job_id=state["jobId"],
-            submessage=f"쿠키 파일 경로: {twitter_cookie_file}",
-            logged_process="crawling_keywords",
-        )
+    # 주석 처리: 다른 소스로 대체 가능
+    # twitter_cookie_file = "twitter_cookies.json"
+    # if os.path.exists(twitter_cookie_file):
+    #     try:
+    #         log_info("Twitter 트렌드 키워드 수집 중...", job_id=state["jobId"])
+    #         twitter_keywords = await get_twitter_trends(
+    #             headless=True,
+    #             max_trends=20,
+    #             cookie_file=twitter_cookie_file,
+    #         )
+    #         keywords.extend(twitter_keywords)
+    #         log_info(f"Twitter: {len(twitter_keywords)}개 키워드 수집", job_id=state["jobId"])
+    #     except Exception as e:
+    #         log_warn(
+    #             message="Twitter 크롤링 실패",
+    #             job_id=state["jobId"],
+    #             submessage=str(e),
+    #             logged_process="crawling_keywords",
+    #         )
+    # else:
+    #     log_warn(
+    #         message="Twitter 쿠키 파일 없음 - Twitter 트렌드 스킵",
+    #         job_id=state["jobId"],
+    #         submessage=f"쿠키 파일 경로: {twitter_cookie_file}",
+    #         logged_process="crawling_keywords",
+    #     )
 
     # 중복 제거
     keywords = list(dict.fromkeys(keywords))
