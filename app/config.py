@@ -35,3 +35,17 @@ LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO").upper()
 JAVA_SERVER_ADDRESS: str | None = os.getenv("JAVA_SERVER_ADDRESS")
 LOG_USER_ID: int = _get_int_env("LOG_USER_ID", 1)
 LOG_HTTP_TIMEOUT: float = _get_float_env("LOG_HTTP_TIMEOUT", 5.0)
+
+# Twitter 관련 설정
+TWITTER_API_KEY: str | None = os.getenv("TWITTER_API_KEY")
+TWITTER_API_SECRET: str | None = os.getenv("TWITTER_API_SECRET")
+TWITTER_ACCESS_TOKEN: str | None = os.getenv("TWITTER_ACCESS_TOKEN")
+TWITTER_ACCESS_SECRET: str | None = os.getenv("TWITTER_ACCESS_SECRET")
+TWITTER_BEARER_TOKEN: str | None = os.getenv("TWITTER_BEARER_TOKEN")
+TWITTER_CALLBACK_URL: str | None = os.getenv("TWITTER_CALLBACK_URL")
+
+# 레이트리밋 대기 옵션은 환경에서 토글하지 않고 기본 True로 고정
+TWITTER_WAIT_ON_RATE_LIMIT: bool = True
+TWITTER_MAX_MEDIA_CONCURRENCY: int = _get_int_env(
+    "TWITTER_MAX_MEDIA_CONCURRENCY", 2
+)
