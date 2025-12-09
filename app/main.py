@@ -3,6 +3,8 @@ import asyncio
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.services.llm.graph import Graph
+from app.services.crawler.keywords.google_trend import get_keywords_and_send
+
 from app.classes.models import GraphState
 
 from app.classes.requests import WritePostRequest, UploadPostRequest
@@ -61,7 +63,7 @@ def create_app() -> FastAPI:
         # => 로직은 돌아가는데 응답을 먼저 제공함
         print("키워드 호출 로직 실행")
         # 크롤링 해서 키워드 리스트 갖다 주는 코드
-
+        asyncio.create_task(run(get_keywords_and_send(), ""))
         return
 
     @app.post("/api/upload")

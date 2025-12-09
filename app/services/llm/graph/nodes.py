@@ -2,6 +2,7 @@ import random
 import asyncio
 import json
 import os
+import re
 import requests
 
 from langsmith import traceable
@@ -336,6 +337,24 @@ async def generate_ads(state: GraphState) -> GraphState:
         title = await generate_title(content=content, llm_settings=llmSetting)
 
     post = {"title": title, "content": content}
+
+    def extract_first_https_link(text: str) -> str | None:
+        match = re.search(r"https://[^\s)>'\"]+", text)
+        return match.group(0) if match else None
+
+    def find_product_by_link(products: dict, link: str) -> dict | None:
+        for mall_products in products.values():
+            for product in mall_products:
+                if product.get("link") == link:
+                    return {k: v for k, v in product.items() if k != "category"}
+        return None
+
+    products_in_state = state.get("products") or {}
+    target_link = extract_first_https_link(content)
+    matched_product = (
+        find_product_by_link(products_in_state, target_link) if target_link else None
+    )
+
     requests.post(
         url=JAVA_SERVER_ADDRESS,
         headers={
@@ -351,7 +370,8 @@ async def generate_ads(state: GraphState) -> GraphState:
             "generationType": llmSetting.generationType,
             "link": "",
             "keyword": state["keyword"],
-            "product": {
+            "product": matched_product
+            or {
                 "title": "string",
                 "link": "string",
                 "thumbnail": "string",
@@ -376,7 +396,6 @@ async def generate_ads(state: GraphState) -> GraphState:
                 jobId=state["jobId"],
                 max_retries=3,
             )
-            # TODO: jobId랑 url 자바한테 보내기
         elif channelSetting.name == "twitter" or "x":
             # 트위터 업로드 로직
             0
