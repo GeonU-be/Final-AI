@@ -38,20 +38,20 @@ jobs:
           echo "files=$FILES" >> "$GITHUB_OUTPUT"
 
       - name: Validate OpenAI API Key
-        # Job-Level에서 이미 설정된 전역 변수 $OPENAI_API_KEY를 직접 참조
+        # Job-Level에서 설정된 전역 변수를 Step-Level에서도 명시적으로 설정
+        env:
+          OPENAI_API_KEY: ${{ env.OPENAI_API_KEY }}
         run: |
           set -euo pipefail
           
-          # 전역 변수 $OPENAI_API_KEY를 직접 사용
-          API_KEY_VAR="${{ env.OPENAI_API_KEY }}"
-          
-          if [ -z "$API_KEY_VAR" ]; then
+          # Shell에서 직접 환경 변수 참조 (YAML 템플릿 문법 대신)
+          if [ -z "$OPENAI_API_KEY" ]; then
             echo "❌ FATAL ERROR: OPENAI_API_KEY is not set"
             echo "Please configure OPENAI_API_KEY in GitHub repository secrets"
             exit 1
           fi
           
-          API_KEY_LENGTH=${#API_KEY_VAR}
+          API_KEY_LENGTH=${#OPENAI_API_KEY}
           if [ "$API_KEY_LENGTH" -lt 20 ]; then
             echo "⚠️  WARNING: OPENAI_API_KEY seems too short (length: $API_KEY_LENGTH)"
             echo "Valid OpenAI API keys are typically 40+ characters"
@@ -62,7 +62,7 @@ jobs:
           fi
           
           # API 키 형식 검증 (sk-로 시작하는지 확인)
-          if [[ "$API_KEY_VAR" != sk-* ]]; then
+          if [[ "$OPENAI_API_KEY" != sk-* ]]; then
             echo "⚠️  WARNING: OPENAI_API_KEY does not start with 'sk-'"
             echo "This might indicate an invalid or old API key format"
             echo "Note: Actual validation will occur during API call"
