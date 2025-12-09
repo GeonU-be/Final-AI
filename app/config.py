@@ -35,3 +35,8 @@ LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO").upper()
 JAVA_SERVER_ADDRESS: str | None = os.getenv("JAVA_SERVER_ADDRESS")
 LOG_USER_ID: int = _get_int_env("LOG_USER_ID", 1)
 LOG_HTTP_TIMEOUT: float = _get_float_env("LOG_HTTP_TIMEOUT", 5.0)
+
+# 네이버 아이디 (임시)
+NAVER_ID: str = os.getenv("NAVER_ID")
+NAVER_PW: str = os.getenv("NAVER_PW")
+SESSION_FILE_DIR = "./naver/login_session.json"
