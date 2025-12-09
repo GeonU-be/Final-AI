@@ -315,7 +315,7 @@ async def get_keywords_and_send(
     requests.post(
         url=JAVA_SERVER_ADDRESS + "/api/trend",
         headers={"Content-Type": "application/json"},
-        data=res_list,
+        json=res_list,
         timeout=15000,
     )
     return res_list

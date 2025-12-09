@@ -110,7 +110,8 @@ async def run_login_upload_workflow(
         if upload_result["success"]:
             requests.patch(
                 url=JAVA_SERVER_ADDRESS,
-                data={"jobId": jobId, "url": upload_result["message"].split(",")[1]},
+                headers={"Content-Type": "application/json"},
+                json={"jobId": jobId, "url": upload_result["message"].split(",")[1]},
                 timeout=10000,
             )
             return {

@@ -357,10 +357,8 @@ async def generate_ads(state: GraphState) -> GraphState:
 
     requests.post(
         url=JAVA_SERVER_ADDRESS,
-        headers={
-            "Content-Type": "application/json",
-        },
-        data={
+        headers={"Content-Type": "application/json"},
+        json={
             "jobId": state["jobId"],
             "uploadChannelId": channelSetting.id,
             "userId": channelSetting.userId,
