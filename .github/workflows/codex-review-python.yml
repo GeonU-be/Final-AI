@@ -38,13 +38,13 @@ jobs:
           echo "files=$FILES" >> "$GITHUB_OUTPUT"
 
       - name: Validate OpenAI API Key
-        # Job-Level에서 설정된 전역 변수를 Step-Level에서도 명시적으로 설정
+        # Secrets에서 직접 참조 (Job-Level env를 거치지 않고 직접 사용)
         env:
-          OPENAI_API_KEY: ${{ env.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           set -euo pipefail
           
-          # Shell에서 직접 환경 변수 참조 (YAML 템플릿 문법 대신)
+          # Shell에서 직접 환경 변수 참조
           if [ -z "$OPENAI_API_KEY" ]; then
             echo "❌ FATAL ERROR: OPENAI_API_KEY is not set"
             echo "Please configure OPENAI_API_KEY in GitHub repository secrets"
