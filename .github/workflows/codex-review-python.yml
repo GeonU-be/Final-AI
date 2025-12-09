@@ -20,7 +20,7 @@ jobs:
       - name: Checkout pull request merge commit
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
           fetch-depth: 0
 
       - name: Get list of changed files
