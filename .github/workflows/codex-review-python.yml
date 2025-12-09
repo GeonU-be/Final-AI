@@ -13,7 +13,7 @@ jobs:
       pull-requests: write
 
     env:
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY2 }}
       GITHUB_TOKEN: ${{ github.token }}
 
     steps:
