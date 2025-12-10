@@ -2,6 +2,8 @@ import random
 import asyncio
 import json
 import os
+import re
+import requests
 
 from langsmith import traceable
 
@@ -12,12 +14,24 @@ from app.services.llm.modules import filter_wrong, select_one
 from app.utils.text_cleaner import try_repair_json
 
 # 키워드 크롤러
-from app.services.crawler.keywords.google_trend import get_trend_keywords as get_google_trends
+from app.services.crawler.keywords.google_trend import (
+    get_trend_keywords as get_google_trends,
+)
+
 # from app.services.crawler.keywords.twitter_crawler import get_trend_keywords as get_twitter_trends
 
 # 상품 크롤러
 from app.services.crawler.products.ssadagu_crawler import crawl_ssadagu_products
 from app.services.crawler.products.coupang_crawler import crawl_coupang_products
+
+from app.services.llm.modules.generate_content import generate_content
+from app.services.llm.modules.generate_title import generate_title
+
+from app.services.uploader.naver.workflow import (
+    run_login_upload_workflow as naver_uploader,
+)
+
+from app.config import NAVER_ID, NAVER_PW, SESSION_FILE_DIR, JAVA_SERVER_ADDRESS
 
 QUEUE_SIZE = 10
 
@@ -46,7 +60,10 @@ async def crawling_keywords_node(state: GraphState) -> GraphState:
         log_info("Google Trends 키워드 수집 중...", job_id=state["jobId"])
         google_keywords = await get_google_trends(headless=True, max_trends=30)
         keywords.extend(google_keywords)
-        log_info(f"Google Trends: {len(google_keywords)}개 키워드 수집", job_id=state["jobId"])
+        log_info(
+            f"Google Trends: {len(google_keywords)}개 키워드 수집",
+            job_id=state["jobId"],
+        )
     except Exception as e:
         log_warn(
             message="Google Trends 크롤링 실패",
@@ -129,7 +146,7 @@ async def keyword_join_node(state: GraphState) -> GraphState:
 @traceable
 async def crawling_items_ssadagu_node(state: GraphState) -> GraphState:
     log_info("상품 크롤링 중 - ssadagu.kr", job_id=state["jobId"])
-    
+
     keyword = state.get("keyword", "")
     if not keyword:
         log_warn(
@@ -138,7 +155,7 @@ async def crawling_items_ssadagu_node(state: GraphState) -> GraphState:
             logged_process="crawling_ssadagu",
         )
         return {"products": {**state.get("products", {}), "ssadagu": []}}
-    
+
     try:
         log_info(f"싸다구 상품 검색: '{keyword}'", job_id=state["jobId"])
         result = await crawl_ssadagu_products(
@@ -155,14 +172,14 @@ async def crawling_items_ssadagu_node(state: GraphState) -> GraphState:
             logged_process="crawling_ssadagu",
         )
         result = []
-    
+
     return {"products": {**state.get("products", {}), "ssadagu": result}}
 
 
 @traceable
 async def crawling_items_coupang_node(state: GraphState) -> GraphState:
     log_info("상품 크롤링 중 - coupang.com", job_id=state["jobId"])
-    
+
     keyword = state.get("keyword", "")
     if not keyword:
         log_warn(
@@ -171,7 +188,7 @@ async def crawling_items_coupang_node(state: GraphState) -> GraphState:
             logged_process="crawling_coupang",
         )
         return {"products": {**state.get("products", {}), "coupang": []}}
-    
+
     try:
         log_info(f"쿠팡 상품 검색: '{keyword}'", job_id=state["jobId"])
         result = await crawl_coupang_products(
@@ -191,7 +208,7 @@ async def crawling_items_coupang_node(state: GraphState) -> GraphState:
             logged_process="crawling_coupang",
         )
         result = []
-    
+
     return {"products": {**state.get("products", {}), "coupang": result}}
 
 
@@ -300,34 +317,88 @@ async def job_failed(state: GraphState) -> GraphState:
 @traceable
 async def generate_ads(state: GraphState) -> GraphState:
     log_info("글 생성 중", job_id=state["jobId"])
-    # # TODO: 설정 갖고 각 플랫폼의 성격에 맞게 LLM이 글 쓰기
-    # # 이건 그냥 if 문으로 순회해도 될 듯? 어짜피 값을 요구하는게 아니라 로직 돌고 있다고 나중에 통보만 할거라
-    # content1={
-    #   "title": "블로그 제목",
-    #   "content": "블로그 내용",
-    #   "tags": ["#해시", "#태그들"]
-    # }
-    # content2={
-    #   "content": "트윗 내용",
-    #   "images": ["이미지 링크. 없으면 빈칸"]
-    # }
-    # content3={
-    #   "content": "쓰레드 내용",
-    #   "images": ["이미지 링크. 없으면 빈칸"]
-    # }
+    llmSetting = state.get("settings").llmSettings
+    channelSetting = state.get("settings").channelSettings
 
-    # # 실제로는 이렇게 단순하게 보내진 않습니다. 예시 출력이 다음과 같다 이 말입니다.
-    # return {
-    #   "result": {
-    #     "blog": content1,
-    #     "x": content2,
-    #     "thread": content3
-    #   }
-    # }
-    result = {"title": "제목입니다.", "content": "글의 내용입니다."}
+    # TODO: 이거 제대로된 값 집어넣게 수정하기
+    product_info = {}
+    compareable_info = {}
 
-    print(result)
-    return {"result": result}
+    title = ""
+    content = await generate_content(
+        platform=channelSetting.name,
+        keyword=state.get("keyword"),
+        tone=llmSetting.prompt,
+        product_info=product_info,
+        compareable_info=compareable_info,
+        llm_settings=llmSetting,
+    )
+
+    if channelSetting.name == "naver":
+        title = await generate_title(content=content, llm_settings=llmSetting)
+
+    post = {"title": title, "content": content}
+
+    def extract_first_https_link(text: str) -> str | None:
+        match = re.search(r"https://[^\s)>'\"]+", text)
+        return match.group(0) if match else None
+
+    def find_product_by_link(products: dict, link: str) -> dict | None:
+        for mall_products in products.values():
+            for product in mall_products:
+                if product.get("link") == link:
+                    return {k: v for k, v in product.items() if k != "category"}
+        return None
+
+    products_in_state = state.get("products") or {}
+    target_link = extract_first_https_link(content)
+    matched_product = (
+        find_product_by_link(products_in_state, target_link) if target_link else None
+    )
+
+    requests.post(
+        url=JAVA_SERVER_ADDRESS,
+        headers={"Content-Type": "application/json"},
+        json={
+            "jobId": state["jobId"],
+            "uploadChannelId": channelSetting.id,
+            "userId": channelSetting.userId,
+            "title": title,
+            "body": content,
+            "status": "PENDING",
+            "generationType": llmSetting.generationType,
+            "link": "",
+            "keyword": state["keyword"],
+            "product": matched_product
+            or {
+                "title": "string",
+                "link": "string",
+                "thumbnail": "string",
+                "price": 0,
+                "category": "string",
+            },
+        },
+        timeout=15000,
+    )
+
+    print(post)
+    if llmSetting.generationType == "AUTO":
+        # TODO: 아이디, 비번 자바에서 제공하도록 변경하기
+        if channelSetting.name == "naver":
+            await naver_uploader(
+                login_id=NAVER_ID,
+                login_pw=NAVER_PW,
+                session_file=SESSION_FILE_DIR,
+                BLOG_ID=NAVER_ID,
+                title=title,
+                content=content,
+                jobId=state["jobId"],
+                max_retries=3,
+            )
+        elif channelSetting.name == "twitter" or "x":
+            # 트위터 업로드 로직
+            0
+    return {"result": post}
 
 
 print("define nodes")

@@ -51,3 +51,20 @@ INFORMATIONS = """
 
 # 플랫폼별 템플릿을 하나의 dict 에 저장
 TEMPLATES = {"naver": NAVER_TEMPLATE, "twitter": TWITTER_TEMPLATE}
+
+
+# 하나의 플랫폼 프롬프트 생성
+def gc_system_prompt(platform: str):
+    """
+    플랫폼에 따라 시스템 프롬프트를 선택하는 함수
+    """
+
+    # 플랫폼에 맞는 템플릿 선택
+    template = TEMPLATES.get(platform)
+
+    # 템플릿이 없으면 예외 처리
+    if not template:
+        raise ValueError(f"지원하지 않는 플랫폼: {platform}")
+
+    # 다음 LangGraph 노드로 전달할 데이터
+    return template

@@ -1,4 +1,6 @@
+import requests
 import asyncio
+from app.config import JAVA_SERVER_ADDRESS
 from app.services.uploader.naver.login_service import naver_auto_login
 from app.services.uploader.naver.upload_service import naver_publish_workflow
 
@@ -56,18 +58,11 @@ async def workflow_upload_step(BLOG_ID, title, content, session_file):
     return result
 
 
-
 # ---------------------------------------------------------
 # ③ 전체 자동 로그인 + 자동 업로드 통합 Workflow (Orchestrator)
 # ---------------------------------------------------------
 async def run_login_upload_workflow(
-        login_id,
-        login_pw,
-        session_file,
-        BLOG_ID,
-        title,
-        content,
-        max_retries=3
+    login_id, login_pw, session_file, BLOG_ID, title, content, jobId, max_retries=3
 ):
     """
     기능:
@@ -97,23 +92,33 @@ async def run_login_upload_workflow(
     login_result = await workflow_login_step(login_id, login_pw, session_file)
 
     if not login_result["success"]:
+        print("login failed")
         return {
             "success": False,
             "message": f"로그인 단계 실패 → {login_result['message']}",
-            "attempts": 0
+            "attempts": 0,
         }
 
+    print("login successed")
     # STEP 2. 업로드 (재시도 포함)
     for attempt in range(1, max_retries + 1):
+        print("uploaded attempt: ", attempt)
         upload_result = await workflow_upload_step(
             BLOG_ID, title, content, session_file
         )
 
         if upload_result["success"]:
+            requests.patch(
+                url=JAVA_SERVER_ADDRESS,
+                headers={"Content-Type": "application/json"},
+                json={"jobId": jobId, "url": upload_result["message"].split(",")[1]},
+                timeout=10000,
+            )
             return {
                 "success": True,
                 "message": "전체 자동 업로드 프로세스 성공",
-                "attempts": attempt
+                "url": upload_result["message"].split(",")[1],
+                "attempts": attempt,
             }
 
         # 실패한 경우 재시도
@@ -121,8 +126,10 @@ async def run_login_upload_workflow(
             await asyncio.sleep(3)
 
     # 모든 재시도 실패
-    return {
-        "success": False,
-        "message": "모든 업로드 시도 실패",
-        "attempts": max_retries
-    }
+    print("workflow was failed!")
+    raise Exception("Naver Uploading workflow was failed.")
+    # return {
+    #     "success": False,
+    #     "message": "모든 업로드 시도 실패",
+    #     "attempts": max_retries,
+    # }

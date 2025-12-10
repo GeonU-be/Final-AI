@@ -1,4 +1,4 @@
-from playwright.async_api import async_playwright
+from playwright.async_api import async_playwright, TimeoutError
 import asyncio
 
 
@@ -22,10 +22,7 @@ async def open_editor_page(browser, BLOG_ID, session_file):
     context = await browser.new_context(storage_state=session_file)
     page = await context.new_page()
 
-    await page.goto(
-        f"https://blog.naver.com/{BLOG_ID}?Redirect=Write&",
-        timeout=30000
-    )
+    await page.goto(f"https://blog.naver.com/{BLOG_ID}?Redirect=Write&", timeout=30000)
 
     await page.wait_for_selector("iframe[name='mainFrame']")
     frame = page.frame(name="mainFrame")
@@ -107,12 +104,9 @@ async def fill_content(frame, content):
     """
     try:
         await frame.wait_for_selector(
-            "div.se-module-text p.se-text-paragraph span.se-placeholder",
-            timeout=5000
+            "div.se-module-text p.se-text-paragraph span.se-placeholder", timeout=5000
         )
-        await frame.click(
-            "div.se-module-text p.se-text-paragraph span.se-placeholder"
-        )
+        await frame.click("div.se-module-text p.se-text-paragraph span.se-placeholder")
         await frame.type("div.se-module-text p.se-text-paragraph", content)
         return True
     except Exception:
@@ -151,8 +145,7 @@ async def publish_final_step(frame):
     """
     try:
         await frame.wait_for_selector(
-            "button[data-testid='seOnePublishBtn']",
-            timeout=5000
+            "button[data-testid='seOnePublishBtn']", timeout=5000
         )
         await frame.click("button[data-testid='seOnePublishBtn']")
         return True
@@ -178,31 +171,48 @@ async def naver_publish_workflow(BLOG_ID, title, content, session_file):
     """
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False)
+        print("browser launched")
 
         try:
             frame, page = await open_editor_page(browser, BLOG_ID, session_file)
 
             await close_existing_popup(frame)
             await close_help_panel(frame)
+            print("closed unuseful frames")
 
             if not await fill_title(frame, title):
+                print("could not type title!")
                 return {"success": False, "message": "제목 입력 실패"}
 
             if not await fill_content(frame, content):
+                print("could not type content!")
                 return {"success": False, "message": "본문 입력 실패"}
 
             if not await publish_first_step(frame):
+                print("could not publish post!")
                 return {"success": False, "message": "발행 1단계 실패"}
 
             if not await publish_final_step(frame):
+                print("could not publish post! second!")
                 return {"success": False, "message": "발행 2단계 실패"}
 
-            # 발행 완료 URL 확인
-            await page.wait_for_url(lambda url: "/PostView.naver" in url, timeout=10000)
+            # 발행 완료 URL 확인 (베스트에포트: 이동 안 하더라도 성공 처리)
+            print("check urls")
+            try:
+                await page.wait_for_url(
+                    lambda url: "/PostView.naver" in url, timeout=15000
+                )
+            except TimeoutError:
+                print(
+                    "게시글 발행 후 URL 이동을 감지하지 못했으나 발행 버튼까지는 완료됨"
+                )
 
-            return {"success": True, "message": "게시물 발행 완료"}
+            print("publish successed!")
+            print("url: ", page.url)
+            return {"success": True, "message": f"게시물 발행 완료,{page.url}"}
 
         except Exception as e:
+            print("오류 발생: ", e)
             return {"success": False, "message": f"오류 발생: {e}"}
 
         finally:

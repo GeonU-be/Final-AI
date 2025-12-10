@@ -3,11 +3,16 @@ import asyncio
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.services.llm.graph import Graph
+from app.services.crawler.keywords.google_trend import get_keywords_and_send
+
 from app.classes.models import GraphState
 
 from app.classes.requests import WritePostRequest, UploadPostRequest
 from app.logs import log_error
 from app.config import FASTAPI_ALLOWED_ORIGINS
+
+from app.services.uploader.naver.workflow import run_login_upload_workflow
+from app.config import NAVER_ID, NAVER_PW, SESSION_FILE_DIR
 
 
 async def run(func: Coroutine, jobId: str):
@@ -44,7 +49,9 @@ def create_app() -> FastAPI:
         # 그래프 굴리는 그 로직
 
         input = GraphState(
-            keyword=request.keyword, settings=request.llmSettings, jobId=request.jobId
+            keyword=request.keyword,
+            settings=request.llmSettings,
+            jobId=request.jobId,
         )
 
         asyncio.create_task(run(Graph.ainvoke(input), request.jobId))
@@ -56,7 +63,7 @@ def create_app() -> FastAPI:
         # => 로직은 돌아가는데 응답을 먼저 제공함
         print("키워드 호출 로직 실행")
         # 크롤링 해서 키워드 리스트 갖다 주는 코드
-
+        asyncio.create_task(run(get_keywords_and_send(), ""))
         return
 
     @app.post("/api/upload")
@@ -66,6 +73,21 @@ def create_app() -> FastAPI:
         print("글 업로드 로직 실행")
         print("입력: \n", request.json())
         # 글 내용 받아서 업로드 해주는 코드
+        # TODO: 로그인 id pw 자바에게 입력 받기
+        asyncio.create_task(
+            run(
+                run_login_upload_workflow(
+                    login_id=NAVER_ID,
+                    login_pw=NAVER_PW,
+                    session_file=SESSION_FILE_DIR,
+                    BLOG_ID=NAVER_ID,
+                    title=request.title,
+                    content=request.body,
+                    jobId=request.jobId,
+                ),
+                jobId=request.jobId,
+            )
+        )
 
         return
 

@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 from enum import Enum
-from typing import TypedDict, Annotated, Optional
+from typing import TypedDict, Annotated, Optional, Any
 import operator
 
 from pydantic import BaseModel
@@ -9,10 +9,37 @@ from pydantic import BaseModel
 class LlmSettings(BaseModel):
     """LLM 세팅들"""
 
-    apiKey: str
-    model: str
+    id: int
+    userId: int
+    name: str
+    modelName: str
+    status: bool
+    maxTokens: str
+    temperature: float
     prompt: str
-    targetLength: int
+    apiKey: str
+    generationType: str
+    createdAt: str
+    updatedAt: str
+
+
+class UploadChannelSettings(BaseModel):
+    """업로드 채널 세팅들"""
+
+    id: int
+    userId: int
+    name: str  # 채널의 name
+    apiKey: str
+    status: str
+    createdAt: str
+    updatedAt: str
+
+
+class Settings(BaseModel):
+    """세팅 두 개 묶음"""
+
+    channelSettings: UploadChannelSettings
+    llmSettings: LlmSettings
 
 
 class PostData(BaseModel):
@@ -29,7 +56,7 @@ class GraphState(TypedDict, total=False):
     jobId: str
     need_keyword: bool
     keywords: list[str]
-    settings: LlmSettings
+    settings: Settings
     products: Annotated[dict[str, list[dict]], operator.or_]
     filtered_products: list[dict]
     need_more_products: bool
@@ -90,3 +117,17 @@ class LogPayload(BaseModel):
             submessage=submessage,
             jobId=job_id or "",
         )
+
+
+class ProductInfo(BaseModel):
+    name: str
+    link: str
+    detail_specs: dict[str, Any]
+    price: int
+    thumbnail_url: str
+
+
+class CompareableInfo(BaseModel):
+    name: str
+    price: str
+    thumbnail_url: str

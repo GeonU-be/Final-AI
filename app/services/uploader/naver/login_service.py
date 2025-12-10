@@ -6,6 +6,20 @@ LOGIN_URL = "https://nid.naver.com/nidlogin.login"
 
 
 # --------------------------------------------
+# ⓪ 세션 파일 경로 준비
+# --------------------------------------------
+def ensure_session_path(session_file: str) -> None:
+    """
+    기능:
+        - storage_state 파일을 저장할 디렉터리가 없으면 생성한다.
+        - 최초 로그인 시 './naver/' 폴더 부재로 발생할 수 있는 오류를 방지한다.
+    """
+    directory = os.path.dirname(session_file)
+    if directory:
+        os.makedirs(directory, exist_ok=True)
+
+
+# --------------------------------------------
 # ① 세션 파일이 비어 있는지 확인하고 필요하면 삭제
 # --------------------------------------------
 async def is_session_file_empty(session_file: str) -> bool:
@@ -60,7 +74,9 @@ async def validate_existing_session(browser, session_file: str) -> bool:
 # --------------------------------------------
 # ③ 신규 로그인 수행 후 세션 파일 저장
 # --------------------------------------------
-async def perform_new_login(browser, login_id: str, login_pw: str, session_file: str) -> bool:
+async def perform_new_login(
+    browser, login_id: str, login_pw: str, session_file: str
+) -> bool:
     """
     기능:
         - 네이버 로그인 페이지 접속
@@ -110,6 +126,9 @@ async def naver_auto_login(login_id: str, login_pw: str, session_file: str) -> b
         browser = await p.chromium.launch(headless=False, slow_mo=120)
 
         try:
+            # Step 0. 세션 파일 경로 준비
+            ensure_session_path(session_file)
+
             # Step 1. 비어 있는 세션 파일 삭제
             await is_session_file_empty(session_file)
 

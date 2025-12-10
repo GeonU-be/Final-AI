@@ -1,5 +1,4 @@
-
-def postprocess(state: dict) -> dict[str, str]:
+def postprocess(txt: str, platform: str) -> str:
     """
     플랫폼별로 LLM의 결과물을 최종 업로드 가능한 형태로 정리.
 
@@ -8,11 +7,8 @@ def postprocess(state: dict) -> dict[str, str]:
       - platform: naver / twitter
 
     출력:
-      { "final_content": "<가공된 최종 텍스트>" }
+      가공된 최종 텍스트, str
     """
-
-    txt = state["generated_content"]
-    platform = state["platform"]
 
     # 네이버: HTML 태그 기반 줄바꿈 보정
     if platform == "naver":
@@ -22,6 +18,4 @@ def postprocess(state: dict) -> dict[str, str]:
     elif platform == "twitter":
         txt = txt.replace("\n", " ").strip()
 
-    return {"final_content": txt}
-
-
+    return txt
