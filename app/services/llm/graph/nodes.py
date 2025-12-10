@@ -320,6 +320,7 @@ async def generate_ads(state: GraphState) -> GraphState:
     llmSetting = state.get("settings").llmSettings
     channelSetting = state.get("settings").channelSettings
 
+    # TODO: 이거 제대로된 값 집어넣게 수정하기
     product_info = {}
     compareable_info = {}
 
